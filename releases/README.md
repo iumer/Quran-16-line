@@ -1,11 +1,11 @@
-# Releases
+# Download
 
-Installable APKs are published as Cursor agent artifacts after each build.
+One installable APK is kept updated at a fixed path:
 
-- Artifact: `Quran16Line-v1.0.0.apk` (signed release)
-- Debug: `Quran16Line-v1.0.0-debug.apk`
+**https://raw.githubusercontent.com/iumer/Quran-16-line/cursor/quran-reader-v1-76fd/dist/Quran16Line.apk**
 
-Build locally:
+Rebuild locally:
 ```bash
 ./gradlew assembleRelease
+# then sign and overwrite dist/Quran16Line.apk
 ```

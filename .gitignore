@@ -22,3 +22,6 @@ out/
 
 keystore/
 releases/*.apk
+
+# apksigner sidecars
+*.idsig

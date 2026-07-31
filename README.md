@@ -17,6 +17,11 @@ Bundled renderable copy: `app/src/main/assets/quran_16_lines.pdf`
 - Search by page, surah, or ayat
 - Offline
 
+## Download
+Always the same link (APK is overwritten on each release):
+
+https://raw.githubusercontent.com/iumer/Quran-16-line/cursor/quran-reader-v1-76fd/dist/Quran16Line.apk
+
 ## Build
 ```bash
 echo "sdk.dir=$ANDROID_HOME" > local.properties
