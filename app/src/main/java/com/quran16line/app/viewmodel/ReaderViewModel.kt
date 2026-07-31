@@ -46,21 +46,22 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             repository.ensureLoaded()
             val pageCount = repository.pageCount()
-            // Load saved page once before marking ready so the pager does not jump/flicker.
-            val savedPage = normalizeReaderPage(prefs.lastPage.first(), pageCount)
+            // Prefer the highlight mark (left-off page/line); fall back to last scrolled page.
             val savedHighlight = prefs.highlight.first()
+            val savedLastPage = prefs.lastPage.first()
+            val resumePage = resumeReaderPage(savedLastPage, savedHighlight, pageCount)
             val savedBookmarks = prefs.bookmarks.first()
             _state.update {
                 it.copy(
                     ready = true,
                     pageCount = pageCount,
-                    currentPage = savedPage,
-                    pageEntry = repository.pageEntry(savedPage),
-                    pageLabel = repository.labelForPage(savedPage),
+                    currentPage = resumePage,
+                    pageEntry = repository.pageEntry(resumePage),
+                    pageLabel = repository.labelForPage(resumePage),
                     surahs = repository.surahList(),
                     highlight = savedHighlight,
                     bookmarks = savedBookmarks,
-                    isBookmarked = savedBookmarks.any { b -> b.page == savedPage }
+                    isBookmarked = savedBookmarks.any { b -> b.page == resumePage }
                 )
             }
 
@@ -107,7 +108,29 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
             } else {
                 HighlightPoint(page, lineIndex.coerceIn(0, PdfMushafSource.LINES_PER_PAGE - 1))
             }
-            prefs.setHighlight(next)
+            // Highlight is the "left off here" mark — persist page + line together.
+            _state.update {
+                it.copy(
+                    highlight = next,
+                    currentPage = page,
+                    pageEntry = repository.pageEntry(page),
+                    pageLabel = repository.labelForPage(page),
+                    isBookmarked = it.bookmarks.any { b -> b.page == page }
+                )
+            }
+            prefs.saveReadingMark(page = page, highlight = next)
+        }
+    }
+
+    /** Flush page (and keep highlight) when the app goes to background. */
+    fun persistReadingPosition() {
+        viewModelScope.launch {
+            val s = _state.value
+            if (!s.ready || s.pageCount < 1) return@launch
+            prefs.saveReadingMark(
+                page = normalizeReaderPage(s.currentPage, s.pageCount),
+                highlight = s.highlight
+            )
         }
     }
 
@@ -172,3 +195,10 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
 
 internal fun normalizeReaderPage(page: Int, pageCount: Int): Int =
     if (pageCount < 1) 1 else page.coerceIn(1, pageCount)
+
+/** Prefer the saved line highlight page; otherwise the last scrolled page. */
+internal fun resumeReaderPage(
+    lastPage: Int,
+    highlight: HighlightPoint?,
+    pageCount: Int
+): Int = normalizeReaderPage(highlight?.page ?: lastPage, pageCount)

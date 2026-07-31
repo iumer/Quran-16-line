@@ -40,12 +40,30 @@ class PreferencesStore(private val context: Context) {
         context.dataStore.edit { it[lastPageKey] = page }
     }
 
+    /**
+     * Atomically save the reading mark: page to reopen + optional line highlight.
+     * Highlight is the "left off here" marker for the next cold start.
+     */
+    suspend fun saveReadingMark(page: Int, highlight: HighlightPoint?) {
+        context.dataStore.edit { prefs ->
+            prefs[lastPageKey] = page
+            if (highlight == null) {
+                prefs.remove(highlightPageKey)
+                prefs.remove(highlightLineKey)
+            } else {
+                prefs[highlightPageKey] = highlight.page
+                prefs[highlightLineKey] = highlight.lineIndex
+            }
+        }
+    }
+
     suspend fun setHighlight(point: HighlightPoint?) {
         context.dataStore.edit { prefs ->
             if (point == null) {
                 prefs.remove(highlightPageKey)
                 prefs.remove(highlightLineKey)
             } else {
+                prefs[lastPageKey] = point.page
                 prefs[highlightPageKey] = point.page
                 prefs[highlightLineKey] = point.lineIndex
             }
