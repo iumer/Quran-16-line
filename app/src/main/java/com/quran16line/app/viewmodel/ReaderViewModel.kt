@@ -1,10 +1,12 @@
 package com.quran16line.app.viewmodel
 
 import android.app.Application
+import android.graphics.Bitmap
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.quran16line.app.data.Bookmark
 import com.quran16line.app.data.HighlightPoint
+import com.quran16line.app.data.PdfMushafSource
 import com.quran16line.app.data.PreferencesStore
 import com.quran16line.app.data.QuranPage
 import com.quran16line.app.data.QuranRepository
@@ -28,7 +30,8 @@ data class ReaderUiState(
     val isBookmarked: Boolean = false,
     val showSearch: Boolean = false,
     val showBookmarks: Boolean = false,
-    val message: String? = null
+    val message: String? = null,
+    val linesPerPage: Int = PdfMushafSource.LINES_PER_PAGE
 )
 
 class ReaderViewModel(app: Application) : AndroidViewModel(app) {
@@ -95,7 +98,7 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
             val next = if (current?.page == page && current.lineIndex == lineIndex) {
                 null
             } else {
-                HighlightPoint(page, lineIndex)
+                HighlightPoint(page, lineIndex.coerceIn(0, PdfMushafSource.LINES_PER_PAGE - 1))
             }
             prefs.setHighlight(next)
         }
@@ -139,8 +142,13 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     fun surahTotalVerses(surahId: Int): Int =
         repository.surahById(surahId)?.totalVerses ?: 1
 
-    fun pageLines(pageNumber: Int): List<com.quran16line.app.data.PageLine> =
-        repository.page(pageNumber)?.lines.orEmpty()
+    suspend fun renderPage(pageNumber: Int, widthPx: Int): Bitmap? =
+        repository.pdf().renderPage(pageNumber, widthPx)
+
+    override fun onCleared() {
+        repository.close()
+        super.onCleared()
+    }
 }
 
 internal fun normalizeReaderPage(page: Int, pageCount: Int): Int =

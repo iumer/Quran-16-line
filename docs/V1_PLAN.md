@@ -168,3 +168,10 @@ Please confirm later if you want:
 - Exact PDF drop-in as source of truth
 - Translation language(s)
 - Audio in v2
+
+## Update: PDF source (v1.1)
+The app now renders the repository-uploaded Taj Company 16-line mushaf PDF:
+
+`48AlQuranAlKareem16Lines-TajCompany-Www.momeen.blogspot.com-Www.quranpdf.blogspot.in.pdf`
+
+Bundled as `app/src/main/assets/quran_16_lines.pdf` (559 pages). Tap highlight uses 16 equal horizontal line bands over each PDF page.

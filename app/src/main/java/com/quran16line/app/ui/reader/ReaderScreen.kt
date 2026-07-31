@@ -1,19 +1,20 @@
 package com.quran16line.app.ui.reader
 
+import android.graphics.Bitmap
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -23,8 +24,6 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bookmarks
 import androidx.compose.material.icons.filled.Search
@@ -54,32 +53,29 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.rememberTextMeasurer
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.quran16line.app.data.PageLine
+import com.quran16line.app.data.PdfMushafSource
 import com.quran16line.app.ui.bookmarks.BookmarksSheet
 import com.quran16line.app.ui.search.SearchSheet
-import com.quran16line.app.ui.theme.AmiriQuran
 import com.quran16line.app.ui.theme.Chrome
 import com.quran16line.app.ui.theme.Highlight
 import com.quran16line.app.ui.theme.Ink
 import com.quran16line.app.ui.theme.Muted
-import com.quran16line.app.ui.theme.Paper
 import com.quran16line.app.ui.theme.Parchment
 import com.quran16line.app.ui.theme.Rule
 import com.quran16line.app.ui.theme.WarmGrey
@@ -161,12 +157,13 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                     beyondBoundsPageCount = 1
                 ) { pageIndex ->
                     val pageNumber = pageIndex + 1
-                    MushafPage(
+                    PdfMushafPage(
                         pageNumber = pageNumber,
-                        lines = vm.pageLines(pageNumber),
                         highlightLine = state.highlight
                             ?.takeIf { it.page == pageNumber }
                             ?.lineIndex,
+                        linesPerPage = state.linesPerPage,
+                        render = { width -> vm.renderPage(pageNumber, width) },
                         onBlankTap = {
                             chromeVisible = !chromeVisible
                             chromePulse++
@@ -188,7 +185,7 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
             ) {
                 ReaderTopBar(
                     title = "Quran 16-Line",
-                    subtitle = state.pageLabel,
+                    subtitle = state.pageLabel.ifBlank { "Page ${state.currentPage}" },
                     bookmarked = state.isBookmarked,
                     onBookmark = {
                         vm.toggleBookmark()
@@ -339,7 +336,7 @@ private fun ReaderBottomBar(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text("Page ${sliderValue.toInt()}", color = Muted, style = MaterialTheme.typography.bodyMedium)
-            Text("$page / $pageCount", color = Muted, style = MaterialTheme.typography.bodyMedium)
+            Text("$page / $pageCount · 16 lines", color = Muted, style = MaterialTheme.typography.bodyMedium)
         }
         Slider(
             value = sliderValue.coerceIn(1f, pageCount.toFloat()),
@@ -361,148 +358,70 @@ private fun ReaderBottomBar(
 }
 
 @Composable
-private fun MushafPage(
+private fun PdfMushafPage(
     pageNumber: Int,
-    lines: List<PageLine>,
     highlightLine: Int?,
+    linesPerPage: Int,
+    render: suspend (widthPx: Int) -> Bitmap?,
     onBlankTap: () -> Unit,
     onLineTap: (Int) -> Unit
 ) {
-    val resolved = remember(pageNumber, lines) {
-        val padded = lines.toMutableList()
-        while (padded.size < 16) {
-            padded.add(PageLine("empty", "", null, null, null))
-        }
-        padded.take(16)
-    }
-
-    Column(
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
-            .background(
-                Brush.verticalGradient(
-                    listOf(Paper.copy(alpha = 0.35f), Parchment, Parchment)
-                )
-            )
-            .clickable(
-                indication = null,
-                interactionSource = remember { MutableInteractionSource() }
-            ) { onBlankTap() }
-            .padding(horizontal = 14.dp, vertical = 18.dp)
+            .background(Parchment),
+        contentAlignment = Alignment.Center
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(1.dp)
-                .background(Rule)
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        Text(
-            text = "page $pageNumber · 16 lines",
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center,
-            color = WarmGrey,
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontSize = 11.sp,
-                letterSpacing = 1.2.sp
-            )
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f),
-            verticalArrangement = Arrangement.SpaceEvenly
-        ) {
-            resolved.forEachIndexed { index, line ->
-                val selected = highlightLine == index
-                val bg = if (selected) Highlight else Color.Transparent
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f)
-                        .clip(RoundedCornerShape(3.dp))
-                        .background(bg)
-                        .semantics { this.selected = selected }
-                        .clickable {
-                            if (line.type != "empty" && line.text.isNotBlank()) {
-                                onLineTap(index)
-                            } else {
+        val density = LocalDensity.current
+        val widthPx = with(density) { maxWidth.roundToPx().coerceAtLeast(1) }
+        var bitmap by remember(pageNumber, widthPx) { mutableStateOf<Bitmap?>(null) }
+
+        LaunchedEffect(pageNumber, widthPx) {
+            bitmap = render(widthPx)
+        }
+
+        val pageBitmap = bitmap
+        if (pageBitmap == null || pageBitmap.isRecycled) {
+            CircularProgressIndicator(color = Ink)
+        } else {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .pointerInput(pageNumber, highlightLine, linesPerPage) {
+                        detectTapGestures { offset: Offset ->
+                            val lineHeight = size.height / linesPerPage.toFloat()
+                            if (lineHeight <= 0f) {
                                 onBlankTap()
+                                return@detectTapGestures
                             }
+                            val line = (offset.y / lineHeight).toInt().coerceIn(0, linesPerPage - 1)
+                            onLineTap(line)
                         }
-                        .padding(horizontal = 2.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    when (line.type) {
-                        "header" -> FittedQuranLine(
-                            text = line.text,
-                            maxFontSp = 24f,
-                            minFontSp = 14f,
-                            boldHeader = true
-                        )
-                        "empty" -> Spacer(modifier = Modifier.fillMaxWidth())
-                        else -> FittedQuranLine(
-                            text = line.text,
-                            maxFontSp = 20f,
-                            minFontSp = 12f,
-                            boldHeader = false
-                        )
+                    }
+            ) {
+                Image(
+                    bitmap = pageBitmap.asImageBitmap(),
+                    contentDescription = "Quran page $pageNumber",
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Fit
+                )
+                if (highlightLine != null) {
+                    Column(modifier = Modifier.fillMaxSize()) {
+                        repeat(linesPerPage) { index ->
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .weight(1f)
+                                    .background(
+                                        if (index == highlightLine) Highlight.copy(alpha = 0.38f)
+                                        else Color.Transparent
+                                    )
+                                    .semantics { selected = index == highlightLine }
+                            )
+                        }
                     }
                 }
             }
         }
-        Spacer(modifier = Modifier.height(8.dp))
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(1.dp)
-                .background(Rule)
-        )
-    }
-}
-
-@Composable
-private fun FittedQuranLine(
-    text: String,
-    maxFontSp: Float,
-    minFontSp: Float,
-    boldHeader: Boolean
-) {
-    BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
-        val measurer = rememberTextMeasurer()
-        val density = LocalDensity.current
-        val maxWidthPx = with(density) { maxWidth.toPx() }
-        val fontSize = remember(text, maxWidthPx, maxFontSp, minFontSp) {
-            var size = maxFontSp
-            while (size > minFontSp) {
-                val result = measurer.measure(
-                    text = text,
-                    style = TextStyle(
-                        fontFamily = AmiriQuran,
-                        fontSize = size.sp,
-                        textDirection = TextDirection.Rtl
-                    ),
-                    maxLines = 1,
-                    softWrap = false
-                )
-                if (result.size.width <= maxWidthPx) break
-                size -= 0.5f
-            }
-            size.coerceAtLeast(minFontSp)
-        }
-        Text(
-            text = text,
-            fontFamily = AmiriQuran,
-            fontSize = fontSize.sp,
-            fontWeight = if (boldHeader) FontWeight.SemiBold else FontWeight.Normal,
-            color = Ink,
-            textAlign = TextAlign.Center,
-            maxLines = 1,
-            softWrap = false,
-            overflow = TextOverflow.Clip,
-            style = TextStyle(textDirection = TextDirection.Rtl),
-            modifier = Modifier.fillMaxWidth()
-        )
     }
 }

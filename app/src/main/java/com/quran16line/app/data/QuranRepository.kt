@@ -6,11 +6,11 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class QuranRepository(private val context: Context) {
+class QuranRepository(
+    private val context: Context,
+    private val pdfSource: PdfMushafSource = PdfMushafSource(context)
+) {
     private val gson = Gson()
-
-    @Volatile
-    private var bundle: QuranBundle? = null
 
     @Volatile
     private var surahs: List<SurahInfo>? = null
@@ -18,11 +18,11 @@ class QuranRepository(private val context: Context) {
     @Volatile
     private var ayahIndex: Map<String, Int>? = null
 
+    @Volatile
+    private var pageMeta: Map<Int, QuranPage>? = null
+
     suspend fun ensureLoaded() = withContext(Dispatchers.IO) {
-        if (bundle == null) {
-            val json = context.assets.open("quran_pages.json").bufferedReader().use { it.readText() }
-            bundle = gson.fromJson(json, QuranBundle::class.java)
-        }
+        pdfSource.ensureOpen()
         if (surahs == null) {
             val json = context.assets.open("surahs.json").bufferedReader().use { it.readText() }
             val type = object : TypeToken<List<SurahInfo>>() {}.type
@@ -34,15 +34,20 @@ class QuranRepository(private val context: Context) {
             val raw: Map<String, Double> = gson.fromJson(json, type)
             ayahIndex = raw.mapValues { it.value.toInt() }
         }
+        if (pageMeta == null && context.assets.list("")?.contains("quran_pages.json") == true) {
+            runCatching {
+                val json = context.assets.open("quran_pages.json").bufferedReader().use { it.readText() }
+                val bundle = gson.fromJson(json, QuranBundle::class.java)
+                pageMeta = bundle.pages.associateBy { it.page }
+            }
+        }
     }
 
-    fun pageCount(): Int = bundle?.pageCount ?: 0
+    fun pageCount(): Int = pdfSource.pageCount()
 
-    fun page(pageNumber: Int): QuranPage? {
-        val pages = bundle?.pages ?: return null
-        if (pageNumber < 1 || pageNumber > pages.size) return null
-        return pages[pageNumber - 1]
-    }
+    fun pdf(): PdfMushafSource = pdfSource
+
+    fun page(pageNumber: Int): QuranPage? = pageMeta?.get(pageNumber)
 
     fun surahList(): List<SurahInfo> = surahs.orEmpty()
 
@@ -53,13 +58,14 @@ class QuranRepository(private val context: Context) {
     fun pageForAyah(surahId: Int, ayah: Int): Int? = ayahIndex?.get("$surahId:$ayah")
 
     fun labelForPage(pageNumber: Int): String {
-        val page = page(pageNumber) ?: return "Page $pageNumber"
-        val surah = page.surahStart?.let { surahById(it) }
+        val meta = page(pageNumber)
+        val surah = meta?.surahStart?.let { surahById(it) }
+            ?: surahs?.lastOrNull { it.page <= pageNumber }
         return if (surah != null) {
             val ayahPart = when {
-                page.ayahStart != null && page.ayahEnd != null && page.ayahStart != page.ayahEnd ->
-                    " · Ayah ${page.ayahStart}–${page.ayahEnd}"
-                page.ayahStart != null -> " · Ayah ${page.ayahStart}"
+                meta?.ayahStart != null && meta.ayahEnd != null && meta.ayahStart != meta.ayahEnd ->
+                    " · Ayah ${meta.ayahStart}–${meta.ayahEnd}"
+                meta?.ayahStart != null -> " · Ayah ${meta.ayahStart}"
                 else -> ""
             }
             "${surah.transliteration}$ayahPart"
@@ -67,4 +73,6 @@ class QuranRepository(private val context: Context) {
             "Page $pageNumber"
         }
     }
+
+    fun close() = pdfSource.close()
 }
