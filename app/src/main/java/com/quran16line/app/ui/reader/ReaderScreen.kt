@@ -21,10 +21,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
@@ -44,6 +46,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -64,11 +67,13 @@ import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
@@ -87,6 +92,7 @@ import com.quran16line.app.ui.theme.WarmGrey
 import com.quran16line.app.viewmodel.ReaderViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlin.math.min
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -168,38 +174,40 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 .padding(padding)
                 .background(Parchment)
         ) {
-            // Keep LTR pager so swipe direction is natural; mushaf pages themselves are RTL text.
-            HorizontalPager(
-                state = pagerState,
-                modifier = Modifier.fillMaxSize(),
-                beyondBoundsPageCount = 1,
-                userScrollEnabled = !pageZoomed,
-                key = { it }
-            ) { pageIndex ->
-                val pageNumber = pageIndex + 1
-                PdfMushafPage(
-                    pageNumber = pageNumber,
-                    highlightLine = state.highlight
-                        ?.takeIf { it.page == pageNumber }
-                        ?.lineIndex,
-                    linesPerPage = state.linesPerPage,
-                    isActive = pagerState.settledPage == pageIndex,
-                    render = { width -> vm.renderPage(pageNumber, width) },
-                    onZoomChanged = { zoomed ->
-                        if (pagerState.settledPage == pageIndex) {
-                            pageZoomed = zoomed
+            // RTL pager: swipe right → next mushaf page (same as a physical mushaf).
+            CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                HorizontalPager(
+                    state = pagerState,
+                    modifier = Modifier.fillMaxSize(),
+                    beyondBoundsPageCount = 1,
+                    userScrollEnabled = !pageZoomed,
+                    key = { it }
+                ) { pageIndex ->
+                    val pageNumber = pageIndex + 1
+                    PdfMushafPage(
+                        pageNumber = pageNumber,
+                        highlightLine = state.highlight
+                            ?.takeIf { it.page == pageNumber }
+                            ?.lineIndex,
+                        linesPerPage = state.linesPerPage,
+                        isActive = pagerState.settledPage == pageIndex,
+                        render = { width -> vm.renderPage(pageNumber, width) },
+                        onZoomChanged = { zoomed ->
+                            if (pagerState.settledPage == pageIndex) {
+                                pageZoomed = zoomed
+                            }
+                        },
+                        onBlankTap = {
+                            chromeVisible = !chromeVisible
+                            chromePulse++
+                        },
+                        onLineTap = { line ->
+                            vm.onLineTapped(pageNumber, line)
+                            chromeVisible = true
+                            chromePulse++
                         }
-                    },
-                    onBlankTap = {
-                        chromeVisible = !chromeVisible
-                        chromePulse++
-                    },
-                    onLineTap = { line ->
-                        vm.onLineTapped(pageNumber, line)
-                        chromeVisible = true
-                        chromePulse++
-                    }
-                )
+                    )
+                }
             }
 
             AnimatedVisibility(
@@ -444,9 +452,22 @@ private fun PdfMushafPage(
         if (pageBitmap == null || pageBitmap.isRecycled) {
             CircularProgressIndicator(color = Ink)
         } else {
+            // Size the interactive page to the fitted bitmap so highlight/taps match the PDF,
+            // not the full screen (avoids overflow into parchment margins).
+            val containerW = constraints.maxWidth.toFloat().coerceAtLeast(1f)
+            val containerH = constraints.maxHeight.toFloat().coerceAtLeast(1f)
+            val bmpW = pageBitmap.width.toFloat().coerceAtLeast(1f)
+            val bmpH = pageBitmap.height.toFloat().coerceAtLeast(1f)
+            val fit = min(containerW / bmpW, containerH / bmpH)
+            val drawWpx = (bmpW * fit).toInt().coerceAtLeast(1)
+            val drawHpx = (bmpH * fit).toInt().coerceAtLeast(1)
+            val drawW = with(density) { drawWpx.toDp() }
+            val drawH = with(density) { drawHpx.toDp() }
+
             Box(
                 modifier = Modifier
-                    .fillMaxSize()
+                    .width(drawW)
+                    .height(drawH)
                     .graphicsLayer(
                         scaleX = scale,
                         scaleY = scale,
@@ -474,7 +495,6 @@ private fun PdfMushafPage(
                             } while (event.changes.any { it.pressed })
                         }
                     }
-                    // When zoomed: pan/pinch here; pager scrolling is disabled by the parent.
                     .then(
                         if (zoomed) Modifier.transformable(state = transformState) else Modifier
                     )
@@ -492,15 +512,12 @@ private fun PdfMushafPage(
                             },
                             onTap = { tapOffset: Offset ->
                                 if (zoomed) return@detectTapGestures
-                                val lineHeight = size.height / linesPerPage.toFloat()
-                                if (lineHeight <= 0f) {
-                                    onBlankTap()
-                                    return@detectTapGestures
-                                }
-                                val line = (tapOffset.y / lineHeight)
-                                    .toInt()
-                                    .coerceIn(0, linesPerPage - 1)
-                                onLineTap(line)
+                                val line = lineIndexForTap(
+                                    tapY = tapOffset.y,
+                                    pageHeight = size.height.toFloat(),
+                                    linesPerPage = linesPerPage
+                                )
+                                if (line == null) onBlankTap() else onLineTap(line)
                             }
                         )
                     }
@@ -509,10 +526,20 @@ private fun PdfMushafPage(
                     bitmap = pageBitmap.asImageBitmap(),
                     contentDescription = "Quran page $pageNumber",
                     modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Fit
+                    contentScale = ContentScale.FillBounds
                 )
                 if (highlightLine != null && !zoomed) {
-                    Column(modifier = Modifier.fillMaxSize()) {
+                    // Inset to the text column inside the ornate border so the band sits on a line.
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(
+                                start = drawW * PAGE_CONTENT_INSET_X,
+                                end = drawW * PAGE_CONTENT_INSET_X,
+                                top = drawH * PAGE_CONTENT_INSET_TOP,
+                                bottom = drawH * PAGE_CONTENT_INSET_BOTTOM
+                            )
+                    ) {
                         repeat(linesPerPage) { index ->
                             Box(
                                 modifier = Modifier
@@ -530,4 +557,25 @@ private fun PdfMushafPage(
             }
         }
     }
+}
+
+/** Fractions of the fitted PDF page that sit outside the 16 text lines (header/border/footer). */
+private const val PAGE_CONTENT_INSET_X = 0.075f
+private const val PAGE_CONTENT_INSET_TOP = 0.105f
+private const val PAGE_CONTENT_INSET_BOTTOM = 0.065f
+
+internal fun lineIndexForTap(
+    tapY: Float,
+    pageHeight: Float,
+    linesPerPage: Int,
+    insetTop: Float = PAGE_CONTENT_INSET_TOP,
+    insetBottom: Float = PAGE_CONTENT_INSET_BOTTOM
+): Int? {
+    if (pageHeight <= 0f || linesPerPage < 1) return null
+    val top = pageHeight * insetTop
+    val bottom = pageHeight * (1f - insetBottom)
+    if (tapY < top || tapY > bottom) return null
+    val band = (bottom - top) / linesPerPage.toFloat()
+    if (band <= 0f) return null
+    return ((tapY - top) / band).toInt().coerceIn(0, linesPerPage - 1)
 }
