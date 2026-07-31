@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -53,12 +54,12 @@ fun BookmarksSheet(
                 Text("No bookmarks yet. Tap the star while reading.", color = Muted)
                 Spacer(modifier = Modifier.height(28.dp))
             } else {
-                LazyColumn {
+                LazyColumn(modifier = Modifier.heightIn(max = 420.dp)) {
                     items(bookmarks, key = { it.page to it.createdAt }) { bookmark ->
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clickable { onOpen(bookmark.page) }
+                                .clickable(onClickLabel = "Open page ${bookmark.page}") { onOpen(bookmark.page) }
                                 .padding(vertical = 12.dp)
                         ) {
                             Text("Page ${bookmark.page}", color = Ink)

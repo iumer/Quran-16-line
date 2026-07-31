@@ -42,28 +42,30 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             repository.ensureLoaded()
             val pageCount = repository.pageCount()
+            val initialPage = normalizeReaderPage(_state.value.currentPage, pageCount)
             _state.update {
                 it.copy(
                     ready = true,
                     pageCount = pageCount,
+                    currentPage = initialPage,
+                    page = repository.page(initialPage),
+                    pageLabel = repository.labelForPage(initialPage),
                     surahs = repository.surahList()
                 )
             }
-        }
 
-        viewModelScope.launch {
             combine(prefs.lastPage, prefs.highlight, prefs.bookmarks) { last, highlight, bookmarks ->
                 Triple(last, highlight, bookmarks)
             }.collect { (last, highlight, bookmarks) ->
-                val page = last.coerceIn(1, maxOf(repository.pageCount(), 1))
+                val persistedPage = normalizeReaderPage(last, repository.pageCount())
                 _state.update { current ->
                     current.copy(
-                        currentPage = page,
-                        page = repository.page(page),
-                        pageLabel = repository.labelForPage(page),
+                        currentPage = persistedPage,
+                        page = repository.page(persistedPage),
+                        pageLabel = repository.labelForPage(persistedPage),
                         highlight = highlight,
                         bookmarks = bookmarks,
-                        isBookmarked = bookmarks.any { it.page == page }
+                        isBookmarked = bookmarks.any { it.page == persistedPage }
                     )
                 }
             }
@@ -72,7 +74,9 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
 
     fun onPageChanged(page: Int) {
         viewModelScope.launch {
-            val safe = page.coerceIn(1, repository.pageCount())
+            val pageCount = repository.pageCount()
+            if (pageCount < 1) return@launch
+            val safe = normalizeReaderPage(page, pageCount)
             prefs.setLastPage(safe)
             _state.update {
                 it.copy(
@@ -138,3 +142,6 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     fun pageLines(pageNumber: Int): List<com.quran16line.app.data.PageLine> =
         repository.page(pageNumber)?.lines.orEmpty()
 }
+
+internal fun normalizeReaderPage(page: Int, pageCount: Int): Int =
+    if (pageCount < 1) 1 else page.coerceIn(1, pageCount)

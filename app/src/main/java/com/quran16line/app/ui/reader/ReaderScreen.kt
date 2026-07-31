@@ -10,15 +10,16 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
@@ -32,6 +33,7 @@ import androidx.compose.material.icons.outlined.StarBorder
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
@@ -44,6 +46,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -54,9 +57,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -75,6 +84,7 @@ import com.quran16line.app.ui.theme.Parchment
 import com.quran16line.app.ui.theme.Rule
 import com.quran16line.app.ui.theme.WarmGrey
 import com.quran16line.app.viewmodel.ReaderViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
@@ -85,11 +95,19 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     var chromeVisible by remember { mutableStateOf(true) }
+    var chromePulse by remember { mutableStateOf(0) }
 
     LaunchedEffect(state.message) {
         state.message?.let {
             snackbar.showSnackbar(it)
             vm.consumeMessage()
+        }
+    }
+
+    LaunchedEffect(chromeVisible, chromePulse, state.currentPage) {
+        if (chromeVisible) {
+            delay(2800)
+            chromeVisible = false
         }
     }
 
@@ -126,6 +144,7 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 .distinctUntilChanged()
                 .collect { pageIndex ->
                     vm.onPageChanged(pageIndex + 1)
+                    chromePulse++
                 }
         }
 
@@ -133,56 +152,77 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
             Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .background(
-                    Brush.verticalGradient(listOf(Chrome, Parchment, Parchment))
-                )
+                .background(Parchment)
         ) {
-            Column(modifier = Modifier.fillMaxSize()) {
-                AnimatedVisibility(visible = chromeVisible, enter = fadeIn(), exit = fadeOut()) {
-                    ReaderTopBar(
-                        title = "Quran 16-Line",
-                        subtitle = state.pageLabel,
-                        bookmarked = state.isBookmarked,
-                        onBookmark = vm::toggleBookmark,
-                        onShowBookmarks = { vm.openBookmarks(true) },
-                        onSearch = { vm.openSearch(true) }
-                    )
-                }
-
-                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                    HorizontalPager(
-                        state = pagerState,
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 4.dp),
-                        beyondBoundsPageCount = 1
-                    ) { pageIndex ->
-                        val pageNumber = pageIndex + 1
-                        MushafPage(
-                            pageNumber = pageNumber,
-                            lines = vm.pageLines(pageNumber),
-                            highlightLine = state.highlight
-                                ?.takeIf { it.page == pageNumber }
-                                ?.lineIndex,
-                            onToggleChrome = { chromeVisible = !chromeVisible },
-                            onLineTap = { line -> vm.onLineTapped(pageNumber, line) }
-                        )
-                    }
-                }
-
-                AnimatedVisibility(visible = chromeVisible, enter = fadeIn(), exit = fadeOut()) {
-                    ReaderBottomBar(
-                        page = state.currentPage,
-                        pageCount = state.pageCount,
-                        onSeek = { page ->
-                            scope.launch {
-                                pagerState.scrollToPage(page - 1)
-                                vm.onPageChanged(page)
-                            }
+            CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                HorizontalPager(
+                    state = pagerState,
+                    modifier = Modifier.fillMaxSize(),
+                    beyondBoundsPageCount = 1
+                ) { pageIndex ->
+                    val pageNumber = pageIndex + 1
+                    MushafPage(
+                        pageNumber = pageNumber,
+                        lines = vm.pageLines(pageNumber),
+                        highlightLine = state.highlight
+                            ?.takeIf { it.page == pageNumber }
+                            ?.lineIndex,
+                        onBlankTap = {
+                            chromeVisible = !chromeVisible
+                            chromePulse++
+                        },
+                        onLineTap = { line ->
+                            vm.onLineTapped(pageNumber, line)
+                            chromeVisible = true
+                            chromePulse++
                         }
                     )
                 }
+            }
+
+            AnimatedVisibility(
+                visible = chromeVisible,
+                enter = fadeIn(),
+                exit = fadeOut(),
+                modifier = Modifier.align(Alignment.TopCenter)
+            ) {
+                ReaderTopBar(
+                    title = "Quran 16-Line",
+                    subtitle = state.pageLabel,
+                    bookmarked = state.isBookmarked,
+                    onBookmark = {
+                        vm.toggleBookmark()
+                        chromePulse++
+                    },
+                    onShowBookmarks = {
+                        vm.openBookmarks(true)
+                        chromePulse++
+                    },
+                    onSearch = {
+                        vm.openSearch(true)
+                        chromePulse++
+                    }
+                )
+            }
+
+            AnimatedVisibility(
+                visible = chromeVisible,
+                enter = fadeIn(),
+                exit = fadeOut(),
+                modifier = Modifier.align(Alignment.BottomCenter)
+            ) {
+                ReaderBottomBar(
+                    page = state.currentPage,
+                    pageCount = state.pageCount,
+                    onSeek = { page ->
+                        scope.launch {
+                            pagerState.scrollToPage(page - 1)
+                            vm.onPageChanged(page)
+                            chromePulse++
+                        }
+                    },
+                    onInteract = { chromePulse++ }
+                )
             }
 
             if (state.showSearch) {
@@ -220,11 +260,20 @@ private fun ReaderTopBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .background(
+                Brush.verticalGradient(
+                    listOf(Chrome.copy(alpha = 0.96f), Chrome.copy(alpha = 0.75f), Color.Transparent)
+                )
+            )
             .statusBarsPadding()
-            .padding(horizontal = 16.dp, vertical = 10.dp),
+            .padding(horizontal = 8.dp, vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(modifier = Modifier.weight(1f)) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(start = 8.dp)
+        ) {
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleLarge.copy(
@@ -240,54 +289,67 @@ private fun ReaderTopBar(
                 overflow = TextOverflow.Ellipsis
             )
         }
-        ChromeIcon(onClick = onBookmark) {
+        IconButton(
+            onClick = onBookmark,
+            modifier = Modifier.sizeIn(minWidth = 48.dp, minHeight = 48.dp)
+        ) {
             Icon(
                 imageVector = if (bookmarked) Icons.Filled.Star else Icons.Outlined.StarBorder,
-                contentDescription = "Bookmark page",
-                tint = Ink
+                contentDescription = if (bookmarked) "Remove bookmark" else "Add bookmark",
+                tint = if (bookmarked) Color(0xFFB0892E) else Ink
             )
         }
-        Spacer(modifier = Modifier.size(8.dp))
-        ChromeIcon(onClick = onShowBookmarks) {
-            Icon(Icons.Filled.Bookmarks, contentDescription = "Bookmarks", tint = Ink)
+        IconButton(
+            onClick = onShowBookmarks,
+            modifier = Modifier.sizeIn(minWidth = 48.dp, minHeight = 48.dp)
+        ) {
+            Icon(Icons.Filled.Bookmarks, contentDescription = "Open bookmarks", tint = Ink)
         }
-        Spacer(modifier = Modifier.size(8.dp))
-        ChromeIcon(onClick = onSearch) {
-            Icon(Icons.Filled.Search, contentDescription = "Search", tint = Ink)
+        IconButton(
+            onClick = onSearch,
+            modifier = Modifier.sizeIn(minWidth = 48.dp, minHeight = 48.dp)
+        ) {
+            Icon(Icons.Filled.Search, contentDescription = "Search Quran", tint = Ink)
         }
     }
 }
 
 @Composable
-private fun ChromeIcon(onClick: () -> Unit, content: @Composable () -> Unit) {
-    Box(
-        modifier = Modifier
-            .size(40.dp)
-            .clip(CircleShape)
-            .background(Paper)
-            .border(1.dp, Rule, CircleShape)
-            .clickable(onClick = onClick),
-        contentAlignment = Alignment.Center
-    ) { content() }
-}
+private fun ReaderBottomBar(
+    page: Int,
+    pageCount: Int,
+    onSeek: (Int) -> Unit,
+    onInteract: () -> Unit
+) {
+    var sliderValue by remember(page) { mutableFloatStateOf(page.toFloat()) }
 
-@Composable
-private fun ReaderBottomBar(page: Int, pageCount: Int, onSeek: (Int) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .background(
+                Brush.verticalGradient(
+                    listOf(Color.Transparent, Chrome.copy(alpha = 0.8f), Chrome.copy(alpha = 0.96f))
+                )
+            )
+            .navigationBarsPadding()
             .padding(horizontal = 16.dp, vertical = 10.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text("Page $page", color = Muted, style = MaterialTheme.typography.bodyMedium)
+            Text("Page ${sliderValue.toInt()}", color = Muted, style = MaterialTheme.typography.bodyMedium)
             Text("$page / $pageCount", color = Muted, style = MaterialTheme.typography.bodyMedium)
         }
         Slider(
-            value = page.toFloat(),
-            onValueChange = { onSeek(it.toInt().coerceIn(1, pageCount)) },
+            value = sliderValue.coerceIn(1f, pageCount.toFloat()),
+            onValueChange = {
+                sliderValue = it
+                onInteract()
+            },
+            onValueChangeFinished = {
+                onSeek(sliderValue.toInt().coerceIn(1, pageCount))
+            },
             valueRange = 1f..pageCount.toFloat(),
             colors = SliderDefaults.colors(
                 thumbColor = Ink,
@@ -303,7 +365,7 @@ private fun MushafPage(
     pageNumber: Int,
     lines: List<PageLine>,
     highlightLine: Int?,
-    onToggleChrome: () -> Unit,
+    onBlankTap: () -> Unit,
     onLineTap: (Int) -> Unit
 ) {
     val resolved = remember(pageNumber, lines) {
@@ -317,27 +379,32 @@ private fun MushafPage(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .clip(RoundedCornerShape(6.dp))
             .background(
                 Brush.verticalGradient(
-                    listOf(Paper.copy(alpha = 0.55f), Parchment, Parchment)
+                    listOf(Paper.copy(alpha = 0.35f), Parchment, Parchment)
                 )
             )
-            .border(1.dp, Rule, RoundedCornerShape(6.dp))
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() }
-            ) { onToggleChrome() }
-            .padding(horizontal = 10.dp, vertical = 12.dp)
+            ) { onBlankTap() }
+            .padding(horizontal = 14.dp, vertical = 18.dp)
     ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(1.dp)
+                .background(Rule)
+        )
+        Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "— page $pageNumber · 16 lines —",
+            text = "page $pageNumber · 16 lines",
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
             color = WarmGrey,
             style = MaterialTheme.typography.bodyMedium.copy(
                 fontSize = 11.sp,
-                letterSpacing = 1.5.sp
+                letterSpacing = 1.2.sp
             )
         )
         Spacer(modifier = Modifier.height(8.dp))
@@ -348,46 +415,94 @@ private fun MushafPage(
             verticalArrangement = Arrangement.SpaceEvenly
         ) {
             resolved.forEachIndexed { index, line ->
-                val bg = if (highlightLine == index) Highlight else Color.Transparent
+                val selected = highlightLine == index
+                val bg = if (selected) Highlight else Color.Transparent
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f)
                         .clip(RoundedCornerShape(3.dp))
                         .background(bg)
+                        .semantics { this.selected = selected }
                         .clickable {
                             if (line.type != "empty" && line.text.isNotBlank()) {
                                 onLineTap(index)
                             } else {
-                                onToggleChrome()
+                                onBlankTap()
                             }
                         }
-                        .padding(horizontal = 4.dp),
+                        .padding(horizontal = 2.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     when (line.type) {
-                        "header" -> Text(
+                        "header" -> FittedQuranLine(
                             text = line.text,
-                            fontFamily = AmiriQuran,
-                            fontSize = 22.sp,
-                            color = Ink,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.fillMaxWidth()
+                            maxFontSp = 24f,
+                            minFontSp = 14f,
+                            boldHeader = true
                         )
-                        "empty" -> Spacer(modifier = Modifier.fillMaxHeight())
-                        else -> Text(
+                        "empty" -> Spacer(modifier = Modifier.fillMaxWidth())
+                        else -> FittedQuranLine(
                             text = line.text,
-                            fontFamily = AmiriQuran,
-                            fontSize = 18.sp,
-                            color = Ink,
-                            textAlign = TextAlign.Center,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.fillMaxWidth()
+                            maxFontSp = 20f,
+                            minFontSp = 12f,
+                            boldHeader = false
                         )
                     }
                 }
             }
         }
+        Spacer(modifier = Modifier.height(8.dp))
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(1.dp)
+                .background(Rule)
+        )
+    }
+}
+
+@Composable
+private fun FittedQuranLine(
+    text: String,
+    maxFontSp: Float,
+    minFontSp: Float,
+    boldHeader: Boolean
+) {
+    BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+        val measurer = rememberTextMeasurer()
+        val density = LocalDensity.current
+        val maxWidthPx = with(density) { maxWidth.toPx() }
+        val fontSize = remember(text, maxWidthPx, maxFontSp, minFontSp) {
+            var size = maxFontSp
+            while (size > minFontSp) {
+                val result = measurer.measure(
+                    text = text,
+                    style = TextStyle(
+                        fontFamily = AmiriQuran,
+                        fontSize = size.sp,
+                        textDirection = TextDirection.Rtl
+                    ),
+                    maxLines = 1,
+                    softWrap = false
+                )
+                if (result.size.width <= maxWidthPx) break
+                size -= 0.5f
+            }
+            size.coerceAtLeast(minFontSp)
+        }
+        Text(
+            text = text,
+            fontFamily = AmiriQuran,
+            fontSize = fontSize.sp,
+            fontWeight = if (boldHeader) FontWeight.SemiBold else FontWeight.Normal,
+            color = Ink,
+            textAlign = TextAlign.Center,
+            maxLines = 1,
+            softWrap = false,
+            overflow = TextOverflow.Clip,
+            style = TextStyle(textDirection = TextDirection.Rtl),
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
