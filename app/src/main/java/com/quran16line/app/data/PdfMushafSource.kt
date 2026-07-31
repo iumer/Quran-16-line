@@ -21,18 +21,9 @@ class PdfMushafSource(private val context: Context) {
     private var descriptor: ParcelFileDescriptor? = null
     private var renderer: PdfRenderer? = null
 
-    private val bitmapCache = object : LruCache<String, Bitmap>(12) {
+    private val bitmapCache = object : LruCache<String, Bitmap>(24) {
         override fun sizeOf(key: String, value: Bitmap): Int = 1
-        override fun entryRemoved(
-            evicted: Boolean,
-            key: String,
-            oldValue: Bitmap,
-            newValue: Bitmap?
-        ) {
-            if (evicted && !oldValue.isRecycled && oldValue !== newValue) {
-                oldValue.recycle()
-            }
-        }
+        // Do not recycle on eviction — pages may still be on-screen and recycling causes flicker.
     }
 
     suspend fun ensureOpen(): Int = withContext(Dispatchers.IO) {

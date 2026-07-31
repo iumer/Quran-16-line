@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
@@ -45,30 +46,33 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             repository.ensureLoaded()
             val pageCount = repository.pageCount()
-            val initialPage = normalizeReaderPage(_state.value.currentPage, pageCount)
+            // Load saved page once before marking ready so the pager does not jump/flicker.
+            val savedPage = normalizeReaderPage(prefs.lastPage.first(), pageCount)
+            val savedHighlight = prefs.highlight.first()
+            val savedBookmarks = prefs.bookmarks.first()
             _state.update {
                 it.copy(
                     ready = true,
                     pageCount = pageCount,
-                    currentPage = initialPage,
-                    pageEntry = repository.pageEntry(initialPage),
-                    pageLabel = repository.labelForPage(initialPage),
-                    surahs = repository.surahList()
+                    currentPage = savedPage,
+                    pageEntry = repository.pageEntry(savedPage),
+                    pageLabel = repository.labelForPage(savedPage),
+                    surahs = repository.surahList(),
+                    highlight = savedHighlight,
+                    bookmarks = savedBookmarks,
+                    isBookmarked = savedBookmarks.any { b -> b.page == savedPage }
                 )
             }
 
-            combine(prefs.lastPage, prefs.highlight, prefs.bookmarks) { last, highlight, bookmarks ->
-                Triple(last, highlight, bookmarks)
-            }.collect { (last, highlight, bookmarks) ->
-                val persistedPage = normalizeReaderPage(last, repository.pageCount())
+            // After startup, never overwrite currentPage from DataStore (that races with swipes).
+            combine(prefs.highlight, prefs.bookmarks) { highlight, bookmarks ->
+                highlight to bookmarks
+            }.collect { (highlight, bookmarks) ->
                 _state.update { current ->
                     current.copy(
-                        currentPage = persistedPage,
-                        pageEntry = repository.pageEntry(persistedPage),
-                        pageLabel = repository.labelForPage(persistedPage),
                         highlight = highlight,
                         bookmarks = bookmarks,
-                        isBookmarked = bookmarks.any { it.page == persistedPage }
+                        isBookmarked = bookmarks.any { it.page == current.currentPage }
                     )
                 }
             }
@@ -80,7 +84,7 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
             val pageCount = repository.pageCount()
             if (pageCount < 1) return@launch
             val safe = normalizeReaderPage(page, pageCount)
-            prefs.setLastPage(safe)
+            val previous = _state.value.currentPage
             _state.update {
                 it.copy(
                     currentPage = safe,
@@ -88,6 +92,9 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
                     pageLabel = repository.labelForPage(safe),
                     isBookmarked = it.bookmarks.any { b -> b.page == safe }
                 )
+            }
+            if (previous != safe) {
+                prefs.setLastPage(safe)
             }
         }
     }

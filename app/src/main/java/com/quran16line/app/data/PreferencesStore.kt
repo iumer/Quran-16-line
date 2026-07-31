@@ -21,7 +21,7 @@ class PreferencesStore(private val context: Context) {
     private val bookmarksKey = stringPreferencesKey("bookmarks_json")
 
     val lastPage: Flow<Int> = context.dataStore.data.map { prefs ->
-        prefs[lastPageKey] ?: 2
+        prefs[lastPageKey] ?: 3
     }
 
     val highlight: Flow<HighlightPoint?> = context.dataStore.data.map { prefs ->

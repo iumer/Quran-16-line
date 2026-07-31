@@ -8,10 +8,12 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.calculateZoom
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.rememberTransformableState
 import androidx.compose.foundation.gestures.transformable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -19,7 +21,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
@@ -43,14 +44,12 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
@@ -60,15 +59,15 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.awaitPointerEvent
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -85,14 +84,12 @@ import com.quran16line.app.ui.theme.WarmGrey
 import com.quran16line.app.viewmodel.ReaderViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
     val state by vm.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-    val scope = rememberCoroutineScope()
     var chromeVisible by remember { mutableStateOf(true) }
     var chromePulse by remember { mutableStateOf(0) }
 
@@ -130,12 +127,17 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
             initialPage = (state.currentPage - 1).coerceIn(0, state.pageCount - 1),
             pageCount = { state.pageCount }
         )
+        var pageZoomed by remember { mutableStateOf(false) }
+        // Only programmatically sync pager for jumps (search/slider), not user swipes.
+        var pendingJumpPage by remember { mutableStateOf<Int?>(null) }
 
-        LaunchedEffect(state.currentPage) {
-            val target = state.currentPage - 1
-            if (pagerState.currentPage != target && !pagerState.isScrollInProgress) {
+        LaunchedEffect(pendingJumpPage) {
+            val jump = pendingJumpPage ?: return@LaunchedEffect
+            val target = (jump - 1).coerceIn(0, state.pageCount - 1)
+            if (pagerState.currentPage != target) {
                 pagerState.scrollToPage(target)
             }
+            pendingJumpPage = null
         }
 
         LaunchedEffect(pagerState) {
@@ -143,7 +145,6 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 .distinctUntilChanged()
                 .collect { pageIndex ->
                     vm.onPageChanged(pageIndex + 1)
-                    chromePulse++
                 }
         }
 
@@ -153,34 +154,38 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 .padding(padding)
                 .background(Parchment)
         ) {
-            var pageZoomed by remember { mutableStateOf(false) }
-            CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                HorizontalPager(
-                    state = pagerState,
-                    modifier = Modifier.fillMaxSize(),
-                    beyondBoundsPageCount = 1,
-                    userScrollEnabled = !pageZoomed
-                ) { pageIndex ->
-                    val pageNumber = pageIndex + 1
-                    PdfMushafPage(
-                        pageNumber = pageNumber,
-                        highlightLine = state.highlight
-                            ?.takeIf { it.page == pageNumber }
-                            ?.lineIndex,
-                        linesPerPage = state.linesPerPage,
-                        render = { width -> vm.renderPage(pageNumber, width) },
-                        onZoomChanged = { zoomed -> pageZoomed = zoomed },
-                        onBlankTap = {
-                            chromeVisible = !chromeVisible
-                            chromePulse++
-                        },
-                        onLineTap = { line ->
-                            vm.onLineTapped(pageNumber, line)
-                            chromeVisible = true
-                            chromePulse++
+            // Keep LTR pager so swipe direction is natural; mushaf pages themselves are RTL text.
+            HorizontalPager(
+                state = pagerState,
+                modifier = Modifier.fillMaxSize(),
+                beyondBoundsPageCount = 1,
+                userScrollEnabled = !pageZoomed,
+                key = { it }
+            ) { pageIndex ->
+                val pageNumber = pageIndex + 1
+                PdfMushafPage(
+                    pageNumber = pageNumber,
+                    highlightLine = state.highlight
+                        ?.takeIf { it.page == pageNumber }
+                        ?.lineIndex,
+                    linesPerPage = state.linesPerPage,
+                    isActive = pagerState.settledPage == pageIndex,
+                    render = { width -> vm.renderPage(pageNumber, width) },
+                    onZoomChanged = { zoomed ->
+                        if (pagerState.settledPage == pageIndex) {
+                            pageZoomed = zoomed
                         }
-                    )
-                }
+                    },
+                    onBlankTap = {
+                        chromeVisible = !chromeVisible
+                        chromePulse++
+                    },
+                    onLineTap = { line ->
+                        vm.onLineTapped(pageNumber, line)
+                        chromeVisible = true
+                        chromePulse++
+                    }
+                )
             }
 
             AnimatedVisibility(
@@ -218,11 +223,9 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                     page = state.currentPage,
                     pageCount = state.pageCount,
                     onSeek = { page ->
-                        scope.launch {
-                            pagerState.scrollToPage(page - 1)
-                            vm.onPageChanged(page)
-                            chromePulse++
-                        }
+                        pendingJumpPage = page
+                        vm.onPageChanged(page)
+                        chromePulse++
                     },
                     onInteract = { chromePulse++ }
                 )
@@ -233,9 +236,20 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                     surahs = state.surahs,
                     pageCount = state.pageCount,
                     onDismiss = { vm.openSearch(false) },
-                    onJumpPage = vm::jumpToPage,
-                    onJumpSurah = vm::jumpToSurah,
-                    onJumpAyah = vm::jumpToAyah,
+                    onJumpPage = { page ->
+                        pendingJumpPage = page
+                        vm.jumpToPage(page)
+                    },
+                    onJumpSurah = { id ->
+                        val page = state.surahs.firstOrNull { it.id == id }?.page
+                        if (page != null) pendingJumpPage = page
+                        vm.jumpToSurah(id)
+                    },
+                    onJumpAyah = { sid, ayah ->
+                        val page = vm.pageForAyah(sid, ayah)
+                        if (page != null) pendingJumpPage = page
+                        vm.jumpToAyah(sid, ayah)
+                    },
                     totalVerses = vm::surahTotalVerses,
                     previewPageLabel = vm::previewPageLabel,
                     resolvePageQuery = vm::resolvePageQuery,
@@ -247,7 +261,10 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 BookmarksSheet(
                     bookmarks = state.bookmarks,
                     onDismiss = { vm.openBookmarks(false) },
-                    onOpen = vm::jumpToPage
+                    onOpen = { page ->
+                        pendingJumpPage = page
+                        vm.jumpToPage(page)
+                    }
                 )
             }
         }
@@ -371,6 +388,7 @@ private fun PdfMushafPage(
     pageNumber: Int,
     highlightLine: Int?,
     linesPerPage: Int,
+    isActive: Boolean,
     render: suspend (widthPx: Int) -> Bitmap?,
     onZoomChanged: (Boolean) -> Unit,
     onBlankTap: () -> Unit,
@@ -387,22 +405,25 @@ private fun PdfMushafPage(
         var bitmap by remember(pageNumber, widthPx) { mutableStateOf<Bitmap?>(null) }
         var scale by remember(pageNumber) { mutableFloatStateOf(1f) }
         var offset by remember(pageNumber) { mutableStateOf(Offset.Zero) }
+        val zoomed = scale > 1.01f
+
         val transformState = rememberTransformableState { zoomChange, panChange, _ ->
             val newScale = (scale * zoomChange).coerceIn(1f, 4f)
             scale = newScale
-            offset = if (newScale <= 1.01f) {
-                Offset.Zero
-            } else {
-                offset + panChange
-            }
-            onZoomChanged(newScale > 1.01f)
+            offset = if (newScale <= 1.01f) Offset.Zero else offset + panChange
+            if (isActive) onZoomChanged(newScale > 1.01f)
         }
 
         LaunchedEffect(pageNumber, widthPx) {
             bitmap = render(widthPx)
-            scale = 1f
-            offset = Offset.Zero
-            onZoomChanged(false)
+        }
+
+        LaunchedEffect(isActive) {
+            if (!isActive && scale != 1f) {
+                scale = 1f
+                offset = Offset.Zero
+            }
+            if (isActive) onZoomChanged(scale > 1.01f)
         }
 
         val pageBitmap = bitmap
@@ -418,21 +439,45 @@ private fun PdfMushafPage(
                         translationX = offset.x,
                         translationY = offset.y
                     )
-                    .transformable(state = transformState)
-                    .pointerInput(pageNumber, highlightLine, linesPerPage, scale) {
+                    // At 1x: only consume two-finger pinch so HorizontalPager keeps single-finger swipes.
+                    .pointerInput(pageNumber, zoomed) {
+                        if (zoomed) return@pointerInput
+                        awaitEachGesture {
+                            awaitFirstDown(requireUnconsumed = false)
+                            do {
+                                val event = awaitPointerEvent(PointerEventPass.Initial)
+                                val pressed = event.changes.filter { it.pressed }
+                                if (pressed.size >= 2) {
+                                    val change = event.calculateZoom()
+                                    if (change != 1f) {
+                                        val newScale = (scale * change).coerceIn(1f, 4f)
+                                        scale = newScale
+                                        if (newScale <= 1.01f) offset = Offset.Zero
+                                        if (isActive) onZoomChanged(newScale > 1.01f)
+                                        pressed.forEach { it.consume() }
+                                    }
+                                }
+                            } while (event.changes.any { it.pressed })
+                        }
+                    }
+                    // When zoomed: pan/pinch here; pager scrolling is disabled by the parent.
+                    .then(
+                        if (zoomed) Modifier.transformable(state = transformState) else Modifier
+                    )
+                    .pointerInput(pageNumber, highlightLine, linesPerPage, zoomed) {
                         detectTapGestures(
                             onDoubleTap = {
-                                if (scale > 1.01f) {
+                                if (zoomed) {
                                     scale = 1f
                                     offset = Offset.Zero
-                                    onZoomChanged(false)
+                                    if (isActive) onZoomChanged(false)
                                 } else {
                                     scale = 2.2f
-                                    onZoomChanged(true)
+                                    if (isActive) onZoomChanged(true)
                                 }
                             },
                             onTap = { tapOffset: Offset ->
-                                if (scale > 1.01f) return@detectTapGestures
+                                if (zoomed) return@detectTapGestures
                                 val lineHeight = size.height / linesPerPage.toFloat()
                                 if (lineHeight <= 0f) {
                                     onBlankTap()
@@ -452,7 +497,7 @@ private fun PdfMushafPage(
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Fit
                 )
-                if (highlightLine != null && scale <= 1.01f) {
+                if (highlightLine != null && !zoomed) {
                     Column(modifier = Modifier.fillMaxSize()) {
                         repeat(linesPerPage) { index ->
                             Box(
