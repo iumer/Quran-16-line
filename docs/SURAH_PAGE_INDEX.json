@@ -128,5 +128,19 @@
     "113": 550,
     "114": 550
   },
-  "note": "Vector DB not used — exact surah/page lookup is best served by a flat JSON index (O(1)/binary search). Vector DBs are for semantic similarity, not precise mushaf navigation."
+  "note": "Vector DB not used — exact surah/page lookup is best served by a flat JSON index (O(1)/binary search). Vector DBs are for semantic similarity, not precise mushaf navigation.",
+  "ayah_index": "Rebuilt from Madani ayah pages scaled to PDF content range with surah clamps",
+  "page_index_asset": "app/src/main/assets/page_index.json",
+  "search": {
+    "page": "App/PDF page 1–559 (printed mushaf page N opens PDF page N+1 for N=1..549)",
+    "surah": "Uses surahs.json page field",
+    "ayat": "Uses ayah_index.json exact key surah:ayah"
+  },
+  "spot_checks": {
+    "page_550": "Al-Falaq + An-Nas",
+    "ayah_114_1": 550,
+    "ayah_2_255": 42,
+    "ayah_36_1": 401,
+    "ayah_67_1": 512
+  }
 }

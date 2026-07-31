@@ -20,6 +20,7 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -63,34 +64,64 @@ fun SearchSheet(
     onJumpPage: (Int) -> Unit,
     onJumpSurah: (Int) -> Unit,
     onJumpAyah: (Int, Int) -> Unit,
-    totalVerses: (Int) -> Int
+    totalVerses: (Int) -> Int,
+    previewPageLabel: (Int) -> String = { "Page $it" },
+    resolvePageQuery: (raw: Int, preferPrinted: Boolean) -> Int? = { raw, _ ->
+        raw.takeIf { it in 1..pageCount }
+    },
+    pageForAyahPreview: (Int, Int) -> Int? = { _, _ -> null }
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var mode by remember { mutableStateOf(SearchMode.Page) }
     var pageText by remember { mutableStateOf("") }
+    var usePrintedPage by remember { mutableStateOf(false) }
     var selectedSurah by remember { mutableIntStateOf(surahs.firstOrNull()?.id ?: 1) }
     var surahQuery by remember { mutableStateOf("") }
     var ayahText by remember { mutableStateOf("1") }
     var error by remember { mutableStateOf<String?>(null) }
 
+    val typedPage = pageText.toIntOrNull()
+    val resolvedPage = typedPage?.let { resolvePageQuery(it, usePrintedPage) }
+    val typedAyah = ayahText.toIntOrNull()
+    val ayahTargetPage = typedAyah?.let { pageForAyahPreview(selectedSurah, it) }
+    val selectedSurahInfo = surahs.firstOrNull { it.id == selectedSurah }
+
     fun go() {
+        error = null
         when (mode) {
             SearchMode.Page -> {
-                val page = pageText.toIntOrNull()
-                if (page == null || page !in 1..pageCount) {
-                    error = "Enter a page between 1 and $pageCount"
+                val raw = pageText.toIntOrNull()
+                if (raw == null) {
+                    error = "Enter a page number"
+                    return
+                }
+                val page = resolvePageQuery(raw, usePrintedPage)
+                if (page == null) {
+                    error = if (usePrintedPage) {
+                        "Printed page must be between 1 and 549"
+                    } else {
+                        "Enter an app page between 1 and $pageCount"
+                    }
                 } else {
                     onJumpPage(page)
                 }
             }
-            SearchMode.Surah -> onJumpSurah(selectedSurah)
+            SearchMode.Surah -> {
+                if (selectedSurahInfo == null) {
+                    error = "Select a surah"
+                } else {
+                    onJumpSurah(selectedSurah)
+                }
+            }
             SearchMode.Ayat -> {
                 val ayah = ayahText.toIntOrNull()
                 val max = totalVerses(selectedSurah)
-                if (ayah == null || ayah !in 1..max) {
-                    error = "Enter an ayat between 1 and $max"
-                } else {
-                    onJumpAyah(selectedSurah, ayah)
+                when {
+                    selectedSurahInfo == null -> error = "Select a surah"
+                    ayah == null -> error = "Enter an ayat number"
+                    ayah !in 1..max -> error = "Enter an ayat between 1 and $max"
+                    pageForAyahPreview(selectedSurah, ayah) == null -> error = "Ayat not found in index"
+                    else -> onJumpAyah(selectedSurah, ayah)
                 }
             }
         }
@@ -119,10 +150,9 @@ fun SearchSheet(
             Spacer(modifier = Modifier.height(12.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 SearchMode.entries.forEach { item ->
-                    val selected = mode == item
                     ModeChip(
                         label = item.name,
-                        selected = selected,
+                        selected = mode == item,
                         onClick = { mode = item; error = null }
                     )
                 }
@@ -145,9 +175,14 @@ fun SearchSheet(
                 SearchMode.Page -> {
                     OutlinedTextField(
                         value = pageText,
-                        onValueChange = { pageText = it.filter { ch -> ch.isDigit() } },
+                        onValueChange = { pageText = it.filter { ch -> ch.isDigit() }; error = null },
                         modifier = Modifier.fillMaxWidth(),
-                        label = { Text("Page number (1–$pageCount)") },
+                        label = {
+                            Text(
+                                if (usePrintedPage) "Printed mushaf page (1–549)"
+                                else "App page number (1–$pageCount)"
+                            )
+                        },
                         keyboardOptions = KeyboardOptions(
                             keyboardType = KeyboardType.Number,
                             imeAction = ImeAction.Go
@@ -156,30 +191,72 @@ fun SearchSheet(
                         singleLine = true,
                         colors = fieldColors
                     )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { usePrintedPage = !usePrintedPage }
+                    ) {
+                        Checkbox(
+                            checked = usePrintedPage,
+                            onCheckedChange = { usePrintedPage = it; error = null }
+                        )
+                        Text(
+                            text = "I entered the printed page number from the book",
+                            color = Muted,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                    if (resolvedPage != null) {
+                        PreviewCard(
+                            title = "Opens app page $resolvedPage",
+                            subtitle = previewPageLabel(resolvedPage)
+                        )
+                    }
                 }
-                SearchMode.Surah, SearchMode.Ayat -> {
+                SearchMode.Surah -> {
                     SurahSearchPicker(
                         surahs = surahs,
                         selected = selectedSurah,
                         query = surahQuery,
-                        onQueryChange = { surahQuery = it },
-                        onSelect = { selectedSurah = it },
+                        onQueryChange = { surahQuery = it; error = null },
+                        onSelect = { selectedSurah = it; error = null },
                         fieldColors = fieldColors
                     )
-                    if (mode == SearchMode.Ayat) {
-                        Spacer(modifier = Modifier.height(8.dp))
-                        OutlinedTextField(
-                            value = ayahText,
-                            onValueChange = { ayahText = it.filter { ch -> ch.isDigit() } },
-                            modifier = Modifier.fillMaxWidth(),
-                            label = { Text("Ayat (1–${totalVerses(selectedSurah)})") },
-                            keyboardOptions = KeyboardOptions(
-                                keyboardType = KeyboardType.Number,
-                                imeAction = ImeAction.Go
-                            ),
-                            keyboardActions = KeyboardActions(onGo = { go() }),
-                            singleLine = true,
-                            colors = fieldColors
+                    selectedSurahInfo?.let {
+                        PreviewCard(
+                            title = "Opens app page ${it.page}",
+                            subtitle = previewPageLabel(it.page)
+                        )
+                    }
+                }
+                SearchMode.Ayat -> {
+                    SurahSearchPicker(
+                        surahs = surahs,
+                        selected = selectedSurah,
+                        query = surahQuery,
+                        onQueryChange = { surahQuery = it; error = null },
+                        onSelect = { selectedSurah = it; error = null },
+                        fieldColors = fieldColors
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = ayahText,
+                        onValueChange = { ayahText = it.filter { ch -> ch.isDigit() }; error = null },
+                        modifier = Modifier.fillMaxWidth(),
+                        label = { Text("Ayat (1–${totalVerses(selectedSurah)})") },
+                        keyboardOptions = KeyboardOptions(
+                            keyboardType = KeyboardType.Number,
+                            imeAction = ImeAction.Go
+                        ),
+                        keyboardActions = KeyboardActions(onGo = { go() }),
+                        singleLine = true,
+                        colors = fieldColors
+                    )
+                    if (ayahTargetPage != null && typedAyah != null) {
+                        PreviewCard(
+                            title = "Opens app page $ayahTargetPage",
+                            subtitle = "${selectedSurahInfo?.transliteration ?: "Surah"} · Ayah $typedAyah · ${previewPageLabel(ayahTargetPage)}"
                         )
                     }
                 }
@@ -196,9 +273,7 @@ fun SearchSheet(
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = SoftBlack,
-                    contentColor = OnSoftBlack,
-                    disabledContainerColor = Rule,
-                    disabledContentColor = Muted
+                    contentColor = OnSoftBlack
                 ),
                 shape = RoundedCornerShape(12.dp)
             ) {
@@ -210,6 +285,20 @@ fun SearchSheet(
             }
             Spacer(modifier = Modifier.height(16.dp))
         }
+    }
+}
+
+@Composable
+private fun PreviewCard(title: String, subtitle: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 8.dp)
+            .background(Chrome, RoundedCornerShape(10.dp))
+            .padding(12.dp)
+    ) {
+        Text(title, color = Ink, fontWeight = FontWeight.SemiBold)
+        Text(subtitle, color = Muted, style = MaterialTheme.typography.bodyMedium)
     }
 }
 
@@ -239,9 +328,7 @@ private fun SurahSearchPicker(
     fieldColors: androidx.compose.material3.TextFieldColors
 ) {
     val current = surahs.firstOrNull { it.id == selected }
-    val filtered = remember(query, surahs) {
-        rankSurahMatches(surahs, query)
-    }
+    val filtered = remember(query, surahs) { rankSurahMatches(surahs, query) }
 
     Text(
         text = current?.let { "Selected: ${it.id} — ${it.transliteration} — ${it.name} · p.${it.page}" } ?: "",
@@ -309,14 +396,13 @@ internal fun scoreSurah(surah: SurahInfo, query: String): Int {
         surah.aliases.orEmpty().forEach { add(it) }
         add(surah.transliteration.replace("-", " "))
         add(surah.transliteration.replace("'", ""))
-        // last token helps "Nas" match An-Nas over An-Nasr
         add(surah.transliteration.substringAfterLast('-'))
         add(surah.transliteration.substringAfterLast(' '))
     }.map { it.lowercase() }.distinct()
 
     if (names.any { it == q }) return 950
     if (names.any { it == "an-$q" || it == "al-$q" || it == "ash-$q" || it == "ad-$q" || it == "at-$q" }) return 920
-    if (names.any { it.endsWith("-$q") || it.endsWith(" $q") || it.endsWith(q) && it.length <= q.length + 4 }) return 880
+    if (names.any { it.endsWith("-$q") || it.endsWith(" $q") || (it.endsWith(q) && it.length <= q.length + 4) }) return 880
     if (names.any { Regex("""(^|[\s\-'])${Regex.escape(q)}($|[\s\-'])""").containsMatchIn(it) }) return 750
     if (names.any { it.contains(q) }) return 400
     return 0

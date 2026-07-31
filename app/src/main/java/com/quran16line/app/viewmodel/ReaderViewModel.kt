@@ -6,9 +6,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.quran16line.app.data.Bookmark
 import com.quran16line.app.data.HighlightPoint
+import com.quran16line.app.data.PageIndexEntry
 import com.quran16line.app.data.PdfMushafSource
 import com.quran16line.app.data.PreferencesStore
-import com.quran16line.app.data.QuranPage
 import com.quran16line.app.data.QuranRepository
 import com.quran16line.app.data.SurahInfo
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,8 +21,8 @@ import kotlinx.coroutines.launch
 data class ReaderUiState(
     val ready: Boolean = false,
     val pageCount: Int = 0,
-    val currentPage: Int = 2,
-    val page: QuranPage? = null,
+    val currentPage: Int = 3,
+    val pageEntry: PageIndexEntry? = null,
     val pageLabel: String = "",
     val highlight: HighlightPoint? = null,
     val bookmarks: List<Bookmark> = emptyList(),
@@ -51,7 +51,7 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
                     ready = true,
                     pageCount = pageCount,
                     currentPage = initialPage,
-                    page = repository.page(initialPage),
+                    pageEntry = repository.pageEntry(initialPage),
                     pageLabel = repository.labelForPage(initialPage),
                     surahs = repository.surahList()
                 )
@@ -64,7 +64,7 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
                 _state.update { current ->
                     current.copy(
                         currentPage = persistedPage,
-                        page = repository.page(persistedPage),
+                        pageEntry = repository.pageEntry(persistedPage),
                         pageLabel = repository.labelForPage(persistedPage),
                         highlight = highlight,
                         bookmarks = bookmarks,
@@ -84,7 +84,7 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
             _state.update {
                 it.copy(
                     currentPage = safe,
-                    page = repository.page(safe),
+                    pageEntry = repository.pageEntry(safe),
                     pageLabel = repository.labelForPage(safe),
                     isBookmarked = it.bookmarks.any { b -> b.page == safe }
                 )
@@ -126,14 +126,18 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun jumpToSurah(surahId: Int) {
-        val page = repository.pageForSurah(surahId) ?: return
+        val page = repository.pageForSurah(surahId)
+        if (page == null) {
+            _state.update { it.copy(message = "Surah not found") }
+            return
+        }
         jumpToPage(page)
     }
 
     fun jumpToAyah(surahId: Int, ayah: Int) {
         val page = repository.pageForAyah(surahId, ayah)
         if (page == null) {
-            _state.update { it.copy(message = "Ayah not found") }
+            _state.update { it.copy(message = "Ayat not found") }
             return
         }
         jumpToPage(page)
@@ -141,6 +145,14 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
 
     fun surahTotalVerses(surahId: Int): Int =
         repository.surahById(surahId)?.totalVerses ?: 1
+
+    fun previewPageLabel(page: Int): String = repository.labelForPage(page)
+
+    fun resolvePageQuery(raw: Int, preferPrinted: Boolean): Int? =
+        repository.resolvePageQuery(raw, preferPrinted)
+
+    fun pageForAyah(surahId: Int, ayah: Int): Int? =
+        repository.pageForAyah(surahId, ayah)
 
     suspend fun renderPage(pageNumber: Int, widthPx: Int): Bitmap? =
         repository.pdf().renderPage(pageNumber, widthPx)

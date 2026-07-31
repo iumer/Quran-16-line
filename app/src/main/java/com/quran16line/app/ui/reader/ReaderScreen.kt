@@ -236,7 +236,10 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                     onJumpPage = vm::jumpToPage,
                     onJumpSurah = vm::jumpToSurah,
                     onJumpAyah = vm::jumpToAyah,
-                    totalVerses = vm::surahTotalVerses
+                    totalVerses = vm::surahTotalVerses,
+                    previewPageLabel = vm::previewPageLabel,
+                    resolvePageQuery = vm::resolvePageQuery,
+                    pageForAyahPreview = vm::pageForAyah
                 )
             }
 
