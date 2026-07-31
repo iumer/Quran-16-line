@@ -9,6 +9,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.gestures.rememberTransformableState
+import androidx.compose.foundation.gestures.transformable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -57,6 +59,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
@@ -150,11 +153,13 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 .padding(padding)
                 .background(Parchment)
         ) {
+            var pageZoomed by remember { mutableStateOf(false) }
             CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
                 HorizontalPager(
                     state = pagerState,
                     modifier = Modifier.fillMaxSize(),
-                    beyondBoundsPageCount = 1
+                    beyondBoundsPageCount = 1,
+                    userScrollEnabled = !pageZoomed
                 ) { pageIndex ->
                     val pageNumber = pageIndex + 1
                     PdfMushafPage(
@@ -164,6 +169,7 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                             ?.lineIndex,
                         linesPerPage = state.linesPerPage,
                         render = { width -> vm.renderPage(pageNumber, width) },
+                        onZoomChanged = { zoomed -> pageZoomed = zoomed },
                         onBlankTap = {
                             chromeVisible = !chromeVisible
                             chromePulse++
@@ -363,6 +369,7 @@ private fun PdfMushafPage(
     highlightLine: Int?,
     linesPerPage: Int,
     render: suspend (widthPx: Int) -> Bitmap?,
+    onZoomChanged: (Boolean) -> Unit,
     onBlankTap: () -> Unit,
     onLineTap: (Int) -> Unit
 ) {
@@ -375,9 +382,24 @@ private fun PdfMushafPage(
         val density = LocalDensity.current
         val widthPx = with(density) { maxWidth.roundToPx().coerceAtLeast(1) }
         var bitmap by remember(pageNumber, widthPx) { mutableStateOf<Bitmap?>(null) }
+        var scale by remember(pageNumber) { mutableFloatStateOf(1f) }
+        var offset by remember(pageNumber) { mutableStateOf(Offset.Zero) }
+        val transformState = rememberTransformableState { zoomChange, panChange, _ ->
+            val newScale = (scale * zoomChange).coerceIn(1f, 4f)
+            scale = newScale
+            offset = if (newScale <= 1.01f) {
+                Offset.Zero
+            } else {
+                offset + panChange
+            }
+            onZoomChanged(newScale > 1.01f)
+        }
 
         LaunchedEffect(pageNumber, widthPx) {
             bitmap = render(widthPx)
+            scale = 1f
+            offset = Offset.Zero
+            onZoomChanged(false)
         }
 
         val pageBitmap = bitmap
@@ -387,16 +409,38 @@ private fun PdfMushafPage(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .pointerInput(pageNumber, highlightLine, linesPerPage) {
-                        detectTapGestures { offset: Offset ->
-                            val lineHeight = size.height / linesPerPage.toFloat()
-                            if (lineHeight <= 0f) {
-                                onBlankTap()
-                                return@detectTapGestures
+                    .graphicsLayer(
+                        scaleX = scale,
+                        scaleY = scale,
+                        translationX = offset.x,
+                        translationY = offset.y
+                    )
+                    .transformable(state = transformState)
+                    .pointerInput(pageNumber, highlightLine, linesPerPage, scale) {
+                        detectTapGestures(
+                            onDoubleTap = {
+                                if (scale > 1.01f) {
+                                    scale = 1f
+                                    offset = Offset.Zero
+                                    onZoomChanged(false)
+                                } else {
+                                    scale = 2.2f
+                                    onZoomChanged(true)
+                                }
+                            },
+                            onTap = { tapOffset: Offset ->
+                                if (scale > 1.01f) return@detectTapGestures
+                                val lineHeight = size.height / linesPerPage.toFloat()
+                                if (lineHeight <= 0f) {
+                                    onBlankTap()
+                                    return@detectTapGestures
+                                }
+                                val line = (tapOffset.y / lineHeight)
+                                    .toInt()
+                                    .coerceIn(0, linesPerPage - 1)
+                                onLineTap(line)
                             }
-                            val line = (offset.y / lineHeight).toInt().coerceIn(0, linesPerPage - 1)
-                            onLineTap(line)
-                        }
+                        )
                     }
             ) {
                 Image(
@@ -405,7 +449,7 @@ private fun PdfMushafPage(
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Fit
                 )
-                if (highlightLine != null) {
+                if (highlightLine != null && scale <= 1.01f) {
                     Column(modifier = Modifier.fillMaxSize()) {
                         repeat(linesPerPage) { index ->
                             Box(

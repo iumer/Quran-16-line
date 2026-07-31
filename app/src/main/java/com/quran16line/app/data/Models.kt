@@ -28,7 +28,8 @@ data class SurahInfo(
     val name: String,
     val transliteration: String,
     val totalVerses: Int,
-    val page: Int
+    val page: Int,
+    val aliases: List<String>? = null
 )
 
 data class Bookmark(

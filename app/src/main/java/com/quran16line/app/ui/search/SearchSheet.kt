@@ -1,6 +1,7 @@
 package com.quran16line.app.ui.search
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,8 +21,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -35,7 +34,10 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -44,9 +46,13 @@ import com.quran16line.app.ui.theme.Chrome
 import com.quran16line.app.ui.theme.Ink
 import com.quran16line.app.ui.theme.Muted
 import com.quran16line.app.ui.theme.Paper
+import com.quran16line.app.ui.theme.Parchment
 import com.quran16line.app.ui.theme.Rule
 
 private enum class SearchMode { Page, Surah, Ayat }
+
+private val SoftBlack = Color(0xFF2A2218)
+private val OnSoftBlack = Color(0xFFFFF8E8)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -113,16 +119,11 @@ fun SearchSheet(
             Spacer(modifier = Modifier.height(12.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 SearchMode.entries.forEach { item ->
-                    FilterChip(
-                        selected = mode == item,
-                        onClick = { mode = item; error = null },
-                        label = { Text(item.name) },
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Ink,
-                            selectedLabelColor = Paper,
-                            containerColor = Chrome,
-                            labelColor = Ink
-                        )
+                    val selected = mode == item
+                    ModeChip(
+                        label = item.name,
+                        selected = selected,
+                        onClick = { mode = item; error = null }
                     )
                 }
             }
@@ -132,7 +133,12 @@ fun SearchSheet(
                 focusedBorderColor = Ink,
                 unfocusedBorderColor = Rule,
                 focusedContainerColor = Paper,
-                unfocusedContainerColor = Paper
+                unfocusedContainerColor = Paper,
+                focusedTextColor = Ink,
+                unfocusedTextColor = Ink,
+                cursorColor = Ink,
+                focusedLabelColor = Muted,
+                unfocusedLabelColor = Muted
             )
 
             when (mode) {
@@ -157,7 +163,7 @@ fun SearchSheet(
                         selected = selectedSurah,
                         query = surahQuery,
                         onQueryChange = { surahQuery = it },
-                        onSelect = { selectedSurah = it; surahQuery = "" },
+                        onSelect = { selectedSurah = it },
                         fieldColors = fieldColors
                     )
                     if (mode == SearchMode.Ayat) {
@@ -181,21 +187,46 @@ fun SearchSheet(
 
             error?.let {
                 Spacer(modifier = Modifier.height(8.dp))
-                Text(it, color = androidx.compose.ui.graphics.Color(0xFF8B3A2A))
+                Text(it, color = Color(0xFF8B3A2A))
             }
 
             Spacer(modifier = Modifier.height(14.dp))
             Button(
                 onClick = { go() },
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = Ink, contentColor = Paper),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = SoftBlack,
+                    contentColor = OnSoftBlack,
+                    disabledContainerColor = Rule,
+                    disabledContentColor = Muted
+                ),
                 shape = RoundedCornerShape(12.dp)
             ) {
-                Text("Go to reading")
+                Text(
+                    text = "Go to reading",
+                    color = OnSoftBlack,
+                    fontWeight = FontWeight.SemiBold
+                )
             }
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
+}
+
+@Composable
+private fun ModeChip(label: String, selected: Boolean, onClick: () -> Unit) {
+    val bg = if (selected) SoftBlack else Chrome
+    val fg = if (selected) OnSoftBlack else Ink
+    Text(
+        text = label,
+        color = fg,
+        fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium,
+        modifier = Modifier
+            .background(bg, RoundedCornerShape(999.dp))
+            .border(1.dp, if (selected) SoftBlack else Rule, RoundedCornerShape(999.dp))
+            .clickable(onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 10.dp)
+    )
 }
 
 @Composable
@@ -209,17 +240,11 @@ private fun SurahSearchPicker(
 ) {
     val current = surahs.firstOrNull { it.id == selected }
     val filtered = remember(query, surahs) {
-        val q = query.trim()
-        if (q.isEmpty()) surahs
-        else surahs.filter {
-            it.id.toString() == q ||
-                it.transliteration.contains(q, ignoreCase = true) ||
-                it.name.contains(q)
-        }
+        rankSurahMatches(surahs, query)
     }
 
     Text(
-        text = current?.let { "Selected: ${it.id} — ${it.transliteration} — ${it.name}" } ?: "",
+        text = current?.let { "Selected: ${it.id} — ${it.transliteration} — ${it.name} · p.${it.page}" } ?: "",
         color = Muted,
         style = MaterialTheme.typography.bodyMedium
     )
@@ -237,21 +262,62 @@ private fun SurahSearchPicker(
         modifier = Modifier
             .fillMaxWidth()
             .heightIn(max = 220.dp)
-            .background(Chrome, RoundedCornerShape(10.dp))
+            .background(Parchment, RoundedCornerShape(10.dp))
             .padding(vertical = 4.dp)
     ) {
         items(filtered, key = { it.id }) { surah ->
             val isSelected = surah.id == selected
-            Text(
-                text = "${surah.id} — ${surah.transliteration} (${surah.name})",
-                color = Ink,
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(if (isSelected) Rule.copy(alpha = 0.35f) else androidx.compose.ui.graphics.Color.Transparent)
+                    .background(if (isSelected) Rule.copy(alpha = 0.45f) else Color.Transparent)
                     .clickable { onSelect(surah.id) }
-                    .padding(horizontal = 12.dp, vertical = 10.dp)
-            )
+                    .padding(horizontal = 12.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = "${surah.id} — ${surah.transliteration} (${surah.name})",
+                    color = Ink,
+                    modifier = Modifier.weight(1f)
+                )
+                Text("p.${surah.page}", color = Muted)
+            }
             HorizontalDivider(color = Rule)
         }
     }
+}
+
+internal fun rankSurahMatches(surahs: List<SurahInfo>, query: String): List<SurahInfo> {
+    val q = query.trim()
+    if (q.isEmpty()) return surahs
+    return surahs
+        .map { it to scoreSurah(it, q) }
+        .filter { it.second > 0 }
+        .sortedWith(compareByDescending<Pair<SurahInfo, Int>> { it.second }.thenBy { it.first.id })
+        .map { it.first }
+}
+
+internal fun scoreSurah(surah: SurahInfo, query: String): Int {
+    val q = query.trim().lowercase()
+    if (q.isEmpty()) return 0
+    if (surah.id.toString() == q) return 1000
+
+    val names = buildList {
+        add(surah.transliteration)
+        add(surah.name)
+        surah.aliases.orEmpty().forEach { add(it) }
+        add(surah.transliteration.replace("-", " "))
+        add(surah.transliteration.replace("'", ""))
+        // last token helps "Nas" match An-Nas over An-Nasr
+        add(surah.transliteration.substringAfterLast('-'))
+        add(surah.transliteration.substringAfterLast(' '))
+    }.map { it.lowercase() }.distinct()
+
+    if (names.any { it == q }) return 950
+    if (names.any { it == "an-$q" || it == "al-$q" || it == "ash-$q" || it == "ad-$q" || it == "at-$q" }) return 920
+    if (names.any { it.endsWith("-$q") || it.endsWith(" $q") || it.endsWith(q) && it.length <= q.length + 4 }) return 880
+    if (names.any { Regex("""(^|[\s\-'])${Regex.escape(q)}($|[\s\-'])""").containsMatchIn(it) }) return 750
+    if (names.any { it.contains(q) }) return 400
+    return 0
 }
