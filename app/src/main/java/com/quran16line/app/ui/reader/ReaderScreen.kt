@@ -491,7 +491,7 @@ private fun PdfMushafPage(
                     contentScale = ContentScale.FillBounds
                 )
                 if (highlightLine != null && !zoomed) {
-                    // Inset to the text column inside the ornate border so the band sits on a line.
+                    // Inset to the 16-line text grid inside the ornate border.
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
@@ -503,19 +503,21 @@ private fun PdfMushafPage(
                             )
                     ) {
                         repeat(linesPerPage) { index ->
+                            // Arabic line weight sits low in each row; bias the band downward
+                            // so it covers the glyphs instead of the gap above the line.
                             Box(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .weight(1f)
-                                    .padding(vertical = 2.dp),
-                                contentAlignment = Alignment.Center
                             ) {
                                 if (index == highlightLine) {
                                     Box(
                                         modifier = Modifier
+                                            .align(Alignment.BottomCenter)
                                             .fillMaxWidth()
-                                            .fillMaxHeight(0.72f)
-                                            .background(Highlight.copy(alpha = 0.40f))
+                                            .fillMaxHeight(0.62f)
+                                            .padding(bottom = 1.dp)
+                                            .background(Highlight.copy(alpha = 0.42f))
                                             .semantics { selected = true }
                                     )
                                 }
@@ -528,10 +530,10 @@ private fun PdfMushafPage(
     }
 }
 
-/** Fractions of the fitted PDF page that sit outside the 16 text lines (header/border/footer). */
-private const val PAGE_CONTENT_INSET_X = 0.108f
-private const val PAGE_CONTENT_INSET_TOP = 0.138f
-private const val PAGE_CONTENT_INSET_BOTTOM = 0.062f
+/** Fractions of the fitted PDF page outside the 16 text-line grid (measured from Taj pages). */
+private const val PAGE_CONTENT_INSET_X = 0.110f
+private const val PAGE_CONTENT_INSET_TOP = 0.072f
+private const val PAGE_CONTENT_INSET_BOTTOM = 0.056f
 
 internal fun lineIndexForTap(
     tapY: Float,

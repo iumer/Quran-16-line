@@ -20,7 +20,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -80,14 +79,13 @@ fun SearchSheet(
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var mode by remember { mutableStateOf(SearchMode.Page) }
     var pageText by remember { mutableStateOf("") }
-    var usePrintedPage by remember { mutableStateOf(true) }
     var selectedSurah by remember { mutableIntStateOf(surahs.firstOrNull()?.id ?: 1) }
     var surahQuery by remember { mutableStateOf("") }
     var ayahText by remember { mutableStateOf("1") }
     var error by remember { mutableStateOf<String?>(null) }
 
     val typedPage = pageText.toIntOrNull()
-    val resolvedPage = typedPage?.let { resolvePageQuery(it, usePrintedPage) }
+    val resolvedPage = typedPage?.let { resolvePageQuery(it, false) }
     val typedAyah = ayahText.toIntOrNull()
     val ayahTargetPage = typedAyah?.let { pageForAyahPreview(selectedSurah, it) }
     val selectedSurahInfo = surahs.firstOrNull { it.id == selectedSurah }
@@ -101,13 +99,9 @@ fun SearchSheet(
                     error = "Enter a page number"
                     return
                 }
-                val page = resolvePageQuery(raw, usePrintedPage)
+                val page = resolvePageQuery(raw, false)
                 if (page == null) {
-                    error = if (usePrintedPage) {
-                        "Printed page must be between 1 and $pageCount"
-                    } else {
-                        "Enter a page between 1 and $pageCount"
-                    }
+                    error = "Enter a page between 1 and $pageCount"
                 } else {
                     onJumpPage(page)
                 }
@@ -178,10 +172,11 @@ fun SearchSheet(
                         value = pageText,
                         onValueChange = { pageText = it.filter { ch -> ch.isDigit() }; error = null },
                         modifier = Modifier.fillMaxWidth(),
-                        label = {
+                        label = { Text("Page number (1–$pageCount)") },
+                        supportingText = {
                             Text(
-                                if (usePrintedPage) "Printed mushaf page (1–$pageCount)"
-                                else "App page number (1–$pageCount)"
+                                "Same number printed on the physical mushaf page (and in this app).",
+                                color = Muted
                             )
                         },
                         keyboardOptions = KeyboardOptions(
@@ -193,22 +188,6 @@ fun SearchSheet(
                         shape = RoundedCornerShape(10.dp),
                         colors = fieldColors
                     )
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { usePrintedPage = !usePrintedPage }
-                    ) {
-                        Checkbox(
-                            checked = usePrintedPage,
-                            onCheckedChange = { usePrintedPage = it; error = null }
-                        )
-                        Text(
-                            text = "I entered the printed page number from the book",
-                            color = Muted,
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                    }
                     if (resolvedPage != null) {
                         PreviewCard(
                             title = "Opens page $resolvedPage",
