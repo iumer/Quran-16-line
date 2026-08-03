@@ -31,6 +31,9 @@ data class ReaderUiState(
     val isBookmarked: Boolean = false,
     val showSearch: Boolean = false,
     val showBookmarks: Boolean = false,
+    val showHome: Boolean = true,
+    val resumePage: Int = PdfMushafSource.DEFAULT_START_PAGE,
+    val resumeLabel: String = "",
     val message: String? = null,
     val linesPerPage: Int = PdfMushafSource.LINES_PER_PAGE
 )
@@ -62,7 +65,10 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
                     surahs = repository.surahList(),
                     highlight = savedHighlight,
                     bookmarks = savedBookmarks,
-                    isBookmarked = savedBookmarks.any { b -> b.page == resumePage }
+                    isBookmarked = savedBookmarks.any { b -> b.page == resumePage },
+                    showHome = true,
+                    resumePage = resumePage,
+                    resumeLabel = "Page $resumePage · ${repository.labelForPage(resumePage)}"
                 )
             }
 
@@ -149,6 +155,38 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     fun openSearch(open: Boolean) = _state.update { it.copy(showSearch = open) }
     fun openBookmarks(open: Boolean) = _state.update { it.copy(showBookmarks = open) }
     fun consumeMessage() = _state.update { it.copy(message = null) }
+
+    fun resumeReading() {
+        val page = _state.value.resumePage
+        _state.update { it.copy(showHome = false) }
+        jumpToPage(page)
+    }
+
+    fun startFromFirstPage() {
+        _state.update { it.copy(showHome = false) }
+        jumpToPage(1)
+    }
+
+    fun openSearchFromHome() {
+        _state.update { it.copy(showHome = false, showSearch = true) }
+    }
+
+    fun openHome() = _state.update { it.copy(showHome = true, showSearch = false, showBookmarks = false) }
+
+    /** Call when the app goes to background so the next open shows Resume / Start / Search. */
+    fun prepareLaunchChooser() {
+        val s = _state.value
+        if (!s.ready) return
+        _state.update {
+            it.copy(
+                showHome = true,
+                showSearch = false,
+                showBookmarks = false,
+                resumePage = s.currentPage,
+                resumeLabel = "Page ${s.currentPage} · ${s.pageLabel.ifBlank { repository.labelForPage(s.currentPage) }}"
+            )
+        }
+    }
 
     fun jumpToPage(page: Int) {
         onPageChanged(page)

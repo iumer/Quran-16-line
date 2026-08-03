@@ -76,6 +76,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.quran16line.app.data.PdfMushafSource
 import com.quran16line.app.ui.bookmarks.BookmarksSheet
+import com.quran16line.app.ui.home.HomeScreen
 import com.quran16line.app.ui.search.SearchSheet
 import com.quran16line.app.ui.theme.Chrome
 import com.quran16line.app.ui.theme.Highlight
@@ -99,6 +100,7 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_STOP) {
                 vm.persistReadingPosition()
+                vm.prepareLaunchChooser()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -124,6 +126,18 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                 contentAlignment = Alignment.Center
             ) {
                 CircularProgressIndicator(color = Ink)
+            }
+            return@Scaffold
+        }
+
+        if (state.showHome) {
+            Box(Modifier.padding(padding)) {
+                HomeScreen(
+                    resumeLabel = state.resumeLabel,
+                    onResume = vm::resumeReading,
+                    onStartFromFirstPage = vm::startFromFirstPage,
+                    onSearch = vm::openSearchFromHome
+                )
             }
             return@Scaffold
         }
