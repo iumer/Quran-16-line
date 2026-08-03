@@ -168,7 +168,8 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun openSearchFromHome() {
-        _state.update { it.copy(showHome = false, showSearch = true) }
+        // Keep home underneath so dismissing Search returns to the chooser.
+        _state.update { it.copy(showSearch = true) }
     }
 
     fun openHome() = _state.update { it.copy(showHome = true, showSearch = false, showBookmarks = false) }
@@ -177,18 +178,20 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     fun prepareLaunchChooser() {
         val s = _state.value
         if (!s.ready) return
+        val page = resumeReaderPage(s.currentPage, s.highlight, s.pageCount)
         _state.update {
             it.copy(
                 showHome = true,
                 showSearch = false,
                 showBookmarks = false,
-                resumePage = s.currentPage,
-                resumeLabel = "Page ${s.currentPage} · ${s.pageLabel.ifBlank { repository.labelForPage(s.currentPage) }}"
+                resumePage = page,
+                resumeLabel = "Page $page · ${repository.labelForPage(page)}"
             )
         }
     }
 
     fun jumpToPage(page: Int) {
+        _state.update { it.copy(showHome = false) }
         onPageChanged(page)
         openSearch(false)
         openBookmarks(false)

@@ -138,6 +138,26 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                     onStartFromFirstPage = vm::startFromFirstPage,
                     onSearch = vm::openSearchFromHome
                 )
+                if (state.showSearch) {
+                    SearchSheet(
+                        surahs = state.surahs,
+                        pageCount = state.pageCount,
+                        onDismiss = { vm.openSearch(false) },
+                        onJumpPage = { page ->
+                            vm.jumpToPage(page)
+                        },
+                        onJumpSurah = { id ->
+                            vm.jumpToSurah(id)
+                        },
+                        onJumpAyah = { sid, ayah ->
+                            vm.jumpToAyah(sid, ayah)
+                        },
+                        totalVerses = vm::surahTotalVerses,
+                        previewPageLabel = vm::previewPageLabel,
+                        resolvePageQuery = vm::resolvePageQuery,
+                        pageForAyahPreview = vm::pageForAyah
+                    )
+                }
             }
             return@Scaffold
         }
