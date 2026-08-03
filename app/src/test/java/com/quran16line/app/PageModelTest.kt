@@ -26,7 +26,7 @@ class PageModelTest {
     @Test
     fun quranPagesAssetHasExpectedShape() {
         val bundle = readJson<QuranBundle>("quran_pages.json")
-        assertEquals("pageCount", 559, bundle.pageCount)
+        assertEquals("pageCount", 558, bundle.pageCount)
         assertEquals("linesPerPage", 16, bundle.linesPerPage)
         assertEquals("pages size", bundle.pageCount, bundle.pages.size)
         bundle.pages.forEach { page ->
@@ -51,13 +51,13 @@ class PageModelTest {
         }.toSet()
         assertEquals(6236, ayahIndex.size)
         assertTrue(expectedKeys.all(ayahIndex::containsKey))
-        assertTrue(ayahIndex.values.all { it in 1..559 })
+        assertTrue(ayahIndex.values.all { it in 1..558 })
     }
 
     @Test
     fun readerPageNormalizationClampsSafely() {
-        assertEquals(1, normalizeReaderPage(-10, 559))
-        assertEquals(559, normalizeReaderPage(560, 559))
+        assertEquals(1, normalizeReaderPage(-10, 558))
+        assertEquals(558, normalizeReaderPage(560, 558))
         assertEquals(1, normalizeReaderPage(2, 0))
     }
 

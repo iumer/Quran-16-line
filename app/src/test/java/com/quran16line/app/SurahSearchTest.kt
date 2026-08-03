@@ -17,9 +17,9 @@ class SurahSearchTest {
     }
 
     @Test
-    fun anNasMapsToPdfPage550() {
+    fun anNasMapsToReaderPage549() {
         val nas = surahs.first { it.id == 114 }
-        assertEquals(550, nas.page)
+        assertEquals(549, nas.page)
     }
 
     @Test

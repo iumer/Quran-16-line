@@ -25,35 +25,35 @@ class SearchNavigationTest {
 
     @Test
     fun pageSearchAcceptsAppPages() {
-        assertEquals(1, normalizeReaderPage(1, 559))
-        assertEquals(550, normalizeReaderPage(550, 559))
-        assertEquals(559, normalizeReaderPage(999, 559))
+        assertEquals(1, normalizeReaderPage(1, 558))
+        assertEquals(549, normalizeReaderPage(549, 558))
+        assertEquals(558, normalizeReaderPage(999, 558))
     }
 
     @Test
-    fun printedPageMapsToAppPagePlusOne() {
-        // Taj PDF: printed N => app/PDF page N+1
-        assertEquals(550, 549 + 1)
-        assertEquals(3, 2 + 1) // Fatiha printed 2
-        assertEquals(4, 3 + 1) // Baqarah printed 3
+    fun printedPageMapsOneToOneAfterCoverRemoved() {
+        // Cover skipped: printed N => reader page N
+        assertEquals(549, 549)
+        assertEquals(2, 2) // Fatiha printed/reader 2
+        assertEquals(3, 3) // Baqarah start
     }
 
     @Test
-    fun surahSearchNasGoesToPage550() {
+    fun surahSearchNasGoesToPage549() {
         val nas = surahs.first { it.id == 114 }
-        assertEquals(550, nas.page)
+        assertEquals(549, nas.page)
         assertEquals(114, rankSurahMatches(surahs, "Nas").first().id)
     }
 
     @Test
     fun ayatSearchUsesAyahIndex() {
-        assertEquals(550, ayahIndex["114:1"])
-        assertEquals(550, ayahIndex["114:6"])
-        assertEquals(550, ayahIndex["113:1"])
-        assertEquals(3, ayahIndex["1:1"])
-        assertEquals(4, ayahIndex["2:1"])
+        assertEquals(549, ayahIndex["114:1"])
+        assertEquals(549, ayahIndex["114:6"])
+        assertEquals(549, ayahIndex["113:1"])
+        assertEquals(2, ayahIndex["1:1"])
+        assertEquals(3, ayahIndex["2:1"])
         assertNotNull(ayahIndex["2:255"])
-        assertTrue(ayahIndex["2:255"]!! in 4..50)
+        assertTrue(ayahIndex["2:255"]!! in 3..49)
         assertEquals(surahs.first { it.id == 67 }.page, ayahIndex["67:1"])
     }
 
@@ -63,8 +63,13 @@ class SearchNavigationTest {
         assertEquals(6236, expected)
         assertEquals(6236, ayahIndex.size)
         ayahIndex.values.forEach { page ->
-            assertTrue(page in 1..559)
+            assertTrue(page in 1..558)
         }
+    }
+
+    @Test
+    fun fatihaIsReaderPageTwo() {
+        assertEquals(2, surahs.first { it.id == 1 }.page)
     }
 
     private fun assetDir(): File {

@@ -1,14 +1,12 @@
 package com.quran16line.app.ui.search
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
@@ -38,14 +36,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.quran16line.app.data.SurahInfo
 import com.quran16line.app.ui.theme.Chrome
 import com.quran16line.app.ui.theme.Ink
@@ -54,7 +52,11 @@ import com.quran16line.app.ui.theme.Paper
 import com.quran16line.app.ui.theme.Parchment
 import com.quran16line.app.ui.theme.Rule
 
-private enum class SearchMode { Page, Surah, Ayat }
+private enum class SearchMode(val label: String) {
+    Page("Page"),
+    Surah("Surah"),
+    Ayat("Ayat")
+}
 
 private val SoftBlack = Color(0xFF2A2218)
 private val OnSoftBlack = Color(0xFFFFF8E8)
@@ -78,7 +80,7 @@ fun SearchSheet(
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var mode by remember { mutableStateOf(SearchMode.Page) }
     var pageText by remember { mutableStateOf("") }
-    var usePrintedPage by remember { mutableStateOf(false) }
+    var usePrintedPage by remember { mutableStateOf(true) }
     var selectedSurah by remember { mutableIntStateOf(surahs.firstOrNull()?.id ?: 1) }
     var surahQuery by remember { mutableStateOf("") }
     var ayahText by remember { mutableStateOf("1") }
@@ -102,9 +104,9 @@ fun SearchSheet(
                 val page = resolvePageQuery(raw, usePrintedPage)
                 if (page == null) {
                     error = if (usePrintedPage) {
-                        "Printed page must be between 1 and 549"
+                        "Printed page must be between 1 and $pageCount"
                     } else {
-                        "Enter an app page between 1 and $pageCount"
+                        "Enter a page between 1 and $pageCount"
                     }
                 } else {
                     onJumpPage(page)
@@ -151,12 +153,12 @@ fun SearchSheet(
                 color = Muted,
                 style = MaterialTheme.typography.bodyMedium
             )
-            Spacer(modifier = Modifier.height(12.dp))
-            ModeSegmentedBar(
+            Spacer(modifier = Modifier.height(16.dp))
+            SearchModeTabs(
                 selected = mode,
                 onSelect = { mode = it; error = null }
             )
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
             val fieldColors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Ink,
@@ -178,7 +180,7 @@ fun SearchSheet(
                         modifier = Modifier.fillMaxWidth(),
                         label = {
                             Text(
-                                if (usePrintedPage) "Printed mushaf page (1–549)"
+                                if (usePrintedPage) "Printed mushaf page (1–$pageCount)"
                                 else "App page number (1–$pageCount)"
                             )
                         },
@@ -188,6 +190,7 @@ fun SearchSheet(
                         ),
                         keyboardActions = KeyboardActions(onGo = { go() }),
                         singleLine = true,
+                        shape = RoundedCornerShape(10.dp),
                         colors = fieldColors
                     )
                     Row(
@@ -208,7 +211,7 @@ fun SearchSheet(
                     }
                     if (resolvedPage != null) {
                         PreviewCard(
-                            title = "Opens app page $resolvedPage",
+                            title = "Opens page $resolvedPage",
                             subtitle = previewPageLabel(resolvedPage)
                         )
                     }
@@ -224,7 +227,7 @@ fun SearchSheet(
                     )
                     selectedSurahInfo?.let {
                         PreviewCard(
-                            title = "Opens app page ${it.page}",
+                            title = "Opens page ${it.page}",
                             subtitle = previewPageLabel(it.page)
                         )
                     }
@@ -250,11 +253,12 @@ fun SearchSheet(
                         ),
                         keyboardActions = KeyboardActions(onGo = { go() }),
                         singleLine = true,
+                        shape = RoundedCornerShape(10.dp),
                         colors = fieldColors
                     )
                     if (ayahTargetPage != null && typedAyah != null) {
                         PreviewCard(
-                            title = "Opens app page $ayahTargetPage",
+                            title = "Opens page $ayahTargetPage",
                             subtitle = "${selectedSurahInfo?.transliteration ?: "Surah"} · Ayah $typedAyah · ${previewPageLabel(ayahTargetPage)}"
                         )
                     }
@@ -269,12 +273,14 @@ fun SearchSheet(
             Spacer(modifier = Modifier.height(14.dp))
             Button(
                 onClick = { go() },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(48.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = SoftBlack,
                     contentColor = OnSoftBlack
                 ),
-                shape = RoundedCornerShape(12.dp)
+                shape = RoundedCornerShape(10.dp)
             ) {
                 Text(
                     text = "Go to reading",
@@ -284,6 +290,43 @@ fun SearchSheet(
             }
             Spacer(modifier = Modifier.height(16.dp))
         }
+    }
+}
+
+@Composable
+private fun SearchModeTabs(
+    selected: SearchMode,
+    onSelect: (SearchMode) -> Unit
+) {
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Row(modifier = Modifier.fillMaxWidth()) {
+            SearchMode.entries.forEach { item ->
+                val isSelected = selected == item
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clickable { onSelect(item) }
+                        .padding(vertical = 8.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = item.label,
+                        color = if (isSelected) Ink else Muted,
+                        fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium,
+                        fontSize = 16.sp,
+                        textAlign = TextAlign.Center
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(2.dp)
+                            .background(if (isSelected) SoftBlack else Color.Transparent)
+                    )
+                }
+            }
+        }
+        HorizontalDivider(color = Rule, thickness = 1.dp)
     }
 }
 
@@ -298,41 +341,6 @@ private fun PreviewCard(title: String, subtitle: String) {
     ) {
         Text(title, color = Ink, fontWeight = FontWeight.SemiBold)
         Text(subtitle, color = Muted, style = MaterialTheme.typography.bodyMedium)
-    }
-}
-
-@Composable
-private fun ModeSegmentedBar(
-    selected: SearchMode,
-    onSelect: (SearchMode) -> Unit
-) {
-    val shape = RoundedCornerShape(8.dp)
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(44.dp)
-            .clip(shape)
-            .border(1.dp, Rule, shape)
-            .background(Chrome)
-    ) {
-        SearchMode.entries.forEach { item ->
-            val isSelected = selected == item
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(if (isSelected) SoftBlack else Color.Transparent)
-                    .clickable { onSelect(item) },
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = item.name,
-                    color = if (isSelected) OnSoftBlack else Ink,
-                    fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium,
-                    textAlign = TextAlign.Center
-                )
-            }
-        }
     }
 }
 
@@ -360,6 +368,7 @@ private fun SurahSearchPicker(
         modifier = Modifier.fillMaxWidth(),
         label = { Text("Search surah by number or name") },
         singleLine = true,
+        shape = RoundedCornerShape(10.dp),
         colors = fieldColors
     )
     Spacer(modifier = Modifier.height(6.dp))

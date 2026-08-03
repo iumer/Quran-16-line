@@ -58,7 +58,7 @@ class QuranRepository(
 
     fun pageCount(): Int = pdfSource.pageCount().takeIf { it > 0 }
         ?: pageIndex?.size
-        ?: 559
+        ?: 558
 
     fun pdf(): PdfMushafSource = pdfSource
 
@@ -80,22 +80,19 @@ class QuranRepository(
     }
 
     /**
-     * Resolves a typed page query.
-     * - App/PDF page numbers: 1..pageCount
-     * - Printed mushaf page N (1..549) also accepted as PDF page N+1
-     *   when the typed value is annotated as printed, or when
-     *   [preferPrinted] is true.
+     * Resolves a typed page query after the cover page was removed from the reader.
+     * - App/reader pages: 1..pageCount (558)
+     * - Printed mushaf page N maps 1:1 to reader page N
+     *   (Title=1, Al-Fatihah=2 / printed 2, …)
      */
     fun resolvePageQuery(raw: Int, preferPrinted: Boolean = false): Int? {
         val count = pageCount()
         if (count < 1) return null
-        if (!preferPrinted && raw in 1..count) return raw
-        // printed page mapping for this Taj PDF: PDF = printed + 1
-        val fromPrinted = raw + 1
-        if (raw in 1..548 && fromPrinted in 1..count) return fromPrinted
-        if (preferPrinted && fromPrinted in 1..count) return fromPrinted
-        if (raw in 1..count) return raw
-        return null
+        // After cover removal, printed page N == reader page N.
+        if (preferPrinted) {
+            return raw.takeIf { it in 1..count }
+        }
+        return raw.takeIf { it in 1..count }
     }
 
     fun labelForPage(pageNumber: Int): String {

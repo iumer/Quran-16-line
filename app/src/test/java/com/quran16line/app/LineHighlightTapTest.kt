@@ -8,9 +8,9 @@ import org.junit.Test
 class LineHighlightTapTest {
     @Test
     fun mapsTapInsideTextBandToLine() {
-        // With default insets 0.105 top / 0.065 bottom on height 1000:
-        // text runs from 105..935 → band height 51.875
-        assertEquals(0, lineIndexForTap(tapY = 110f, pageHeight = 1000f, linesPerPage = 16))
+        // Default insets 0.138 top / 0.062 bottom on height 1000:
+        // text runs from 138..938 → band height 50
+        assertEquals(0, lineIndexForTap(tapY = 140f, pageHeight = 1000f, linesPerPage = 16))
         assertEquals(15, lineIndexForTap(tapY = 930f, pageHeight = 1000f, linesPerPage = 16))
     }
 

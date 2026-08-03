@@ -1,13 +1,9 @@
 package com.quran16line.app.ui.reader
 
 import android.graphics.Bitmap
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.calculateZoom
@@ -19,6 +15,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -90,7 +87,6 @@ import com.quran16line.app.ui.theme.Parchment
 import com.quran16line.app.ui.theme.Rule
 import com.quran16line.app.ui.theme.WarmGrey
 import com.quran16line.app.viewmodel.ReaderViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlin.math.min
 
@@ -99,8 +95,6 @@ import kotlin.math.min
 fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
     val state by vm.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-    var chromeVisible by remember { mutableStateOf(true) }
-    var chromePulse by remember { mutableStateOf(0) }
     val lifecycleOwner = LocalLifecycleOwner.current
 
     DisposableEffect(lifecycleOwner, vm) {
@@ -117,13 +111,6 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
         state.message?.let {
             snackbar.showSnackbar(it)
             vm.consumeMessage()
-        }
-    }
-
-    LaunchedEffect(chromeVisible, chromePulse, state.currentPage) {
-        if (chromeVisible) {
-            delay(2800)
-            chromeVisible = false
         }
     }
 
@@ -197,61 +184,34 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
                                 pageZoomed = zoomed
                             }
                         },
-                        onBlankTap = {
-                            chromeVisible = !chromeVisible
-                            chromePulse++
-                        },
+                        onBlankTap = { },
                         onLineTap = { line ->
                             vm.onLineTapped(pageNumber, line)
-                            chromeVisible = true
-                            chromePulse++
                         }
                     )
                 }
             }
 
-            AnimatedVisibility(
-                visible = chromeVisible,
-                enter = fadeIn(),
-                exit = fadeOut(),
+            ReaderTopBar(
+                title = "Quran Pak 16 Lines",
+                subtitle = state.pageLabel.ifBlank { "Page ${state.currentPage}" },
+                bookmarked = state.isBookmarked,
+                onBookmark = { vm.toggleBookmark() },
+                onShowBookmarks = { vm.openBookmarks(true) },
+                onSearch = { vm.openSearch(true) },
                 modifier = Modifier.align(Alignment.TopCenter)
-            ) {
-                ReaderTopBar(
-                    title = "Quran 16-Line",
-                    subtitle = state.pageLabel.ifBlank { "Page ${state.currentPage}" },
-                    bookmarked = state.isBookmarked,
-                    onBookmark = {
-                        vm.toggleBookmark()
-                        chromePulse++
-                    },
-                    onShowBookmarks = {
-                        vm.openBookmarks(true)
-                        chromePulse++
-                    },
-                    onSearch = {
-                        vm.openSearch(true)
-                        chromePulse++
-                    }
-                )
-            }
+            )
 
-            AnimatedVisibility(
-                visible = chromeVisible,
-                enter = fadeIn(),
-                exit = fadeOut(),
+            ReaderBottomBar(
+                page = state.currentPage,
+                pageCount = state.pageCount,
+                onSeek = { page ->
+                    pendingJumpPage = page
+                    vm.onPageChanged(page)
+                },
+                onInteract = { },
                 modifier = Modifier.align(Alignment.BottomCenter)
-            ) {
-                ReaderBottomBar(
-                    page = state.currentPage,
-                    pageCount = state.pageCount,
-                    onSeek = { page ->
-                        pendingJumpPage = page
-                        vm.onPageChanged(page)
-                        chromePulse++
-                    },
-                    onInteract = { chromePulse++ }
-                )
-            }
+            )
 
             if (state.showSearch) {
                 SearchSheet(
@@ -300,10 +260,11 @@ private fun ReaderTopBar(
     bookmarked: Boolean,
     onBookmark: () -> Unit,
     onShowBookmarks: () -> Unit,
-    onSearch: () -> Unit
+    onSearch: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .background(
                 Brush.verticalGradient(
@@ -364,12 +325,13 @@ private fun ReaderBottomBar(
     page: Int,
     pageCount: Int,
     onSeek: (Int) -> Unit,
-    onInteract: () -> Unit
+    onInteract: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     var sliderValue by remember(page) { mutableFloatStateOf(page.toFloat()) }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .background(
                 Brush.verticalGradient(
@@ -545,12 +507,19 @@ private fun PdfMushafPage(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .weight(1f)
-                                    .background(
-                                        if (index == highlightLine) Highlight.copy(alpha = 0.38f)
-                                        else Color.Transparent
+                                    .padding(vertical = 2.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                if (index == highlightLine) {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .fillMaxHeight(0.72f)
+                                            .background(Highlight.copy(alpha = 0.40f))
+                                            .semantics { selected = true }
                                     )
-                                    .semantics { selected = index == highlightLine }
-                            )
+                                }
+                            }
                         }
                     }
                 }
@@ -560,9 +529,9 @@ private fun PdfMushafPage(
 }
 
 /** Fractions of the fitted PDF page that sit outside the 16 text lines (header/border/footer). */
-private const val PAGE_CONTENT_INSET_X = 0.075f
-private const val PAGE_CONTENT_INSET_TOP = 0.105f
-private const val PAGE_CONTENT_INSET_BOTTOM = 0.065f
+private const val PAGE_CONTENT_INSET_X = 0.108f
+private const val PAGE_CONTENT_INSET_TOP = 0.138f
+private const val PAGE_CONTENT_INSET_BOTTOM = 0.062f
 
 internal fun lineIndexForTap(
     tapY: Float,

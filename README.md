@@ -22,6 +22,8 @@ Always the same link (APK is overwritten on each release):
 
 https://raw.githubusercontent.com/iumer/Quran-16-line/cursor/quran-reader-v1-76fd/dist/Quran16Line.apk
 
+App name: **Quran Pak 16 Lines**
+
 ## Build
 ```bash
 echo "sdk.dir=$ANDROID_HOME" > local.properties

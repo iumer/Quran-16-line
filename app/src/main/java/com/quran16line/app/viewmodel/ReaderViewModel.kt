@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 data class ReaderUiState(
     val ready: Boolean = false,
     val pageCount: Int = 0,
-    val currentPage: Int = 3,
+    val currentPage: Int = PdfMushafSource.DEFAULT_START_PAGE,
     val pageEntry: PageIndexEntry? = null,
     val pageLabel: String = "",
     val highlight: HighlightPoint? = null,
@@ -45,6 +45,7 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     init {
         viewModelScope.launch {
             repository.ensureLoaded()
+            prefs.migratePageIndexIfNeeded()
             val pageCount = repository.pageCount()
             // Prefer the highlight mark (left-off page/line); fall back to last scrolled page.
             val savedHighlight = prefs.highlight.first()

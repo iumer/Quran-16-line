@@ -15,6 +15,9 @@ import java.io.FileOutputStream
 /**
  * Renders pages from the bundled Taj Company 16-line mushaf PDF
  * (`assets/quran_16_lines.pdf`, sourced from the repo-uploaded original).
+ *
+ * The decorative cover (PDF page 1 / index 0) is skipped from the reader:
+ * display page 1 = PDF page 2 (Title), Al-Fatihah = display page 2, etc.
  */
 class PdfMushafSource(private val context: Context) {
     private val mutex = Mutex()
@@ -28,7 +31,7 @@ class PdfMushafSource(private val context: Context) {
 
     suspend fun ensureOpen(): Int = withContext(Dispatchers.IO) {
         mutex.withLock {
-            if (renderer != null) return@withLock renderer!!.pageCount
+            if (renderer != null) return@withLock readerPageCountLocked()
             val target = File(context.filesDir, "quran_16_lines.pdf")
             if (!target.exists() || target.length() == 0L) {
                 context.assets.open(ASSET_NAME).use { input ->
@@ -38,16 +41,23 @@ class PdfMushafSource(private val context: Context) {
             val pfd = ParcelFileDescriptor.open(target, ParcelFileDescriptor.MODE_READ_ONLY)
             descriptor = pfd
             renderer = PdfRenderer(pfd)
-            renderer!!.pageCount
+            readerPageCountLocked()
         }
     }
 
-    fun pageCount(): Int = renderer?.pageCount ?: 0
+    fun pageCount(): Int = renderer?.let { (it.pageCount - SKIP_LEADING_PDF_PAGES).coerceAtLeast(0) } ?: 0
+
+    private fun readerPageCountLocked(): Int =
+        renderer?.let { (it.pageCount - SKIP_LEADING_PDF_PAGES).coerceAtLeast(0) } ?: 0
+
+    /** Maps a 1-based reader page to the underlying PDF page index. */
+    fun pdfIndexForReaderPage(pageNumber: Int): Int =
+        pageNumber - 1 + SKIP_LEADING_PDF_PAGES
 
     suspend fun renderPage(pageNumber: Int, targetWidthPx: Int): Bitmap? =
         withContext(Dispatchers.IO) {
             if (targetWidthPx <= 0) return@withContext null
-            val index = pageNumber - 1
+            val index = pdfIndexForReaderPage(pageNumber)
             mutex.withLock {
                 val pdf = renderer ?: return@withLock null
                 if (index !in 0 until pdf.pageCount) return@withLock null
@@ -78,5 +88,8 @@ class PdfMushafSource(private val context: Context) {
     companion object {
         const val ASSET_NAME = "quran_16_lines.pdf"
         const val LINES_PER_PAGE = 16
+        /** Skip the decorative cover so reader page 1 is the Title page. */
+        const val SKIP_LEADING_PDF_PAGES = 1
+        const val DEFAULT_START_PAGE = 2 // Al-Fatihah after cover removal
     }
 }
