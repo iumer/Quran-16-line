@@ -6,16 +6,14 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.calculatePan
 import androidx.compose.foundation.gestures.calculateZoom
 import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.gestures.rememberTransformableState
-import androidx.compose.foundation.gestures.transformable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -391,13 +389,6 @@ private fun PdfMushafPage(
         var offset by remember(pageNumber) { mutableStateOf(Offset.Zero) }
         val zoomed = scale > 1.01f
 
-        val transformState = rememberTransformableState { zoomChange, panChange, _ ->
-            val newScale = (scale * zoomChange).coerceIn(1f, 4f)
-            scale = newScale
-            offset = if (newScale <= 1.01f) Offset.Zero else offset + panChange
-            if (isActive) onZoomChanged(newScale > 1.01f)
-        }
-
         LaunchedEffect(pageNumber, widthPx) {
             bitmap = render(widthPx)
         }
@@ -436,30 +427,38 @@ private fun PdfMushafPage(
                         translationX = offset.x,
                         translationY = offset.y
                     )
-                    // At 1x: only consume two-finger pinch so HorizontalPager keeps single-finger swipes.
-                    .pointerInput(pageNumber, zoomed) {
-                        if (zoomed) return@pointerInput
+                    // One continuous gesture detector: pinch always works; pan only when zoomed.
+                    // Avoids swapping modifiers mid-gesture (which made the first pinch feel stuck).
+                    .pointerInput(pageNumber) {
                         awaitEachGesture {
                             awaitFirstDown(requireUnconsumed = false)
                             do {
                                 val event = awaitPointerEvent(PointerEventPass.Initial)
                                 val pressed = event.changes.filter { it.pressed }
                                 if (pressed.size >= 2) {
-                                    val change = event.calculateZoom()
-                                    if (change != 1f) {
-                                        val newScale = (scale * change).coerceIn(1f, 4f)
+                                    val zoomChange = event.calculateZoom()
+                                    val panChange = event.calculatePan()
+                                    if (zoomChange != 1f || panChange != Offset.Zero) {
+                                        val newScale = (scale * zoomChange).coerceIn(1f, 4f)
                                         scale = newScale
-                                        if (newScale <= 1.01f) offset = Offset.Zero
+                                        offset = if (newScale <= 1.01f) {
+                                            Offset.Zero
+                                        } else {
+                                            offset + panChange
+                                        }
                                         if (isActive) onZoomChanged(newScale > 1.01f)
+                                        pressed.forEach { it.consume() }
+                                    }
+                                } else if (scale > 1.01f && pressed.size == 1) {
+                                    val panChange = event.calculatePan()
+                                    if (panChange != Offset.Zero) {
+                                        offset += panChange
                                         pressed.forEach { it.consume() }
                                     }
                                 }
                             } while (event.changes.any { it.pressed })
                         }
                     }
-                    .then(
-                        if (zoomed) Modifier.transformable(state = transformState) else Modifier
-                    )
                     .pointerInput(pageNumber, highlightLine, linesPerPage, zoomed) {
                         detectTapGestures(
                             onDoubleTap = {
@@ -484,43 +483,38 @@ private fun PdfMushafPage(
                         )
                     }
             ) {
-                Image(
-                    bitmap = pageBitmap.asImageBitmap(),
-                    contentDescription = "Quran page $pageNumber",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.FillBounds
-                )
-                if (highlightLine != null && !zoomed) {
-                    // Inset to the 16-line text grid inside the ornate border.
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(
-                                start = drawW * PAGE_CONTENT_INSET_X,
-                                end = drawW * PAGE_CONTENT_INSET_X,
-                                top = drawH * PAGE_CONTENT_INSET_TOP,
-                                bottom = drawH * PAGE_CONTENT_INSET_BOTTOM
-                            )
-                    ) {
-                        repeat(linesPerPage) { index ->
-                            // Arabic line weight sits low in each row; bias the band downward
-                            // so it covers the glyphs instead of the gap above the line.
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .weight(1f)
-                            ) {
-                                if (index == highlightLine) {
-                                    Box(
-                                        modifier = Modifier
-                                            .align(Alignment.BottomCenter)
-                                            .fillMaxWidth()
-                                            .fillMaxHeight(0.62f)
-                                            .padding(bottom = 1.dp)
-                                            .background(Highlight.copy(alpha = 0.42f))
-                                            .semantics { selected = true }
-                                    )
-                                }
+                // Keep page chrome LTR so highlight/tap bands are full-width regardless of pager RTL.
+                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+                    Image(
+                        bitmap = pageBitmap.asImageBitmap(),
+                        contentDescription = "Quran page $pageNumber",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.FillBounds
+                    )
+                    if (highlightLine != null && !zoomed) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(
+                                    horizontal = drawW * PAGE_CONTENT_INSET_X,
+                                    vertical = 0.dp
+                                )
+                                .padding(
+                                    top = drawH * PAGE_CONTENT_INSET_TOP,
+                                    bottom = drawH * PAGE_CONTENT_INSET_BOTTOM
+                                )
+                        ) {
+                            repeat(linesPerPage) { index ->
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .weight(1f)
+                                        .background(
+                                            if (index == highlightLine) Highlight.copy(alpha = 0.40f)
+                                            else Color.Transparent
+                                        )
+                                        .semantics { selected = index == highlightLine }
+                                )
                             }
                         }
                     }

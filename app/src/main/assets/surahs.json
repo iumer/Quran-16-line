@@ -91,7 +91,7 @@
     "name": "الأنفال",
     "transliteration": "Al-Anfal",
     "totalVerses": 75,
-    "page": 162,
+    "page": 161,
     "aliases": [
       "Al Anfal",
       "Al-Anfal",
@@ -103,7 +103,7 @@
     "name": "التوبة",
     "transliteration": "At-Tawbah",
     "totalVerses": 129,
-    "page": 171,
+    "page": 170,
     "aliases": [
       "التوبة",
       "At Tawbah",
@@ -115,7 +115,7 @@
     "name": "يونس",
     "transliteration": "Yunus",
     "totalVerses": 109,
-    "page": 190,
+    "page": 189,
     "aliases": [
       "يونس",
       "Yunus"
@@ -126,7 +126,7 @@
     "name": "هود",
     "transliteration": "Hud",
     "totalVerses": 123,
-    "page": 202,
+    "page": 201,
     "aliases": [
       "هود",
       "Hud"
@@ -137,7 +137,7 @@
     "name": "يوسف",
     "transliteration": "Yusuf",
     "totalVerses": 111,
-    "page": 214,
+    "page": 213,
     "aliases": [
       "يوسف",
       "Yusuf"
@@ -148,7 +148,7 @@
     "name": "الرعد",
     "transliteration": "Ar-Ra'd",
     "totalVerses": 43,
-    "page": 227,
+    "page": 226,
     "aliases": [
       "Ar-Rad",
       "الرعد",
@@ -172,7 +172,7 @@
     "name": "الحجر",
     "transliteration": "Al-Hijr",
     "totalVerses": 99,
-    "page": 239,
+    "page": 238,
     "aliases": [
       "Al-Hijr",
       "الحجر",
@@ -184,7 +184,7 @@
     "name": "النحل",
     "transliteration": "An-Nahl",
     "totalVerses": 128,
-    "page": 243,
+    "page": 242,
     "aliases": [
       "An-Nahl",
       "An Nahl",
@@ -196,7 +196,7 @@
     "name": "الإسراء",
     "transliteration": "Al-Isra",
     "totalVerses": 111,
-    "page": 257,
+    "page": 256,
     "aliases": [
       "الإسراء",
       "Al Isra",
@@ -208,7 +208,7 @@
     "name": "الكهف",
     "transliteration": "Al-Kahf",
     "totalVerses": 110,
-    "page": 267,
+    "page": 266,
     "aliases": [
       "Al-Kahf",
       "Al Kahf",
@@ -220,7 +220,7 @@
     "name": "مريم",
     "transliteration": "Maryam",
     "totalVerses": 98,
-    "page": 278,
+    "page": 277,
     "aliases": [
       "Maryam",
       "مريم"
@@ -231,7 +231,7 @@
     "name": "طه",
     "transliteration": "Taha",
     "totalVerses": 135,
-    "page": 284,
+    "page": 283,
     "aliases": [
       "Taha",
       "طه"
@@ -242,7 +242,7 @@
     "name": "الأنبياء",
     "transliteration": "Al-Anbya",
     "totalVerses": 112,
-    "page": 293,
+    "page": 292,
     "aliases": [
       "Al Anbya",
       "الأنبياء",
@@ -254,7 +254,7 @@
     "name": "الحج",
     "transliteration": "Al-Hajj",
     "totalVerses": 78,
-    "page": 302,
+    "page": 301,
     "aliases": [
       "Al Hajj",
       "الحج",
@@ -266,7 +266,7 @@
     "name": "المؤمنون",
     "transliteration": "Al-Mu'minun",
     "totalVerses": 118,
-    "page": 311,
+    "page": 310,
     "aliases": [
       "المؤمنون",
       "Al-Muminun",
@@ -279,7 +279,7 @@
     "name": "النور",
     "transliteration": "An-Nur",
     "totalVerses": 64,
-    "page": 319,
+    "page": 317,
     "aliases": [
       "An-Nur",
       "النور",
@@ -291,7 +291,7 @@
     "name": "الفرقان",
     "transliteration": "Al-Furqan",
     "totalVerses": 77,
-    "page": 327,
+    "page": 325,
     "aliases": [
       "Al-Furqan",
       "الفرقان",
@@ -303,7 +303,7 @@
     "name": "الشعراء",
     "transliteration": "Ash-Shu'ara",
     "totalVerses": 227,
-    "page": 334,
+    "page": 333,
     "aliases": [
       "الشعراء",
       "Ash-Shu'ara",
@@ -316,7 +316,7 @@
     "name": "النمل",
     "transliteration": "An-Naml",
     "totalVerses": 93,
-    "page": 343,
+    "page": 342,
     "aliases": [
       "An-Naml",
       "An Naml",
@@ -328,7 +328,7 @@
     "name": "القصص",
     "transliteration": "Al-Qasas",
     "totalVerses": 88,
-    "page": 350,
+    "page": 349,
     "aliases": [
       "القصص",
       "Al-Qasas",
@@ -340,7 +340,7 @@
     "name": "العنكبوت",
     "transliteration": "Al-'Ankabut",
     "totalVerses": 69,
-    "page": 360,
+    "page": 359,
     "aliases": [
       "Al-'Ankabut",
       "Al 'Ankabut",
@@ -353,7 +353,7 @@
     "name": "الروم",
     "transliteration": "Ar-Rum",
     "totalVerses": 60,
-    "page": 368,
+    "page": 366,
     "aliases": [
       "Ar Rum",
       "الروم",
@@ -365,7 +365,7 @@
     "name": "لقمان",
     "transliteration": "Luqman",
     "totalVerses": 34,
-    "page": 374,
+    "page": 372,
     "aliases": [
       "لقمان",
       "Luqman"
@@ -376,7 +376,7 @@
     "name": "السجدة",
     "transliteration": "As-Sajdah",
     "totalVerses": 30,
-    "page": 378,
+    "page": 376,
     "aliases": [
       "As Sajdah",
       "As-Sajdah",
@@ -388,7 +388,7 @@
     "name": "الأحزاب",
     "transliteration": "Al-Ahzab",
     "totalVerses": 73,
-    "page": 380,
+    "page": 379,
     "aliases": [
       "الأحزاب",
       "Al-Ahzab",
@@ -400,7 +400,7 @@
     "name": "سبإ",
     "transliteration": "Saba",
     "totalVerses": 54,
-    "page": 389,
+    "page": 388,
     "aliases": [
       "Saba",
       "سبإ"
@@ -411,7 +411,7 @@
     "name": "فاطر",
     "transliteration": "Fatir",
     "totalVerses": 45,
-    "page": 395,
+    "page": 393,
     "aliases": [
       "Fatir",
       "فاطر"
@@ -422,7 +422,7 @@
     "name": "يس",
     "transliteration": "Ya-Sin",
     "totalVerses": 83,
-    "page": 400,
+    "page": 399,
     "aliases": [
       "يس",
       "Ya-Sin",
@@ -434,7 +434,7 @@
     "name": "الصافات",
     "transliteration": "As-Saffat",
     "totalVerses": 182,
-    "page": 406,
+    "page": 404,
     "aliases": [
       "الصافات",
       "As Saffat",
@@ -446,7 +446,7 @@
     "name": "ص",
     "transliteration": "Sad",
     "totalVerses": 88,
-    "page": 412,
+    "page": 410,
     "aliases": [
       "Sad",
       "ص"
@@ -457,7 +457,7 @@
     "name": "الزمر",
     "transliteration": "Az-Zumar",
     "totalVerses": 75,
-    "page": 417,
+    "page": 415,
     "aliases": [
       "Az Zumar",
       "Az-Zumar",
@@ -469,7 +469,7 @@
     "name": "غافر",
     "transliteration": "Ghafir",
     "totalVerses": 85,
-    "page": 425,
+    "page": 423,
     "aliases": [
       "غافر",
       "Ghafir"
@@ -480,7 +480,7 @@
     "name": "فصلت",
     "transliteration": "Fussilat",
     "totalVerses": 54,
-    "page": 434,
+    "page": 432,
     "aliases": [
       "فصلت",
       "Fussilat"
@@ -491,7 +491,7 @@
     "name": "الشورى",
     "transliteration": "Ash-Shuraa",
     "totalVerses": 53,
-    "page": 439,
+    "page": 437,
     "aliases": [
       "Ash-Shuraa",
       "الشورى",
@@ -503,7 +503,7 @@
     "name": "الزخرف",
     "transliteration": "Az-Zukhruf",
     "totalVerses": 89,
-    "page": 445,
+    "page": 443,
     "aliases": [
       "Az-Zukhruf",
       "Az Zukhruf",
@@ -515,7 +515,7 @@
     "name": "الدخان",
     "transliteration": "Ad-Dukhan",
     "totalVerses": 59,
-    "page": 451,
+    "page": 449,
     "aliases": [
       "الدخان",
       "Ad Dukhan",
@@ -527,7 +527,7 @@
     "name": "الجاثية",
     "transliteration": "Al-Jathiyah",
     "totalVerses": 37,
-    "page": 454,
+    "page": 452,
     "aliases": [
       "Al-Jathiyah",
       "الجاثية",
@@ -539,7 +539,7 @@
     "name": "الأحقاف",
     "transliteration": "Al-Ahqaf",
     "totalVerses": 35,
-    "page": 456,
+    "page": 455,
     "aliases": [
       "الأحقاف",
       "Al-Ahqaf",
@@ -551,7 +551,7 @@
     "name": "محمد",
     "transliteration": "Muhammad",
     "totalVerses": 38,
-    "page": 461,
+    "page": 459,
     "aliases": [
       "محمد",
       "Muhammad"
@@ -562,7 +562,7 @@
     "name": "الفتح",
     "transliteration": "Al-Fath",
     "totalVerses": 29,
-    "page": 465,
+    "page": 463,
     "aliases": [
       "الفتح",
       "Al Fath",
@@ -574,7 +574,7 @@
     "name": "الحجرات",
     "transliteration": "Al-Hujurat",
     "totalVerses": 18,
-    "page": 468,
+    "page": 466,
     "aliases": [
       "Al-Hujurat",
       "Al Hujurat",
@@ -586,7 +586,7 @@
     "name": "ق",
     "transliteration": "Qaf",
     "totalVerses": 45,
-    "page": 471,
+    "page": 469,
     "aliases": [
       "ق",
       "Qaf"
@@ -597,7 +597,7 @@
     "name": "الذاريات",
     "transliteration": "Adh-Dhariyat",
     "totalVerses": 60,
-    "page": 473,
+    "page": 471,
     "aliases": [
       "الذاريات",
       "Adh-Dhariyat",
@@ -609,7 +609,7 @@
     "name": "الطور",
     "transliteration": "At-Tur",
     "totalVerses": 49,
-    "page": 476,
+    "page": 474,
     "aliases": [
       "الطور",
       "At Tur",
@@ -621,7 +621,7 @@
     "name": "النجم",
     "transliteration": "An-Najm",
     "totalVerses": 62,
-    "page": 478,
+    "page": 476,
     "aliases": [
       "النجم",
       "An-Najm",
@@ -633,7 +633,7 @@
     "name": "القمر",
     "transliteration": "Al-Qamar",
     "totalVerses": 55,
-    "page": 480,
+    "page": 478,
     "aliases": [
       "Al-Qamar",
       "Al Qamar",
@@ -645,7 +645,7 @@
     "name": "الرحمن",
     "transliteration": "Ar-Rahman",
     "totalVerses": 78,
-    "page": 483,
+    "page": 481,
     "aliases": [
       "الرحمن",
       "Ar Rahman",
@@ -657,7 +657,7 @@
     "name": "الواقعة",
     "transliteration": "Al-Waqi'ah",
     "totalVerses": 96,
-    "page": 486,
+    "page": 484,
     "aliases": [
       "Al-Waqi'ah",
       "Al Waqi'ah",
@@ -670,7 +670,7 @@
     "name": "الحديد",
     "transliteration": "Al-Hadid",
     "totalVerses": 29,
-    "page": 488,
+    "page": 486,
     "aliases": [
       "Al-Hadid",
       "الحديد",
@@ -682,7 +682,7 @@
     "name": "المجادلة",
     "transliteration": "Al-Mujadila",
     "totalVerses": 22,
-    "page": 493,
+    "page": 491,
     "aliases": [
       "Al-Mujadila",
       "Al Mujadila",
@@ -694,7 +694,7 @@
     "name": "الحشر",
     "transliteration": "Al-Hashr",
     "totalVerses": 24,
-    "page": 495,
+    "page": 493,
     "aliases": [
       "Al-Hashr",
       "Al Hashr",
@@ -706,7 +706,7 @@
     "name": "الممتحنة",
     "transliteration": "Al-Mumtahanah",
     "totalVerses": 13,
-    "page": 499,
+    "page": 497,
     "aliases": [
       "Al Mumtahanah",
       "Al-Mumtahanah",
@@ -718,7 +718,7 @@
     "name": "الصف",
     "transliteration": "As-Saf",
     "totalVerses": 14,
-    "page": 501,
+    "page": 499,
     "aliases": [
       "As-Saf",
       "As Saf",
@@ -730,7 +730,7 @@
     "name": "الجمعة",
     "transliteration": "Al-Jumu'ah",
     "totalVerses": 11,
-    "page": 503,
+    "page": 501,
     "aliases": [
       "Al-Jumu'ah",
       "Al Jumu'ah",
@@ -743,7 +743,7 @@
     "name": "المنافقون",
     "transliteration": "Al-Munafiqun",
     "totalVerses": 11,
-    "page": 504,
+    "page": 502,
     "aliases": [
       "Al-Munafiqun",
       "المنافقون",
@@ -755,7 +755,7 @@
     "name": "التغابن",
     "transliteration": "At-Taghabun",
     "totalVerses": 18,
-    "page": 505,
+    "page": 503,
     "aliases": [
       "التغابن",
       "At Taghabun",
@@ -767,7 +767,7 @@
     "name": "الطلاق",
     "transliteration": "At-Talaq",
     "totalVerses": 12,
-    "page": 507,
+    "page": 505,
     "aliases": [
       "الطلاق",
       "At-Talaq",
@@ -803,7 +803,7 @@
     "name": "القلم",
     "transliteration": "Al-Qalam",
     "totalVerses": 52,
-    "page": 513,
+    "page": 512,
     "aliases": [
       "Al-Qalam",
       "Al Qalam",
@@ -815,7 +815,7 @@
     "name": "الحاقة",
     "transliteration": "Al-Haqqah",
     "totalVerses": 52,
-    "page": 515,
+    "page": 514,
     "aliases": [
       "Al-Haqqah",
       "الحاقة",
@@ -851,7 +851,7 @@
     "name": "الجن",
     "transliteration": "Al-Jinn",
     "totalVerses": 28,
-    "page": 520,
+    "page": 519,
     "aliases": [
       "Al Jinn",
       "الجن",
@@ -863,7 +863,7 @@
     "name": "المزمل",
     "transliteration": "Al-Muzzammil",
     "totalVerses": 20,
-    "page": 522,
+    "page": 521,
     "aliases": [
       "Al Muzzammil",
       "Al-Muzzammil",
@@ -875,7 +875,7 @@
     "name": "المدثر",
     "transliteration": "Al-Muddaththir",
     "totalVerses": 56,
-    "page": 523,
+    "page": 522,
     "aliases": [
       "Al-Muddaththir",
       "Al Muddaththir",
@@ -887,7 +887,7 @@
     "name": "القيامة",
     "transliteration": "Al-Qiyamah",
     "totalVerses": 40,
-    "page": 525,
+    "page": 524,
     "aliases": [
       "القيامة",
       "Al-Qiyamah",
@@ -899,7 +899,7 @@
     "name": "الانسان",
     "transliteration": "Al-Insan",
     "totalVerses": 31,
-    "page": 525,
+    "page": 526,
     "aliases": [
       "الانسان",
       "Al Insan",
@@ -911,7 +911,7 @@
     "name": "المرسلات",
     "transliteration": "Al-Mursalat",
     "totalVerses": 50,
-    "page": 527,
+    "page": 528,
     "aliases": [
       "Al-Mursalat",
       "المرسلات",
@@ -935,7 +935,7 @@
     "name": "النازعات",
     "transliteration": "An-Nazi'at",
     "totalVerses": 46,
-    "page": 530,
+    "page": 531,
     "aliases": [
       "An-Nazi'at",
       "النازعات",
@@ -948,7 +948,7 @@
     "name": "عبس",
     "transliteration": "'Abasa",
     "totalVerses": 42,
-    "page": 532,
+    "page": 533,
     "aliases": [
       "'Abasa",
       "عبس",
@@ -960,7 +960,7 @@
     "name": "التكوير",
     "transliteration": "At-Takwir",
     "totalVerses": 29,
-    "page": 533,
+    "page": 534,
     "aliases": [
       "التكوير",
       "At-Takwir",
@@ -972,7 +972,7 @@
     "name": "الإنفطار",
     "transliteration": "Al-Infitar",
     "totalVerses": 19,
-    "page": 534,
+    "page": 535,
     "aliases": [
       "الإنفطار",
       "Al Infitar",
@@ -984,7 +984,7 @@
     "name": "المطففين",
     "transliteration": "Al-Mutaffifin",
     "totalVerses": 36,
-    "page": 534,
+    "page": 536,
     "aliases": [
       "Al-Mutaffifin",
       "Al Mutaffifin",
@@ -996,7 +996,7 @@
     "name": "الإنشقاق",
     "transliteration": "Al-Inshiqaq",
     "totalVerses": 25,
-    "page": 535,
+    "page": 537,
     "aliases": [
       "Al-Inshiqaq",
       "Al Inshiqaq",
@@ -1008,7 +1008,7 @@
     "name": "البروج",
     "transliteration": "Al-Buruj",
     "totalVerses": 22,
-    "page": 536,
+    "page": 538,
     "aliases": [
       "البروج",
       "Al Buruj",
@@ -1020,7 +1020,7 @@
     "name": "الطارق",
     "transliteration": "At-Tariq",
     "totalVerses": 17,
-    "page": 537,
+    "page": 539,
     "aliases": [
       "الطارق",
       "At Tariq",
@@ -1032,7 +1032,7 @@
     "name": "الأعلى",
     "transliteration": "Al-A'la",
     "totalVerses": 19,
-    "page": 537,
+    "page": 540,
     "aliases": [
       "Al-Ala",
       "Al-A'la",
@@ -1045,7 +1045,7 @@
     "name": "الغاشية",
     "transliteration": "Al-Ghashiyah",
     "totalVerses": 26,
-    "page": 538,
+    "page": 541,
     "aliases": [
       "الغاشية",
       "Al-Ghashiyah",
@@ -1057,7 +1057,7 @@
     "name": "الفجر",
     "transliteration": "Al-Fajr",
     "totalVerses": 30,
-    "page": 539,
+    "page": 541,
     "aliases": [
       "Al Fajr",
       "Al-Fajr",
@@ -1069,7 +1069,7 @@
     "name": "البلد",
     "transliteration": "Al-Balad",
     "totalVerses": 20,
-    "page": 540,
+    "page": 542,
     "aliases": [
       "البلد",
       "Al-Balad",
@@ -1081,7 +1081,7 @@
     "name": "الشمس",
     "transliteration": "Ash-Shams",
     "totalVerses": 15,
-    "page": 541,
+    "page": 542,
     "aliases": [
       "Ash-Shams",
       "Ash Shams",
@@ -1093,7 +1093,7 @@
     "name": "الليل",
     "transliteration": "Al-Layl",
     "totalVerses": 21,
-    "page": 541,
+    "page": 543,
     "aliases": [
       "Al Layl",
       "الليل",
@@ -1105,7 +1105,7 @@
     "name": "الضحى",
     "transliteration": "Ad-Duhaa",
     "totalVerses": 11,
-    "page": 542,
+    "page": 543,
     "aliases": [
       "الضحى",
       "Ad-Duhaa",
@@ -1117,7 +1117,7 @@
     "name": "الشرح",
     "transliteration": "Ash-Sharh",
     "totalVerses": 8,
-    "page": 542,
+    "page": 543,
     "aliases": [
       "Ash Sharh",
       "Ash-Sharh",
@@ -1141,7 +1141,7 @@
     "name": "العلق",
     "transliteration": "Al-'Alaq",
     "totalVerses": 19,
-    "page": 543,
+    "page": 544,
     "aliases": [
       "العلق",
       "Al-'Alaq",
@@ -1178,7 +1178,7 @@
     "name": "الزلزلة",
     "transliteration": "Az-Zalzalah",
     "totalVerses": 8,
-    "page": 544,
+    "page": 545,
     "aliases": [
       "Az Zalzalah",
       "Az-Zalzalah",
@@ -1190,7 +1190,7 @@
     "name": "العاديات",
     "transliteration": "Al-'Adiyat",
     "totalVerses": 11,
-    "page": 544,
+    "page": 545,
     "aliases": [
       "Al-Adiyat",
       "Al-'Adiyat",
@@ -1216,7 +1216,7 @@
     "name": "التكاثر",
     "transliteration": "At-Takathur",
     "totalVerses": 8,
-    "page": 545,
+    "page": 546,
     "aliases": [
       "At Takathur",
       "At-Takathur",
@@ -1253,7 +1253,7 @@
     "name": "الفيل",
     "transliteration": "Al-Fil",
     "totalVerses": 5,
-    "page": 546,
+    "page": 547,
     "aliases": [
       "الفيل",
       "Al-Fil",
