@@ -11,8 +11,8 @@ android {
         applicationId = "com.quran16line.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 13
-        versionName = "1.4.4"
+        versionCode = 14
+        versionName = "1.5.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

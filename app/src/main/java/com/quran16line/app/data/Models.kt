@@ -29,6 +29,8 @@ data class SurahInfo(
     val transliteration: String,
     val totalVerses: Int,
     val page: Int,
+    /** 1-based visual line on [page] where the surah text begins (Taj 16-line). */
+    val startLine: Int? = null,
     val aliases: List<String>? = null
 )
 

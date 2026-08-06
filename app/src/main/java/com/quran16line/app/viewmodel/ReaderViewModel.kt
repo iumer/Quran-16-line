@@ -198,12 +198,29 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun jumpToSurah(surahId: Int) {
-        val page = repository.pageForSurah(surahId)
-        if (page == null) {
+        val surah = repository.surahById(surahId)
+        if (surah == null) {
             _state.update { it.copy(message = "Surah not found") }
             return
         }
-        jumpToPage(page)
+        jumpToPage(surah.page)
+        // Mark the surah's first visual line so mid-page starts (e.g. Ar-Rahman on 479) are obvious.
+        val line1Based = surah.startLine
+        if (line1Based != null) {
+            val lineIndex = (line1Based - 1).coerceIn(0, PdfMushafSource.LINES_PER_PAGE - 1)
+            viewModelScope.launch {
+                val mark = HighlightPoint(page = surah.page, lineIndex = lineIndex)
+                _state.update {
+                    it.copy(
+                        highlight = mark,
+                        currentPage = surah.page,
+                        pageEntry = repository.pageEntry(surah.page),
+                        pageLabel = repository.labelForPage(surah.page)
+                    )
+                }
+                prefs.saveReadingMark(page = surah.page, highlight = mark)
+            }
+        }
     }
 
     fun jumpToAyah(surahId: Int, ayah: Int) {

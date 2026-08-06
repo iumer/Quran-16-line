@@ -1,1 +1,5027 @@
-{"pageCount":558,"pages":[{"page":1,"printedPage":null,"surahStart":null,"surahEnd":null,"ayahStart":null,"ayahEnd":null,"label":"Title"},{"page":2,"printedPage":2,"surahStart":1,"surahEnd":1,"ayahStart":1,"ayahEnd":4,"label":"Al-Fatihah · Ayah 1–4"},{"page":3,"printedPage":3,"surahStart":1,"surahEnd":2,"ayahStart":5,"ayahEnd":4,"label":"Al-Fatihah–Al-Baqarah"},{"page":4,"printedPage":4,"surahStart":2,"surahEnd":2,"ayahStart":5,"ayahEnd":10,"label":"Al-Baqarah · Ayah 5–10"},{"page":5,"printedPage":5,"surahStart":2,"surahEnd":2,"ayahStart":11,"ayahEnd":17,"label":"Al-Baqarah · Ayah 11–17"},{"page":6,"printedPage":6,"surahStart":2,"surahEnd":2,"ayahStart":18,"ayahEnd":24,"label":"Al-Baqarah · Ayah 18–24"},{"page":7,"printedPage":7,"surahStart":2,"surahEnd":2,"ayahStart":25,"ayahEnd":30,"label":"Al-Baqarah · Ayah 25–30"},{"page":8,"printedPage":8,"surahStart":2,"surahEnd":2,"ayahStart":31,"ayahEnd":37,"label":"Al-Baqarah · Ayah 31–37"},{"page":9,"printedPage":9,"surahStart":2,"surahEnd":2,"ayahStart":38,"ayahEnd":44,"label":"Al-Baqarah · Ayah 38–44"},{"page":10,"printedPage":10,"surahStart":2,"surahEnd":2,"ayahStart":45,"ayahEnd":50,"label":"Al-Baqarah · Ayah 45–50"},{"page":11,"printedPage":11,"surahStart":2,"surahEnd":2,"ayahStart":51,"ayahEnd":57,"label":"Al-Baqarah · Ayah 51–57"},{"page":12,"printedPage":12,"surahStart":2,"surahEnd":2,"ayahStart":58,"ayahEnd":63,"label":"Al-Baqarah · Ayah 58–63"},{"page":13,"printedPage":13,"surahStart":2,"surahEnd":2,"ayahStart":64,"ayahEnd":70,"label":"Al-Baqarah · Ayah 64–70"},{"page":14,"printedPage":14,"surahStart":2,"surahEnd":2,"ayahStart":71,"ayahEnd":77,"label":"Al-Baqarah · Ayah 71–77"},{"page":15,"printedPage":15,"surahStart":2,"surahEnd":2,"ayahStart":78,"ayahEnd":83,"label":"Al-Baqarah · Ayah 78–83"},{"page":16,"printedPage":16,"surahStart":2,"surahEnd":2,"ayahStart":84,"ayahEnd":90,"label":"Al-Baqarah · Ayah 84–90"},{"page":17,"printedPage":17,"surahStart":2,"surahEnd":2,"ayahStart":91,"ayahEnd":97,"label":"Al-Baqarah · Ayah 91–97"},{"page":18,"printedPage":18,"surahStart":2,"surahEnd":2,"ayahStart":98,"ayahEnd":103,"label":"Al-Baqarah · Ayah 98–103"},{"page":19,"printedPage":19,"surahStart":2,"surahEnd":2,"ayahStart":104,"ayahEnd":110,"label":"Al-Baqarah · Ayah 104–110"},{"page":20,"printedPage":20,"surahStart":2,"surahEnd":2,"ayahStart":111,"ayahEnd":116,"label":"Al-Baqarah · Ayah 111–116"},{"page":21,"printedPage":21,"surahStart":2,"surahEnd":2,"ayahStart":117,"ayahEnd":123,"label":"Al-Baqarah · Ayah 117–123"},{"page":22,"printedPage":22,"surahStart":2,"surahEnd":2,"ayahStart":124,"ayahEnd":130,"label":"Al-Baqarah · Ayah 124–130"},{"page":23,"printedPage":23,"surahStart":2,"surahEnd":2,"ayahStart":131,"ayahEnd":136,"label":"Al-Baqarah · Ayah 131–136"},{"page":24,"printedPage":24,"surahStart":2,"surahEnd":2,"ayahStart":137,"ayahEnd":143,"label":"Al-Baqarah · Ayah 137–143"},{"page":25,"printedPage":25,"surahStart":2,"surahEnd":2,"ayahStart":144,"ayahEnd":150,"label":"Al-Baqarah · Ayah 144–150"},{"page":26,"printedPage":26,"surahStart":2,"surahEnd":2,"ayahStart":151,"ayahEnd":156,"label":"Al-Baqarah · Ayah 151–156"},{"page":27,"printedPage":27,"surahStart":2,"surahEnd":2,"ayahStart":157,"ayahEnd":163,"label":"Al-Baqarah · Ayah 157–163"},{"page":28,"printedPage":28,"surahStart":2,"surahEnd":2,"ayahStart":164,"ayahEnd":170,"label":"Al-Baqarah · Ayah 164–170"},{"page":29,"printedPage":29,"surahStart":2,"surahEnd":2,"ayahStart":171,"ayahEnd":176,"label":"Al-Baqarah · Ayah 171–176"},{"page":30,"printedPage":30,"surahStart":2,"surahEnd":2,"ayahStart":177,"ayahEnd":183,"label":"Al-Baqarah · Ayah 177–183"},{"page":31,"printedPage":31,"surahStart":2,"surahEnd":2,"ayahStart":184,"ayahEnd":189,"label":"Al-Baqarah · Ayah 184–189"},{"page":32,"printedPage":32,"surahStart":2,"surahEnd":2,"ayahStart":190,"ayahEnd":196,"label":"Al-Baqarah · Ayah 190–196"},{"page":33,"printedPage":33,"surahStart":2,"surahEnd":2,"ayahStart":197,"ayahEnd":203,"label":"Al-Baqarah · Ayah 197–203"},{"page":34,"printedPage":34,"surahStart":2,"surahEnd":2,"ayahStart":204,"ayahEnd":209,"label":"Al-Baqarah · Ayah 204–209"},{"page":35,"printedPage":35,"surahStart":2,"surahEnd":2,"ayahStart":210,"ayahEnd":216,"label":"Al-Baqarah · Ayah 210–216"},{"page":36,"printedPage":36,"surahStart":2,"surahEnd":2,"ayahStart":217,"ayahEnd":223,"label":"Al-Baqarah · Ayah 217–223"},{"page":37,"printedPage":37,"surahStart":2,"surahEnd":2,"ayahStart":224,"ayahEnd":229,"label":"Al-Baqarah · Ayah 224–229"},{"page":38,"printedPage":38,"surahStart":2,"surahEnd":2,"ayahStart":230,"ayahEnd":236,"label":"Al-Baqarah · Ayah 230–236"},{"page":39,"printedPage":39,"surahStart":2,"surahEnd":2,"ayahStart":237,"ayahEnd":242,"label":"Al-Baqarah · Ayah 237–242"},{"page":40,"printedPage":40,"surahStart":2,"surahEnd":2,"ayahStart":243,"ayahEnd":249,"label":"Al-Baqarah · Ayah 243–249"},{"page":41,"printedPage":41,"surahStart":2,"surahEnd":2,"ayahStart":250,"ayahEnd":256,"label":"Al-Baqarah · Ayah 250–256"},{"page":42,"printedPage":42,"surahStart":2,"surahEnd":2,"ayahStart":257,"ayahEnd":262,"label":"Al-Baqarah · Ayah 257–262"},{"page":43,"printedPage":43,"surahStart":2,"surahEnd":2,"ayahStart":263,"ayahEnd":269,"label":"Al-Baqarah · Ayah 263–269"},{"page":44,"printedPage":44,"surahStart":2,"surahEnd":2,"ayahStart":270,"ayahEnd":276,"label":"Al-Baqarah · Ayah 270–276"},{"page":45,"printedPage":45,"surahStart":2,"surahEnd":2,"ayahStart":277,"ayahEnd":282,"label":"Al-Baqarah · Ayah 277–282"},{"page":46,"printedPage":46,"surahStart":2,"surahEnd":3,"ayahStart":283,"ayahEnd":4,"label":"Al-Baqarah–Ali 'Imran"},{"page":47,"printedPage":47,"surahStart":3,"surahEnd":3,"ayahStart":5,"ayahEnd":12,"label":"Ali 'Imran · Ayah 5–12"},{"page":48,"printedPage":48,"surahStart":3,"surahEnd":3,"ayahStart":13,"ayahEnd":20,"label":"Ali 'Imran · Ayah 13–20"},{"page":49,"printedPage":49,"surahStart":3,"surahEnd":3,"ayahStart":21,"ayahEnd":28,"label":"Ali 'Imran · Ayah 21–28"},{"page":50,"printedPage":50,"surahStart":3,"surahEnd":3,"ayahStart":29,"ayahEnd":36,"label":"Ali 'Imran · Ayah 29–36"},{"page":51,"printedPage":51,"surahStart":3,"surahEnd":3,"ayahStart":37,"ayahEnd":44,"label":"Ali 'Imran · Ayah 37–44"},{"page":52,"printedPage":52,"surahStart":3,"surahEnd":3,"ayahStart":45,"ayahEnd":52,"label":"Ali 'Imran · Ayah 45–52"},{"page":53,"printedPage":53,"surahStart":3,"surahEnd":3,"ayahStart":53,"ayahEnd":60,"label":"Ali 'Imran · Ayah 53–60"},{"page":54,"printedPage":54,"surahStart":3,"surahEnd":3,"ayahStart":61,"ayahEnd":68,"label":"Ali 'Imran · Ayah 61–68"},{"page":55,"printedPage":55,"surahStart":3,"surahEnd":3,"ayahStart":69,"ayahEnd":76,"label":"Ali 'Imran · Ayah 69–76"},{"page":56,"printedPage":56,"surahStart":3,"surahEnd":3,"ayahStart":77,"ayahEnd":84,"label":"Ali 'Imran · Ayah 77–84"},{"page":57,"printedPage":57,"surahStart":3,"surahEnd":3,"ayahStart":85,"ayahEnd":92,"label":"Ali 'Imran · Ayah 85–92"},{"page":58,"printedPage":58,"surahStart":3,"surahEnd":3,"ayahStart":93,"ayahEnd":100,"label":"Ali 'Imran · Ayah 93–100"},{"page":59,"printedPage":59,"surahStart":3,"surahEnd":3,"ayahStart":101,"ayahEnd":108,"label":"Ali 'Imran · Ayah 101–108"},{"page":60,"printedPage":60,"surahStart":3,"surahEnd":3,"ayahStart":109,"ayahEnd":116,"label":"Ali 'Imran · Ayah 109–116"},{"page":61,"printedPage":61,"surahStart":3,"surahEnd":3,"ayahStart":117,"ayahEnd":124,"label":"Ali 'Imran · Ayah 117–124"},{"page":62,"printedPage":62,"surahStart":3,"surahEnd":3,"ayahStart":125,"ayahEnd":132,"label":"Ali 'Imran · Ayah 125–132"},{"page":63,"printedPage":63,"surahStart":3,"surahEnd":3,"ayahStart":133,"ayahEnd":140,"label":"Ali 'Imran · Ayah 133–140"},{"page":64,"printedPage":64,"surahStart":3,"surahEnd":3,"ayahStart":141,"ayahEnd":148,"label":"Ali 'Imran · Ayah 141–148"},{"page":65,"printedPage":65,"surahStart":3,"surahEnd":3,"ayahStart":149,"ayahEnd":156,"label":"Ali 'Imran · Ayah 149–156"},{"page":66,"printedPage":66,"surahStart":3,"surahEnd":3,"ayahStart":157,"ayahEnd":164,"label":"Ali 'Imran · Ayah 157–164"},{"page":67,"printedPage":67,"surahStart":3,"surahEnd":3,"ayahStart":165,"ayahEnd":172,"label":"Ali 'Imran · Ayah 165–172"},{"page":68,"printedPage":68,"surahStart":3,"surahEnd":3,"ayahStart":173,"ayahEnd":180,"label":"Ali 'Imran · Ayah 173–180"},{"page":69,"printedPage":69,"surahStart":3,"surahEnd":3,"ayahStart":181,"ayahEnd":188,"label":"Ali 'Imran · Ayah 181–188"},{"page":70,"printedPage":70,"surahStart":3,"surahEnd":3,"ayahStart":189,"ayahEnd":196,"label":"Ali 'Imran · Ayah 189–196"},{"page":71,"printedPage":71,"surahStart":3,"surahEnd":4,"ayahStart":197,"ayahEnd":4,"label":"Ali 'Imran–An-Nisa"},{"page":72,"printedPage":72,"surahStart":4,"surahEnd":4,"ayahStart":5,"ayahEnd":11,"label":"An-Nisa · Ayah 5–11"},{"page":73,"printedPage":73,"surahStart":4,"surahEnd":4,"ayahStart":12,"ayahEnd":17,"label":"An-Nisa · Ayah 12–17"},{"page":74,"printedPage":74,"surahStart":4,"surahEnd":4,"ayahStart":18,"ayahEnd":24,"label":"An-Nisa · Ayah 18–24"},{"page":75,"printedPage":75,"surahStart":4,"surahEnd":4,"ayahStart":25,"ayahEnd":31,"label":"An-Nisa · Ayah 25–31"},{"page":76,"printedPage":76,"surahStart":4,"surahEnd":4,"ayahStart":32,"ayahEnd":38,"label":"An-Nisa · Ayah 32–38"},{"page":77,"printedPage":77,"surahStart":4,"surahEnd":4,"ayahStart":39,"ayahEnd":44,"label":"An-Nisa · Ayah 39–44"},{"page":78,"printedPage":78,"surahStart":4,"surahEnd":4,"ayahStart":45,"ayahEnd":51,"label":"An-Nisa · Ayah 45–51"},{"page":79,"printedPage":79,"surahStart":4,"surahEnd":4,"ayahStart":52,"ayahEnd":58,"label":"An-Nisa · Ayah 52–58"},{"page":80,"printedPage":80,"surahStart":4,"surahEnd":4,"ayahStart":59,"ayahEnd":64,"label":"An-Nisa · Ayah 59–64"},{"page":81,"printedPage":81,"surahStart":4,"surahEnd":4,"ayahStart":65,"ayahEnd":71,"label":"An-Nisa · Ayah 65–71"},{"page":82,"printedPage":82,"surahStart":4,"surahEnd":4,"ayahStart":72,"ayahEnd":78,"label":"An-Nisa · Ayah 72–78"},{"page":83,"printedPage":83,"surahStart":4,"surahEnd":4,"ayahStart":79,"ayahEnd":85,"label":"An-Nisa · Ayah 79–85"},{"page":84,"printedPage":84,"surahStart":4,"surahEnd":4,"ayahStart":86,"ayahEnd":91,"label":"An-Nisa · Ayah 86–91"},{"page":85,"printedPage":85,"surahStart":4,"surahEnd":4,"ayahStart":92,"ayahEnd":98,"label":"An-Nisa · Ayah 92–98"},{"page":86,"printedPage":86,"surahStart":4,"surahEnd":4,"ayahStart":99,"ayahEnd":105,"label":"An-Nisa · Ayah 99–105"},{"page":87,"printedPage":87,"surahStart":4,"surahEnd":4,"ayahStart":106,"ayahEnd":112,"label":"An-Nisa · Ayah 106–112"},{"page":88,"printedPage":88,"surahStart":4,"surahEnd":4,"ayahStart":113,"ayahEnd":118,"label":"An-Nisa · Ayah 113–118"},{"page":89,"printedPage":89,"surahStart":4,"surahEnd":4,"ayahStart":119,"ayahEnd":125,"label":"An-Nisa · Ayah 119–125"},{"page":90,"printedPage":90,"surahStart":4,"surahEnd":4,"ayahStart":126,"ayahEnd":132,"label":"An-Nisa · Ayah 126–132"},{"page":91,"printedPage":91,"surahStart":4,"surahEnd":4,"ayahStart":133,"ayahEnd":138,"label":"An-Nisa · Ayah 133–138"},{"page":92,"printedPage":92,"surahStart":4,"surahEnd":4,"ayahStart":139,"ayahEnd":145,"label":"An-Nisa · Ayah 139–145"},{"page":93,"printedPage":93,"surahStart":4,"surahEnd":4,"ayahStart":146,"ayahEnd":152,"label":"An-Nisa · Ayah 146–152"},{"page":94,"printedPage":94,"surahStart":4,"surahEnd":4,"ayahStart":153,"ayahEnd":159,"label":"An-Nisa · Ayah 153–159"},{"page":95,"printedPage":95,"surahStart":4,"surahEnd":4,"ayahStart":160,"ayahEnd":165,"label":"An-Nisa · Ayah 160–165"},{"page":96,"printedPage":96,"surahStart":4,"surahEnd":4,"ayahStart":166,"ayahEnd":172,"label":"An-Nisa · Ayah 166–172"},{"page":97,"printedPage":97,"surahStart":4,"surahEnd":5,"ayahStart":173,"ayahEnd":3,"label":"An-Nisa–Al-Ma'idah"},{"page":98,"printedPage":98,"surahStart":5,"surahEnd":5,"ayahStart":4,"ayahEnd":9,"label":"Al-Ma'idah · Ayah 4–9"},{"page":99,"printedPage":99,"surahStart":5,"surahEnd":5,"ayahStart":10,"ayahEnd":15,"label":"Al-Ma'idah · Ayah 10–15"},{"page":100,"printedPage":100,"surahStart":5,"surahEnd":5,"ayahStart":16,"ayahEnd":21,"label":"Al-Ma'idah · Ayah 16–21"},{"page":101,"printedPage":101,"surahStart":5,"surahEnd":5,"ayahStart":22,"ayahEnd":27,"label":"Al-Ma'idah · Ayah 22–27"},{"page":102,"printedPage":102,"surahStart":5,"surahEnd":5,"ayahStart":28,"ayahEnd":33,"label":"Al-Ma'idah · Ayah 28–33"},{"page":103,"printedPage":103,"surahStart":5,"surahEnd":5,"ayahStart":34,"ayahEnd":39,"label":"Al-Ma'idah · Ayah 34–39"},{"page":104,"printedPage":104,"surahStart":5,"surahEnd":5,"ayahStart":40,"ayahEnd":45,"label":"Al-Ma'idah · Ayah 40–45"},{"page":105,"printedPage":105,"surahStart":5,"surahEnd":5,"ayahStart":46,"ayahEnd":51,"label":"Al-Ma'idah · Ayah 46–51"},{"page":106,"printedPage":106,"surahStart":5,"surahEnd":5,"ayahStart":52,"ayahEnd":57,"label":"Al-Ma'idah · Ayah 52–57"},{"page":107,"printedPage":107,"surahStart":5,"surahEnd":5,"ayahStart":58,"ayahEnd":63,"label":"Al-Ma'idah · Ayah 58–63"},{"page":108,"printedPage":108,"surahStart":5,"surahEnd":5,"ayahStart":64,"ayahEnd":69,"label":"Al-Ma'idah · Ayah 64–69"},{"page":109,"printedPage":109,"surahStart":5,"surahEnd":5,"ayahStart":70,"ayahEnd":75,"label":"Al-Ma'idah · Ayah 70–75"},{"page":110,"printedPage":110,"surahStart":5,"surahEnd":5,"ayahStart":76,"ayahEnd":81,"label":"Al-Ma'idah · Ayah 76–81"},{"page":111,"printedPage":111,"surahStart":5,"surahEnd":5,"ayahStart":82,"ayahEnd":87,"label":"Al-Ma'idah · Ayah 82–87"},{"page":112,"printedPage":112,"surahStart":5,"surahEnd":5,"ayahStart":88,"ayahEnd":93,"label":"Al-Ma'idah · Ayah 88–93"},{"page":113,"printedPage":113,"surahStart":5,"surahEnd":5,"ayahStart":94,"ayahEnd":99,"label":"Al-Ma'idah · Ayah 94–99"},{"page":114,"printedPage":114,"surahStart":5,"surahEnd":5,"ayahStart":100,"ayahEnd":105,"label":"Al-Ma'idah · Ayah 100–105"},{"page":115,"printedPage":115,"surahStart":5,"surahEnd":5,"ayahStart":106,"ayahEnd":111,"label":"Al-Ma'idah · Ayah 106–111"},{"page":116,"printedPage":116,"surahStart":5,"surahEnd":5,"ayahStart":112,"ayahEnd":117,"label":"Al-Ma'idah · Ayah 112–117"},{"page":117,"printedPage":117,"surahStart":5,"surahEnd":6,"ayahStart":118,"ayahEnd":4,"label":"Al-Ma'idah–Al-An'am"},{"page":118,"printedPage":118,"surahStart":6,"surahEnd":6,"ayahStart":5,"ayahEnd":12,"label":"Al-An'am · Ayah 5–12"},{"page":119,"printedPage":119,"surahStart":6,"surahEnd":6,"ayahStart":13,"ayahEnd":20,"label":"Al-An'am · Ayah 13–20"},{"page":120,"printedPage":120,"surahStart":6,"surahEnd":6,"ayahStart":21,"ayahEnd":28,"label":"Al-An'am · Ayah 21–28"},{"page":121,"printedPage":121,"surahStart":6,"surahEnd":6,"ayahStart":29,"ayahEnd":36,"label":"Al-An'am · Ayah 29–36"},{"page":122,"printedPage":122,"surahStart":6,"surahEnd":6,"ayahStart":37,"ayahEnd":43,"label":"Al-An'am · Ayah 37–43"},{"page":123,"printedPage":123,"surahStart":6,"surahEnd":6,"ayahStart":44,"ayahEnd":51,"label":"Al-An'am · Ayah 44–51"},{"page":124,"printedPage":124,"surahStart":6,"surahEnd":6,"ayahStart":52,"ayahEnd":59,"label":"Al-An'am · Ayah 52–59"},{"page":125,"printedPage":125,"surahStart":6,"surahEnd":6,"ayahStart":60,"ayahEnd":67,"label":"Al-An'am · Ayah 60–67"},{"page":126,"printedPage":126,"surahStart":6,"surahEnd":6,"ayahStart":68,"ayahEnd":75,"label":"Al-An'am · Ayah 68–75"},{"page":127,"printedPage":127,"surahStart":6,"surahEnd":6,"ayahStart":76,"ayahEnd":82,"label":"Al-An'am · Ayah 76–82"},{"page":128,"printedPage":128,"surahStart":6,"surahEnd":6,"ayahStart":83,"ayahEnd":90,"label":"Al-An'am · Ayah 83–90"},{"page":129,"printedPage":129,"surahStart":6,"surahEnd":6,"ayahStart":91,"ayahEnd":98,"label":"Al-An'am · Ayah 91–98"},{"page":130,"printedPage":130,"surahStart":6,"surahEnd":6,"ayahStart":99,"ayahEnd":106,"label":"Al-An'am · Ayah 99–106"},{"page":131,"printedPage":131,"surahStart":6,"surahEnd":6,"ayahStart":107,"ayahEnd":114,"label":"Al-An'am · Ayah 107–114"},{"page":132,"printedPage":132,"surahStart":6,"surahEnd":6,"ayahStart":115,"ayahEnd":122,"label":"Al-An'am · Ayah 115–122"},{"page":133,"printedPage":133,"surahStart":6,"surahEnd":6,"ayahStart":123,"ayahEnd":129,"label":"Al-An'am · Ayah 123–129"},{"page":134,"printedPage":134,"surahStart":6,"surahEnd":6,"ayahStart":130,"ayahEnd":137,"label":"Al-An'am · Ayah 130–137"},{"page":135,"printedPage":135,"surahStart":6,"surahEnd":6,"ayahStart":138,"ayahEnd":145,"label":"Al-An'am · Ayah 138–145"},{"page":136,"printedPage":136,"surahStart":6,"surahEnd":6,"ayahStart":146,"ayahEnd":153,"label":"Al-An'am · Ayah 146–153"},{"page":137,"printedPage":137,"surahStart":6,"surahEnd":6,"ayahStart":154,"ayahEnd":161,"label":"Al-An'am · Ayah 154–161"},{"page":138,"printedPage":138,"surahStart":6,"surahEnd":7,"ayahStart":162,"ayahEnd":5,"label":"Al-An'am–Al-A'raf"},{"page":139,"printedPage":139,"surahStart":7,"surahEnd":7,"ayahStart":6,"ayahEnd":14,"label":"Al-A'raf · Ayah 6–14"},{"page":140,"printedPage":140,"surahStart":7,"surahEnd":7,"ayahStart":15,"ayahEnd":23,"label":"Al-A'raf · Ayah 15–23"},{"page":141,"printedPage":141,"surahStart":7,"surahEnd":7,"ayahStart":24,"ayahEnd":32,"label":"Al-A'raf · Ayah 24–32"},{"page":142,"printedPage":142,"surahStart":7,"surahEnd":7,"ayahStart":33,"ayahEnd":41,"label":"Al-A'raf · Ayah 33–41"},{"page":143,"printedPage":143,"surahStart":7,"surahEnd":7,"ayahStart":42,"ayahEnd":50,"label":"Al-A'raf · Ayah 42–50"},{"page":144,"printedPage":144,"surahStart":7,"surahEnd":7,"ayahStart":51,"ayahEnd":58,"label":"Al-A'raf · Ayah 51–58"},{"page":145,"printedPage":145,"surahStart":7,"surahEnd":7,"ayahStart":59,"ayahEnd":67,"label":"Al-A'raf · Ayah 59–67"},{"page":146,"printedPage":146,"surahStart":7,"surahEnd":7,"ayahStart":68,"ayahEnd":76,"label":"Al-A'raf · Ayah 68–76"},{"page":147,"printedPage":147,"surahStart":7,"surahEnd":7,"ayahStart":77,"ayahEnd":85,"label":"Al-A'raf · Ayah 77–85"},{"page":148,"printedPage":148,"surahStart":7,"surahEnd":7,"ayahStart":86,"ayahEnd":94,"label":"Al-A'raf · Ayah 86–94"},{"page":149,"printedPage":149,"surahStart":7,"surahEnd":7,"ayahStart":95,"ayahEnd":103,"label":"Al-A'raf · Ayah 95–103"},{"page":150,"printedPage":150,"surahStart":7,"surahEnd":7,"ayahStart":104,"ayahEnd":112,"label":"Al-A'raf · Ayah 104–112"},{"page":151,"printedPage":151,"surahStart":7,"surahEnd":7,"ayahStart":113,"ayahEnd":121,"label":"Al-A'raf · Ayah 113–121"},{"page":152,"printedPage":152,"surahStart":7,"surahEnd":7,"ayahStart":122,"ayahEnd":130,"label":"Al-A'raf · Ayah 122–130"},{"page":153,"printedPage":153,"surahStart":7,"surahEnd":7,"ayahStart":131,"ayahEnd":139,"label":"Al-A'raf · Ayah 131–139"},{"page":154,"printedPage":154,"surahStart":7,"surahEnd":7,"ayahStart":140,"ayahEnd":148,"label":"Al-A'raf · Ayah 140–148"},{"page":155,"printedPage":155,"surahStart":7,"surahEnd":7,"ayahStart":149,"ayahEnd":156,"label":"Al-A'raf · Ayah 149–156"},{"page":156,"printedPage":156,"surahStart":7,"surahEnd":7,"ayahStart":157,"ayahEnd":165,"label":"Al-A'raf · Ayah 157–165"},{"page":157,"printedPage":157,"surahStart":7,"surahEnd":7,"ayahStart":166,"ayahEnd":174,"label":"Al-A'raf · Ayah 166–174"},{"page":158,"printedPage":158,"surahStart":7,"surahEnd":7,"ayahStart":175,"ayahEnd":183,"label":"Al-A'raf · Ayah 175–183"},{"page":159,"printedPage":159,"surahStart":7,"surahEnd":7,"ayahStart":184,"ayahEnd":192,"label":"Al-A'raf · Ayah 184–192"},{"page":160,"printedPage":160,"surahStart":7,"surahEnd":7,"ayahStart":193,"ayahEnd":201,"label":"Al-A'raf · Ayah 193–201"},{"page":161,"printedPage":161,"surahStart":7,"surahEnd":8,"ayahStart":202,"ayahEnd":5,"label":"Al-A'raf–Al-Anfal"},{"page":162,"printedPage":162,"surahStart":8,"surahEnd":8,"ayahStart":6,"ayahEnd":13,"label":"Al-Anfal · Ayah 6–13"},{"page":163,"printedPage":163,"surahStart":8,"surahEnd":8,"ayahStart":14,"ayahEnd":21,"label":"Al-Anfal · Ayah 14–21"},{"page":164,"printedPage":164,"surahStart":8,"surahEnd":8,"ayahStart":22,"ayahEnd":29,"label":"Al-Anfal · Ayah 22–29"},{"page":165,"printedPage":165,"surahStart":8,"surahEnd":8,"ayahStart":30,"ayahEnd":37,"label":"Al-Anfal · Ayah 30–37"},{"page":166,"printedPage":166,"surahStart":8,"surahEnd":8,"ayahStart":38,"ayahEnd":46,"label":"Al-Anfal · Ayah 38–46"},{"page":167,"printedPage":167,"surahStart":8,"surahEnd":8,"ayahStart":47,"ayahEnd":54,"label":"Al-Anfal · Ayah 47–54"},{"page":168,"printedPage":168,"surahStart":8,"surahEnd":8,"ayahStart":55,"ayahEnd":62,"label":"Al-Anfal · Ayah 55–62"},{"page":169,"printedPage":169,"surahStart":8,"surahEnd":8,"ayahStart":63,"ayahEnd":70,"label":"Al-Anfal · Ayah 63–70"},{"page":170,"printedPage":170,"surahStart":8,"surahEnd":9,"ayahStart":71,"ayahEnd":4,"label":"Al-Anfal–At-Tawbah"},{"page":171,"printedPage":171,"surahStart":9,"surahEnd":9,"ayahStart":5,"ayahEnd":11,"label":"At-Tawbah · Ayah 5–11"},{"page":172,"printedPage":172,"surahStart":9,"surahEnd":9,"ayahStart":12,"ayahEnd":17,"label":"At-Tawbah · Ayah 12–17"},{"page":173,"printedPage":173,"surahStart":9,"surahEnd":9,"ayahStart":18,"ayahEnd":24,"label":"At-Tawbah · Ayah 18–24"},{"page":174,"printedPage":174,"surahStart":9,"surahEnd":9,"ayahStart":25,"ayahEnd":31,"label":"At-Tawbah · Ayah 25–31"},{"page":175,"printedPage":175,"surahStart":9,"surahEnd":9,"ayahStart":32,"ayahEnd":38,"label":"At-Tawbah · Ayah 32–38"},{"page":176,"printedPage":176,"surahStart":9,"surahEnd":9,"ayahStart":39,"ayahEnd":44,"label":"At-Tawbah · Ayah 39–44"},{"page":177,"printedPage":177,"surahStart":9,"surahEnd":9,"ayahStart":45,"ayahEnd":51,"label":"At-Tawbah · Ayah 45–51"},{"page":178,"printedPage":178,"surahStart":9,"surahEnd":9,"ayahStart":52,"ayahEnd":58,"label":"At-Tawbah · Ayah 52–58"},{"page":179,"printedPage":179,"surahStart":9,"surahEnd":9,"ayahStart":59,"ayahEnd":64,"label":"At-Tawbah · Ayah 59–64"},{"page":180,"printedPage":180,"surahStart":9,"surahEnd":9,"ayahStart":65,"ayahEnd":71,"label":"At-Tawbah · Ayah 65–71"},{"page":181,"printedPage":181,"surahStart":9,"surahEnd":9,"ayahStart":72,"ayahEnd":78,"label":"At-Tawbah · Ayah 72–78"},{"page":182,"printedPage":182,"surahStart":9,"surahEnd":9,"ayahStart":79,"ayahEnd":85,"label":"At-Tawbah · Ayah 79–85"},{"page":183,"printedPage":183,"surahStart":9,"surahEnd":9,"ayahStart":86,"ayahEnd":91,"label":"At-Tawbah · Ayah 86–91"},{"page":184,"printedPage":184,"surahStart":9,"surahEnd":9,"ayahStart":92,"ayahEnd":98,"label":"At-Tawbah · Ayah 92–98"},{"page":185,"printedPage":185,"surahStart":9,"surahEnd":9,"ayahStart":99,"ayahEnd":105,"label":"At-Tawbah · Ayah 99–105"},{"page":186,"printedPage":186,"surahStart":9,"surahEnd":9,"ayahStart":106,"ayahEnd":112,"label":"At-Tawbah · Ayah 106–112"},{"page":187,"printedPage":187,"surahStart":9,"surahEnd":9,"ayahStart":113,"ayahEnd":118,"label":"At-Tawbah · Ayah 113–118"},{"page":188,"printedPage":188,"surahStart":9,"surahEnd":9,"ayahStart":119,"ayahEnd":125,"label":"At-Tawbah · Ayah 119–125"},{"page":189,"printedPage":189,"surahStart":9,"surahEnd":10,"ayahStart":126,"ayahEnd":5,"label":"At-Tawbah–Yunus"},{"page":190,"printedPage":190,"surahStart":10,"surahEnd":10,"ayahStart":6,"ayahEnd":14,"label":"Yunus · Ayah 6–14"},{"page":191,"printedPage":191,"surahStart":10,"surahEnd":10,"ayahStart":15,"ayahEnd":23,"label":"Yunus · Ayah 15–23"},{"page":192,"printedPage":192,"surahStart":10,"surahEnd":10,"ayahStart":24,"ayahEnd":32,"label":"Yunus · Ayah 24–32"},{"page":193,"printedPage":193,"surahStart":10,"surahEnd":10,"ayahStart":33,"ayahEnd":41,"label":"Yunus · Ayah 33–41"},{"page":194,"printedPage":194,"surahStart":10,"surahEnd":10,"ayahStart":42,"ayahEnd":50,"label":"Yunus · Ayah 42–50"},{"page":195,"printedPage":195,"surahStart":10,"surahEnd":10,"ayahStart":51,"ayahEnd":59,"label":"Yunus · Ayah 51–59"},{"page":196,"printedPage":196,"surahStart":10,"surahEnd":10,"ayahStart":60,"ayahEnd":68,"label":"Yunus · Ayah 60–68"},{"page":197,"printedPage":197,"surahStart":10,"surahEnd":10,"ayahStart":69,"ayahEnd":77,"label":"Yunus · Ayah 69–77"},{"page":198,"printedPage":198,"surahStart":10,"surahEnd":10,"ayahStart":78,"ayahEnd":86,"label":"Yunus · Ayah 78–86"},{"page":199,"printedPage":199,"surahStart":10,"surahEnd":10,"ayahStart":87,"ayahEnd":95,"label":"Yunus · Ayah 87–95"},{"page":200,"printedPage":200,"surahStart":10,"surahEnd":10,"ayahStart":96,"ayahEnd":104,"label":"Yunus · Ayah 96–104"},{"page":201,"printedPage":201,"surahStart":10,"surahEnd":11,"ayahStart":105,"ayahEnd":6,"label":"Yunus–Hud"},{"page":202,"printedPage":202,"surahStart":11,"surahEnd":11,"ayahStart":7,"ayahEnd":16,"label":"Hud · Ayah 7–16"},{"page":203,"printedPage":203,"surahStart":11,"surahEnd":11,"ayahStart":17,"ayahEnd":26,"label":"Hud · Ayah 17–26"},{"page":204,"printedPage":204,"surahStart":11,"surahEnd":11,"ayahStart":27,"ayahEnd":36,"label":"Hud · Ayah 27–36"},{"page":205,"printedPage":205,"surahStart":11,"surahEnd":11,"ayahStart":37,"ayahEnd":46,"label":"Hud · Ayah 37–46"},{"page":206,"printedPage":206,"surahStart":11,"surahEnd":11,"ayahStart":47,"ayahEnd":56,"label":"Hud · Ayah 47–56"},{"page":207,"printedPage":207,"surahStart":11,"surahEnd":11,"ayahStart":57,"ayahEnd":67,"label":"Hud · Ayah 57–67"},{"page":208,"printedPage":208,"surahStart":11,"surahEnd":11,"ayahStart":68,"ayahEnd":77,"label":"Hud · Ayah 68–77"},{"page":209,"printedPage":209,"surahStart":11,"surahEnd":11,"ayahStart":78,"ayahEnd":87,"label":"Hud · Ayah 78–87"},{"page":210,"printedPage":210,"surahStart":11,"surahEnd":11,"ayahStart":88,"ayahEnd":97,"label":"Hud · Ayah 88–97"},{"page":211,"printedPage":211,"surahStart":11,"surahEnd":11,"ayahStart":98,"ayahEnd":107,"label":"Hud · Ayah 98–107"},{"page":212,"printedPage":212,"surahStart":11,"surahEnd":11,"ayahStart":108,"ayahEnd":117,"label":"Hud · Ayah 108–117"},{"page":213,"printedPage":213,"surahStart":11,"surahEnd":12,"ayahStart":118,"ayahEnd":5,"label":"Hud–Yusuf"},{"page":214,"printedPage":214,"surahStart":12,"surahEnd":12,"ayahStart":6,"ayahEnd":13,"label":"Yusuf · Ayah 6–13"},{"page":215,"printedPage":215,"surahStart":12,"surahEnd":12,"ayahStart":14,"ayahEnd":22,"label":"Yusuf · Ayah 14–22"},{"page":216,"printedPage":216,"surahStart":12,"surahEnd":12,"ayahStart":23,"ayahEnd":30,"label":"Yusuf · Ayah 23–30"},{"page":217,"printedPage":217,"surahStart":12,"surahEnd":12,"ayahStart":31,"ayahEnd":39,"label":"Yusuf · Ayah 31–39"},{"page":218,"printedPage":218,"surahStart":12,"surahEnd":12,"ayahStart":40,"ayahEnd":47,"label":"Yusuf · Ayah 40–47"},{"page":219,"printedPage":219,"surahStart":12,"surahEnd":12,"ayahStart":48,"ayahEnd":55,"label":"Yusuf · Ayah 48–55"},{"page":220,"printedPage":220,"surahStart":12,"surahEnd":12,"ayahStart":56,"ayahEnd":64,"label":"Yusuf · Ayah 56–64"},{"page":221,"printedPage":221,"surahStart":12,"surahEnd":12,"ayahStart":65,"ayahEnd":72,"label":"Yusuf · Ayah 65–72"},{"page":222,"printedPage":222,"surahStart":12,"surahEnd":12,"ayahStart":73,"ayahEnd":81,"label":"Yusuf · Ayah 73–81"},{"page":223,"printedPage":223,"surahStart":12,"surahEnd":12,"ayahStart":82,"ayahEnd":89,"label":"Yusuf · Ayah 82–89"},{"page":224,"printedPage":224,"surahStart":12,"surahEnd":12,"ayahStart":90,"ayahEnd":98,"label":"Yusuf · Ayah 90–98"},{"page":225,"printedPage":225,"surahStart":12,"surahEnd":12,"ayahStart":99,"ayahEnd":106,"label":"Yusuf · Ayah 99–106"},{"page":226,"printedPage":226,"surahStart":12,"surahEnd":13,"ayahStart":107,"ayahEnd":4,"label":"Yusuf–Ar-Ra'd"},{"page":227,"printedPage":227,"surahStart":13,"surahEnd":13,"ayahStart":5,"ayahEnd":11,"label":"Ar-Ra'd · Ayah 5–11"},{"page":228,"printedPage":228,"surahStart":13,"surahEnd":13,"ayahStart":12,"ayahEnd":18,"label":"Ar-Ra'd · Ayah 12–18"},{"page":229,"printedPage":229,"surahStart":13,"surahEnd":13,"ayahStart":19,"ayahEnd":25,"label":"Ar-Ra'd · Ayah 19–25"},{"page":230,"printedPage":230,"surahStart":13,"surahEnd":13,"ayahStart":26,"ayahEnd":32,"label":"Ar-Ra'd · Ayah 26–32"},{"page":231,"printedPage":231,"surahStart":13,"surahEnd":13,"ayahStart":33,"ayahEnd":39,"label":"Ar-Ra'd · Ayah 33–39"},{"page":232,"printedPage":232,"surahStart":13,"surahEnd":14,"ayahStart":40,"ayahEnd":5,"label":"Ar-Ra'd–Ibrahim"},{"page":233,"printedPage":233,"surahStart":14,"surahEnd":14,"ayahStart":6,"ayahEnd":13,"label":"Ibrahim · Ayah 6–13"},{"page":234,"printedPage":234,"surahStart":14,"surahEnd":14,"ayahStart":14,"ayahEnd":22,"label":"Ibrahim · Ayah 14–22"},{"page":235,"printedPage":235,"surahStart":14,"surahEnd":14,"ayahStart":23,"ayahEnd":30,"label":"Ibrahim · Ayah 23–30"},{"page":236,"printedPage":236,"surahStart":14,"surahEnd":14,"ayahStart":31,"ayahEnd":39,"label":"Ibrahim · Ayah 31–39"},{"page":237,"printedPage":237,"surahStart":14,"surahEnd":14,"ayahStart":40,"ayahEnd":47,"label":"Ibrahim · Ayah 40–47"},{"page":238,"printedPage":238,"surahStart":14,"surahEnd":15,"ayahStart":48,"ayahEnd":13,"label":"Ibrahim–Al-Hijr"},{"page":239,"printedPage":239,"surahStart":15,"surahEnd":15,"ayahStart":14,"ayahEnd":37,"label":"Al-Hijr · Ayah 14–37"},{"page":240,"printedPage":240,"surahStart":15,"surahEnd":15,"ayahStart":38,"ayahEnd":62,"label":"Al-Hijr · Ayah 38–62"},{"page":241,"printedPage":241,"surahStart":15,"surahEnd":15,"ayahStart":63,"ayahEnd":86,"label":"Al-Hijr · Ayah 63–86"},{"page":242,"printedPage":242,"surahStart":15,"surahEnd":16,"ayahStart":87,"ayahEnd":5,"label":"Al-Hijr–An-Nahl"},{"page":243,"printedPage":243,"surahStart":16,"surahEnd":16,"ayahStart":6,"ayahEnd":14,"label":"An-Nahl · Ayah 6–14"},{"page":244,"printedPage":244,"surahStart":16,"surahEnd":16,"ayahStart":15,"ayahEnd":23,"label":"An-Nahl · Ayah 15–23"},{"page":245,"printedPage":245,"surahStart":16,"surahEnd":16,"ayahStart":24,"ayahEnd":32,"label":"An-Nahl · Ayah 24–32"},{"page":246,"printedPage":246,"surahStart":16,"surahEnd":16,"ayahStart":33,"ayahEnd":41,"label":"An-Nahl · Ayah 33–41"},{"page":247,"printedPage":247,"surahStart":16,"surahEnd":16,"ayahStart":42,"ayahEnd":50,"label":"An-Nahl · Ayah 42–50"},{"page":248,"printedPage":248,"surahStart":16,"surahEnd":16,"ayahStart":51,"ayahEnd":59,"label":"An-Nahl · Ayah 51–59"},{"page":249,"printedPage":249,"surahStart":16,"surahEnd":16,"ayahStart":60,"ayahEnd":69,"label":"An-Nahl · Ayah 60–69"},{"page":250,"printedPage":250,"surahStart":16,"surahEnd":16,"ayahStart":70,"ayahEnd":78,"label":"An-Nahl · Ayah 70–78"},{"page":251,"printedPage":251,"surahStart":16,"surahEnd":16,"ayahStart":79,"ayahEnd":87,"label":"An-Nahl · Ayah 79–87"},{"page":252,"printedPage":252,"surahStart":16,"surahEnd":16,"ayahStart":88,"ayahEnd":96,"label":"An-Nahl · Ayah 88–96"},{"page":253,"printedPage":253,"surahStart":16,"surahEnd":16,"ayahStart":97,"ayahEnd":105,"label":"An-Nahl · Ayah 97–105"},{"page":254,"printedPage":254,"surahStart":16,"surahEnd":16,"ayahStart":106,"ayahEnd":114,"label":"An-Nahl · Ayah 106–114"},{"page":255,"printedPage":255,"surahStart":16,"surahEnd":16,"ayahStart":115,"ayahEnd":123,"label":"An-Nahl · Ayah 115–123"},{"page":256,"printedPage":256,"surahStart":16,"surahEnd":17,"ayahStart":124,"ayahEnd":6,"label":"An-Nahl–Al-Isra"},{"page":257,"printedPage":257,"surahStart":17,"surahEnd":17,"ayahStart":7,"ayahEnd":17,"label":"Al-Isra · Ayah 7–17"},{"page":258,"printedPage":258,"surahStart":17,"surahEnd":17,"ayahStart":18,"ayahEnd":28,"label":"Al-Isra · Ayah 18–28"},{"page":259,"printedPage":259,"surahStart":17,"surahEnd":17,"ayahStart":29,"ayahEnd":39,"label":"Al-Isra · Ayah 29–39"},{"page":260,"printedPage":260,"surahStart":17,"surahEnd":17,"ayahStart":40,"ayahEnd":50,"label":"Al-Isra · Ayah 40–50"},{"page":261,"printedPage":261,"surahStart":17,"surahEnd":17,"ayahStart":51,"ayahEnd":61,"label":"Al-Isra · Ayah 51–61"},{"page":262,"printedPage":262,"surahStart":17,"surahEnd":17,"ayahStart":62,"ayahEnd":72,"label":"Al-Isra · Ayah 62–72"},{"page":263,"printedPage":263,"surahStart":17,"surahEnd":17,"ayahStart":73,"ayahEnd":83,"label":"Al-Isra · Ayah 73–83"},{"page":264,"printedPage":264,"surahStart":17,"surahEnd":17,"ayahStart":84,"ayahEnd":94,"label":"Al-Isra · Ayah 84–94"},{"page":265,"printedPage":265,"surahStart":17,"surahEnd":17,"ayahStart":95,"ayahEnd":105,"label":"Al-Isra · Ayah 95–105"},{"page":266,"printedPage":266,"surahStart":17,"surahEnd":18,"ayahStart":106,"ayahEnd":5,"label":"Al-Isra–Al-Kahf"},{"page":267,"printedPage":267,"surahStart":18,"surahEnd":18,"ayahStart":6,"ayahEnd":15,"label":"Al-Kahf · Ayah 6–15"},{"page":268,"printedPage":268,"surahStart":18,"surahEnd":18,"ayahStart":16,"ayahEnd":25,"label":"Al-Kahf · Ayah 16–25"},{"page":269,"printedPage":269,"surahStart":18,"surahEnd":18,"ayahStart":26,"ayahEnd":35,"label":"Al-Kahf · Ayah 26–35"},{"page":270,"printedPage":270,"surahStart":18,"surahEnd":18,"ayahStart":36,"ayahEnd":45,"label":"Al-Kahf · Ayah 36–45"},{"page":271,"printedPage":271,"surahStart":18,"surahEnd":18,"ayahStart":46,"ayahEnd":55,"label":"Al-Kahf · Ayah 46–55"},{"page":272,"printedPage":272,"surahStart":18,"surahEnd":18,"ayahStart":56,"ayahEnd":65,"label":"Al-Kahf · Ayah 56–65"},{"page":273,"printedPage":273,"surahStart":18,"surahEnd":18,"ayahStart":66,"ayahEnd":75,"label":"Al-Kahf · Ayah 66–75"},{"page":274,"printedPage":274,"surahStart":18,"surahEnd":18,"ayahStart":76,"ayahEnd":85,"label":"Al-Kahf · Ayah 76–85"},{"page":275,"printedPage":275,"surahStart":18,"surahEnd":18,"ayahStart":86,"ayahEnd":95,"label":"Al-Kahf · Ayah 86–95"},{"page":276,"printedPage":276,"surahStart":18,"surahEnd":18,"ayahStart":96,"ayahEnd":105,"label":"Al-Kahf · Ayah 96–105"},{"page":277,"printedPage":277,"surahStart":18,"surahEnd":19,"ayahStart":106,"ayahEnd":9,"label":"Al-Kahf–Maryam"},{"page":278,"printedPage":278,"surahStart":19,"surahEnd":19,"ayahStart":10,"ayahEnd":25,"label":"Maryam · Ayah 10–25"},{"page":279,"printedPage":279,"surahStart":19,"surahEnd":19,"ayahStart":26,"ayahEnd":41,"label":"Maryam · Ayah 26–41"},{"page":280,"printedPage":280,"surahStart":19,"surahEnd":19,"ayahStart":42,"ayahEnd":57,"label":"Maryam · Ayah 42–57"},{"page":281,"printedPage":281,"surahStart":19,"surahEnd":19,"ayahStart":58,"ayahEnd":73,"label":"Maryam · Ayah 58–73"},{"page":282,"printedPage":282,"surahStart":19,"surahEnd":19,"ayahStart":74,"ayahEnd":89,"label":"Maryam · Ayah 74–89"},{"page":283,"printedPage":283,"surahStart":19,"surahEnd":20,"ayahStart":90,"ayahEnd":8,"label":"Maryam–Taha"},{"page":284,"printedPage":284,"surahStart":20,"surahEnd":20,"ayahStart":9,"ayahEnd":23,"label":"Taha · Ayah 9–23"},{"page":285,"printedPage":285,"surahStart":20,"surahEnd":20,"ayahStart":24,"ayahEnd":38,"label":"Taha · Ayah 24–38"},{"page":286,"printedPage":286,"surahStart":20,"surahEnd":20,"ayahStart":39,"ayahEnd":53,"label":"Taha · Ayah 39–53"},{"page":287,"printedPage":287,"surahStart":20,"surahEnd":20,"ayahStart":54,"ayahEnd":67,"label":"Taha · Ayah 54–67"},{"page":288,"printedPage":288,"surahStart":20,"surahEnd":20,"ayahStart":68,"ayahEnd":82,"label":"Taha · Ayah 68–82"},{"page":289,"printedPage":289,"surahStart":20,"surahEnd":20,"ayahStart":83,"ayahEnd":97,"label":"Taha · Ayah 83–97"},{"page":290,"printedPage":290,"surahStart":20,"surahEnd":20,"ayahStart":98,"ayahEnd":112,"label":"Taha · Ayah 98–112"},{"page":291,"printedPage":291,"surahStart":20,"surahEnd":20,"ayahStart":113,"ayahEnd":127,"label":"Taha · Ayah 113–127"},{"page":292,"printedPage":292,"surahStart":20,"surahEnd":21,"ayahStart":128,"ayahEnd":7,"label":"Taha–Al-Anbya"},{"page":293,"printedPage":293,"surahStart":21,"surahEnd":21,"ayahStart":8,"ayahEnd":19,"label":"Al-Anbya · Ayah 8–19"},{"page":294,"printedPage":294,"surahStart":21,"surahEnd":21,"ayahStart":20,"ayahEnd":31,"label":"Al-Anbya · Ayah 20–31"},{"page":295,"printedPage":295,"surahStart":21,"surahEnd":21,"ayahStart":32,"ayahEnd":44,"label":"Al-Anbya · Ayah 32–44"},{"page":296,"printedPage":296,"surahStart":21,"surahEnd":21,"ayahStart":45,"ayahEnd":56,"label":"Al-Anbya · Ayah 45–56"},{"page":297,"printedPage":297,"surahStart":21,"surahEnd":21,"ayahStart":57,"ayahEnd":68,"label":"Al-Anbya · Ayah 57–68"},{"page":298,"printedPage":298,"surahStart":21,"surahEnd":21,"ayahStart":69,"ayahEnd":81,"label":"Al-Anbya · Ayah 69–81"},{"page":299,"printedPage":299,"surahStart":21,"surahEnd":21,"ayahStart":82,"ayahEnd":93,"label":"Al-Anbya · Ayah 82–93"},{"page":300,"printedPage":300,"surahStart":21,"surahEnd":21,"ayahStart":94,"ayahEnd":105,"label":"Al-Anbya · Ayah 94–105"},{"page":301,"printedPage":301,"surahStart":21,"surahEnd":22,"ayahStart":106,"ayahEnd":5,"label":"Al-Anbya–Al-Hajj"},{"page":302,"printedPage":302,"surahStart":22,"surahEnd":22,"ayahStart":6,"ayahEnd":13,"label":"Al-Hajj · Ayah 6–13"},{"page":303,"printedPage":303,"surahStart":22,"surahEnd":22,"ayahStart":14,"ayahEnd":22,"label":"Al-Hajj · Ayah 14–22"},{"page":304,"printedPage":304,"surahStart":22,"surahEnd":22,"ayahStart":23,"ayahEnd":30,"label":"Al-Hajj · Ayah 23–30"},{"page":305,"printedPage":305,"surahStart":22,"surahEnd":22,"ayahStart":31,"ayahEnd":39,"label":"Al-Hajj · Ayah 31–39"},{"page":306,"printedPage":306,"surahStart":22,"surahEnd":22,"ayahStart":40,"ayahEnd":48,"label":"Al-Hajj · Ayah 40–48"},{"page":307,"printedPage":307,"surahStart":22,"surahEnd":22,"ayahStart":49,"ayahEnd":56,"label":"Al-Hajj · Ayah 49–56"},{"page":308,"printedPage":308,"surahStart":22,"surahEnd":22,"ayahStart":57,"ayahEnd":65,"label":"Al-Hajj · Ayah 57–65"},{"page":309,"printedPage":309,"surahStart":22,"surahEnd":22,"ayahStart":66,"ayahEnd":73,"label":"Al-Hajj · Ayah 66–73"},{"page":310,"printedPage":310,"surahStart":22,"surahEnd":23,"ayahStart":74,"ayahEnd":9,"label":"Al-Hajj–Al-Mu'minun"},{"page":311,"printedPage":311,"surahStart":23,"surahEnd":23,"ayahStart":10,"ayahEnd":26,"label":"Al-Mu'minun · Ayah 10–26"},{"page":312,"printedPage":312,"surahStart":23,"surahEnd":23,"ayahStart":27,"ayahEnd":42,"label":"Al-Mu'minun · Ayah 27–42"},{"page":313,"printedPage":313,"surahStart":23,"surahEnd":23,"ayahStart":43,"ayahEnd":59,"label":"Al-Mu'minun · Ayah 43–59"},{"page":314,"printedPage":314,"surahStart":23,"surahEnd":23,"ayahStart":60,"ayahEnd":76,"label":"Al-Mu'minun · Ayah 60–76"},{"page":315,"printedPage":315,"surahStart":23,"surahEnd":23,"ayahStart":77,"ayahEnd":92,"label":"Al-Mu'minun · Ayah 77–92"},{"page":316,"printedPage":316,"surahStart":23,"surahEnd":23,"ayahStart":93,"ayahEnd":109,"label":"Al-Mu'minun · Ayah 93–109"},{"page":317,"printedPage":317,"surahStart":23,"surahEnd":24,"ayahStart":110,"ayahEnd":4,"label":"Al-Mu'minun–An-Nur"},{"page":318,"printedPage":318,"surahStart":24,"surahEnd":24,"ayahStart":5,"ayahEnd":12,"label":"An-Nur · Ayah 5–12"},{"page":319,"printedPage":319,"surahStart":24,"surahEnd":24,"ayahStart":13,"ayahEnd":20,"label":"An-Nur · Ayah 13–20"},{"page":320,"printedPage":320,"surahStart":24,"surahEnd":24,"ayahStart":21,"ayahEnd":28,"label":"An-Nur · Ayah 21–28"},{"page":321,"printedPage":321,"surahStart":24,"surahEnd":24,"ayahStart":29,"ayahEnd":36,"label":"An-Nur · Ayah 29–36"},{"page":322,"printedPage":322,"surahStart":24,"surahEnd":24,"ayahStart":37,"ayahEnd":44,"label":"An-Nur · Ayah 37–44"},{"page":323,"printedPage":323,"surahStart":24,"surahEnd":24,"ayahStart":45,"ayahEnd":52,"label":"An-Nur · Ayah 45–52"},{"page":324,"printedPage":324,"surahStart":24,"surahEnd":24,"ayahStart":53,"ayahEnd":60,"label":"An-Nur · Ayah 53–60"},{"page":325,"printedPage":325,"surahStart":24,"surahEnd":25,"ayahStart":61,"ayahEnd":5,"label":"An-Nur–Al-Furqan"},{"page":326,"printedPage":326,"surahStart":25,"surahEnd":25,"ayahStart":6,"ayahEnd":15,"label":"Al-Furqan · Ayah 6–15"},{"page":327,"printedPage":327,"surahStart":25,"surahEnd":25,"ayahStart":16,"ayahEnd":24,"label":"Al-Furqan · Ayah 16–24"},{"page":328,"printedPage":328,"surahStart":25,"surahEnd":25,"ayahStart":25,"ayahEnd":34,"label":"Al-Furqan · Ayah 25–34"},{"page":329,"printedPage":329,"surahStart":25,"surahEnd":25,"ayahStart":35,"ayahEnd":43,"label":"Al-Furqan · Ayah 35–43"},{"page":330,"printedPage":330,"surahStart":25,"surahEnd":25,"ayahStart":44,"ayahEnd":53,"label":"Al-Furqan · Ayah 44–53"},{"page":331,"printedPage":331,"surahStart":25,"surahEnd":25,"ayahStart":54,"ayahEnd":62,"label":"Al-Furqan · Ayah 54–62"},{"page":332,"printedPage":332,"surahStart":25,"surahEnd":25,"ayahStart":63,"ayahEnd":72,"label":"Al-Furqan · Ayah 63–72"},{"page":333,"printedPage":333,"surahStart":25,"surahEnd":26,"ayahStart":73,"ayahEnd":13,"label":"Al-Furqan–Ash-Shu'ara"},{"page":334,"printedPage":334,"surahStart":26,"surahEnd":26,"ayahStart":14,"ayahEnd":38,"label":"Ash-Shu'ara · Ayah 14–38"},{"page":335,"printedPage":335,"surahStart":26,"surahEnd":26,"ayahStart":39,"ayahEnd":63,"label":"Ash-Shu'ara · Ayah 39–63"},{"page":336,"printedPage":336,"surahStart":26,"surahEnd":26,"ayahStart":64,"ayahEnd":88,"label":"Ash-Shu'ara · Ayah 64–88"},{"page":337,"printedPage":337,"surahStart":26,"surahEnd":26,"ayahStart":89,"ayahEnd":113,"label":"Ash-Shu'ara · Ayah 89–113"},{"page":338,"printedPage":338,"surahStart":26,"surahEnd":26,"ayahStart":114,"ayahEnd":139,"label":"Ash-Shu'ara · Ayah 114–139"},{"page":339,"printedPage":339,"surahStart":26,"surahEnd":26,"ayahStart":140,"ayahEnd":164,"label":"Ash-Shu'ara · Ayah 140–164"},{"page":340,"printedPage":340,"surahStart":26,"surahEnd":26,"ayahStart":165,"ayahEnd":189,"label":"Ash-Shu'ara · Ayah 165–189"},{"page":341,"printedPage":341,"surahStart":26,"surahEnd":26,"ayahStart":190,"ayahEnd":214,"label":"Ash-Shu'ara · Ayah 190–214"},{"page":342,"printedPage":342,"surahStart":26,"surahEnd":27,"ayahStart":215,"ayahEnd":7,"label":"Ash-Shu'ara–An-Naml"},{"page":343,"printedPage":343,"surahStart":27,"surahEnd":27,"ayahStart":8,"ayahEnd":20,"label":"An-Naml · Ayah 8–20"},{"page":344,"printedPage":344,"surahStart":27,"surahEnd":27,"ayahStart":21,"ayahEnd":33,"label":"An-Naml · Ayah 21–33"},{"page":345,"printedPage":345,"surahStart":27,"surahEnd":27,"ayahStart":34,"ayahEnd":46,"label":"An-Naml · Ayah 34–46"},{"page":346,"printedPage":346,"surahStart":27,"surahEnd":27,"ayahStart":47,"ayahEnd":60,"label":"An-Naml · Ayah 47–60"},{"page":347,"printedPage":347,"surahStart":27,"surahEnd":27,"ayahStart":61,"ayahEnd":73,"label":"An-Naml · Ayah 61–73"},{"page":348,"printedPage":348,"surahStart":27,"surahEnd":27,"ayahStart":74,"ayahEnd":86,"label":"An-Naml · Ayah 74–86"},{"page":349,"printedPage":349,"surahStart":27,"surahEnd":28,"ayahStart":87,"ayahEnd":5,"label":"An-Naml–Al-Qasas"},{"page":350,"printedPage":350,"surahStart":28,"surahEnd":28,"ayahStart":6,"ayahEnd":14,"label":"Al-Qasas · Ayah 6–14"},{"page":351,"printedPage":351,"surahStart":28,"surahEnd":28,"ayahStart":15,"ayahEnd":22,"label":"Al-Qasas · Ayah 15–22"},{"page":352,"printedPage":352,"surahStart":28,"surahEnd":28,"ayahStart":23,"ayahEnd":31,"label":"Al-Qasas · Ayah 23–31"},{"page":353,"printedPage":353,"surahStart":28,"surahEnd":28,"ayahStart":32,"ayahEnd":40,"label":"Al-Qasas · Ayah 32–40"},{"page":354,"printedPage":354,"surahStart":28,"surahEnd":28,"ayahStart":41,"ayahEnd":48,"label":"Al-Qasas · Ayah 41–48"},{"page":355,"printedPage":355,"surahStart":28,"surahEnd":28,"ayahStart":49,"ayahEnd":57,"label":"Al-Qasas · Ayah 49–57"},{"page":356,"printedPage":356,"surahStart":28,"surahEnd":28,"ayahStart":58,"ayahEnd":66,"label":"Al-Qasas · Ayah 58–66"},{"page":357,"printedPage":357,"surahStart":28,"surahEnd":28,"ayahStart":67,"ayahEnd":74,"label":"Al-Qasas · Ayah 67–74"},{"page":358,"printedPage":358,"surahStart":28,"surahEnd":28,"ayahStart":75,"ayahEnd":83,"label":"Al-Qasas · Ayah 75–83"},{"page":359,"printedPage":359,"surahStart":28,"surahEnd":29,"ayahStart":84,"ayahEnd":5,"label":"Al-Qasas–Al-'Ankabut"},{"page":360,"printedPage":360,"surahStart":29,"surahEnd":29,"ayahStart":6,"ayahEnd":15,"label":"Al-'Ankabut · Ayah 6–15"},{"page":361,"printedPage":361,"surahStart":29,"surahEnd":29,"ayahStart":16,"ayahEnd":25,"label":"Al-'Ankabut · Ayah 16–25"},{"page":362,"printedPage":362,"surahStart":29,"surahEnd":29,"ayahStart":26,"ayahEnd":35,"label":"Al-'Ankabut · Ayah 26–35"},{"page":363,"printedPage":363,"surahStart":29,"surahEnd":29,"ayahStart":36,"ayahEnd":44,"label":"Al-'Ankabut · Ayah 36–44"},{"page":364,"printedPage":364,"surahStart":29,"surahEnd":29,"ayahStart":45,"ayahEnd":54,"label":"Al-'Ankabut · Ayah 45–54"},{"page":365,"printedPage":365,"surahStart":29,"surahEnd":29,"ayahStart":55,"ayahEnd":64,"label":"Al-'Ankabut · Ayah 55–64"},{"page":366,"printedPage":366,"surahStart":29,"surahEnd":30,"ayahStart":65,"ayahEnd":5,"label":"Al-'Ankabut–Ar-Rum"},{"page":367,"printedPage":367,"surahStart":30,"surahEnd":30,"ayahStart":6,"ayahEnd":15,"label":"Ar-Rum · Ayah 6–15"},{"page":368,"printedPage":368,"surahStart":30,"surahEnd":30,"ayahStart":16,"ayahEnd":25,"label":"Ar-Rum · Ayah 16–25"},{"page":369,"printedPage":369,"surahStart":30,"surahEnd":30,"ayahStart":26,"ayahEnd":35,"label":"Ar-Rum · Ayah 26–35"},{"page":370,"printedPage":370,"surahStart":30,"surahEnd":30,"ayahStart":36,"ayahEnd":45,"label":"Ar-Rum · Ayah 36–45"},{"page":371,"printedPage":371,"surahStart":30,"surahEnd":30,"ayahStart":46,"ayahEnd":55,"label":"Ar-Rum · Ayah 46–55"},{"page":372,"printedPage":372,"surahStart":30,"surahEnd":31,"ayahStart":56,"ayahEnd":5,"label":"Ar-Rum–Luqman"},{"page":373,"printedPage":373,"surahStart":31,"surahEnd":31,"ayahStart":6,"ayahEnd":13,"label":"Luqman · Ayah 6–13"},{"page":374,"printedPage":374,"surahStart":31,"surahEnd":31,"ayahStart":14,"ayahEnd":21,"label":"Luqman · Ayah 14–21"},{"page":375,"printedPage":375,"surahStart":31,"surahEnd":31,"ayahStart":22,"ayahEnd":29,"label":"Luqman · Ayah 22–29"},{"page":376,"printedPage":376,"surahStart":31,"surahEnd":32,"ayahStart":30,"ayahEnd":5,"label":"Luqman–As-Sajdah"},{"page":377,"printedPage":377,"surahStart":32,"surahEnd":32,"ayahStart":6,"ayahEnd":15,"label":"As-Sajdah · Ayah 6–15"},{"page":378,"printedPage":378,"surahStart":32,"surahEnd":32,"ayahStart":16,"ayahEnd":25,"label":"As-Sajdah · Ayah 16–25"},{"page":379,"printedPage":379,"surahStart":32,"surahEnd":33,"ayahStart":26,"ayahEnd":4,"label":"As-Sajdah–Al-Ahzab"},{"page":380,"printedPage":380,"surahStart":33,"surahEnd":33,"ayahStart":5,"ayahEnd":13,"label":"Al-Ahzab · Ayah 5–13"},{"page":381,"printedPage":381,"surahStart":33,"surahEnd":33,"ayahStart":14,"ayahEnd":20,"label":"Al-Ahzab · Ayah 14–20"},{"page":382,"printedPage":382,"surahStart":33,"surahEnd":33,"ayahStart":21,"ayahEnd":29,"label":"Al-Ahzab · Ayah 21–29"},{"page":383,"printedPage":383,"surahStart":33,"surahEnd":33,"ayahStart":30,"ayahEnd":36,"label":"Al-Ahzab · Ayah 30–36"},{"page":384,"printedPage":384,"surahStart":33,"surahEnd":33,"ayahStart":37,"ayahEnd":45,"label":"Al-Ahzab · Ayah 37–45"},{"page":385,"printedPage":385,"surahStart":33,"surahEnd":33,"ayahStart":46,"ayahEnd":52,"label":"Al-Ahzab · Ayah 46–52"},{"page":386,"printedPage":386,"surahStart":33,"surahEnd":33,"ayahStart":53,"ayahEnd":61,"label":"Al-Ahzab · Ayah 53–61"},{"page":387,"printedPage":387,"surahStart":33,"surahEnd":33,"ayahStart":62,"ayahEnd":68,"label":"Al-Ahzab · Ayah 62–68"},{"page":388,"printedPage":388,"surahStart":33,"surahEnd":34,"ayahStart":69,"ayahEnd":6,"label":"Al-Ahzab–Saba"},{"page":389,"printedPage":389,"surahStart":34,"surahEnd":34,"ayahStart":7,"ayahEnd":16,"label":"Saba · Ayah 7–16"},{"page":390,"printedPage":390,"surahStart":34,"surahEnd":34,"ayahStart":17,"ayahEnd":27,"label":"Saba · Ayah 17–27"},{"page":391,"printedPage":391,"surahStart":34,"surahEnd":34,"ayahStart":28,"ayahEnd":38,"label":"Saba · Ayah 28–38"},{"page":392,"printedPage":392,"surahStart":34,"surahEnd":34,"ayahStart":39,"ayahEnd":48,"label":"Saba · Ayah 39–48"},{"page":393,"printedPage":393,"surahStart":34,"surahEnd":35,"ayahStart":49,"ayahEnd":4,"label":"Saba–Fatir"},{"page":394,"printedPage":394,"surahStart":35,"surahEnd":35,"ayahStart":5,"ayahEnd":12,"label":"Fatir · Ayah 5–12"},{"page":395,"printedPage":395,"surahStart":35,"surahEnd":35,"ayahStart":13,"ayahEnd":19,"label":"Fatir · Ayah 13–19"},{"page":396,"printedPage":396,"surahStart":35,"surahEnd":35,"ayahStart":20,"ayahEnd":26,"label":"Fatir · Ayah 20–26"},{"page":397,"printedPage":397,"surahStart":35,"surahEnd":35,"ayahStart":27,"ayahEnd":33,"label":"Fatir · Ayah 27–33"},{"page":398,"printedPage":398,"surahStart":35,"surahEnd":35,"ayahStart":34,"ayahEnd":41,"label":"Fatir · Ayah 34–41"},{"page":399,"printedPage":399,"surahStart":35,"surahEnd":36,"ayahStart":42,"ayahEnd":9,"label":"Fatir–Ya-Sin"},{"page":400,"printedPage":400,"surahStart":36,"surahEnd":36,"ayahStart":10,"ayahEnd":25,"label":"Ya-Sin · Ayah 10–25"},{"page":401,"printedPage":401,"surahStart":36,"surahEnd":36,"ayahStart":26,"ayahEnd":41,"label":"Ya-Sin · Ayah 26–41"},{"page":402,"printedPage":402,"surahStart":36,"surahEnd":36,"ayahStart":42,"ayahEnd":58,"label":"Ya-Sin · Ayah 42–58"},{"page":403,"printedPage":403,"surahStart":36,"surahEnd":36,"ayahStart":59,"ayahEnd":74,"label":"Ya-Sin · Ayah 59–74"},{"page":404,"printedPage":404,"surahStart":36,"surahEnd":37,"ayahStart":75,"ayahEnd":16,"label":"Ya-Sin–As-Saffat"},{"page":405,"printedPage":405,"surahStart":37,"surahEnd":37,"ayahStart":17,"ayahEnd":46,"label":"As-Saffat · Ayah 17–46"},{"page":406,"printedPage":406,"surahStart":37,"surahEnd":37,"ayahStart":47,"ayahEnd":76,"label":"As-Saffat · Ayah 47–76"},{"page":407,"printedPage":407,"surahStart":37,"surahEnd":37,"ayahStart":77,"ayahEnd":106,"label":"As-Saffat · Ayah 77–106"},{"page":408,"printedPage":408,"surahStart":37,"surahEnd":37,"ayahStart":107,"ayahEnd":136,"label":"As-Saffat · Ayah 107–136"},{"page":409,"printedPage":409,"surahStart":37,"surahEnd":37,"ayahStart":137,"ayahEnd":166,"label":"As-Saffat · Ayah 137–166"},{"page":410,"printedPage":410,"surahStart":37,"surahEnd":38,"ayahStart":167,"ayahEnd":9,"label":"As-Saffat–Sad"},{"page":411,"printedPage":411,"surahStart":38,"surahEnd":38,"ayahStart":10,"ayahEnd":27,"label":"Sad · Ayah 10–27"},{"page":412,"printedPage":412,"surahStart":38,"surahEnd":38,"ayahStart":28,"ayahEnd":44,"label":"Sad · Ayah 28–44"},{"page":413,"printedPage":413,"surahStart":38,"surahEnd":38,"ayahStart":45,"ayahEnd":61,"label":"Sad · Ayah 45–61"},{"page":414,"printedPage":414,"surahStart":38,"surahEnd":38,"ayahStart":62,"ayahEnd":79,"label":"Sad · Ayah 62–79"},{"page":415,"printedPage":415,"surahStart":38,"surahEnd":39,"ayahStart":80,"ayahEnd":5,"label":"Sad–Az-Zumar"},{"page":416,"printedPage":416,"surahStart":39,"surahEnd":39,"ayahStart":6,"ayahEnd":14,"label":"Az-Zumar · Ayah 6–14"},{"page":417,"printedPage":417,"surahStart":39,"surahEnd":39,"ayahStart":15,"ayahEnd":24,"label":"Az-Zumar · Ayah 15–24"},{"page":418,"printedPage":418,"surahStart":39,"surahEnd":39,"ayahStart":25,"ayahEnd":33,"label":"Az-Zumar · Ayah 25–33"},{"page":419,"printedPage":419,"surahStart":39,"surahEnd":39,"ayahStart":34,"ayahEnd":42,"label":"Az-Zumar · Ayah 34–42"},{"page":420,"printedPage":420,"surahStart":39,"surahEnd":39,"ayahStart":43,"ayahEnd":51,"label":"Az-Zumar · Ayah 43–51"},{"page":421,"printedPage":421,"surahStart":39,"surahEnd":39,"ayahStart":52,"ayahEnd":61,"label":"Az-Zumar · Ayah 52–61"},{"page":422,"printedPage":422,"surahStart":39,"surahEnd":39,"ayahStart":62,"ayahEnd":70,"label":"Az-Zumar · Ayah 62–70"},{"page":423,"printedPage":423,"surahStart":39,"surahEnd":40,"ayahStart":71,"ayahEnd":5,"label":"Az-Zumar–Ghafir"},{"page":424,"printedPage":424,"surahStart":40,"surahEnd":40,"ayahStart":6,"ayahEnd":15,"label":"Ghafir · Ayah 6–15"},{"page":425,"printedPage":425,"surahStart":40,"surahEnd":40,"ayahStart":16,"ayahEnd":24,"label":"Ghafir · Ayah 16–24"},{"page":426,"printedPage":426,"surahStart":40,"surahEnd":40,"ayahStart":25,"ayahEnd":33,"label":"Ghafir · Ayah 25–33"},{"page":427,"printedPage":427,"surahStart":40,"surahEnd":40,"ayahStart":34,"ayahEnd":42,"label":"Ghafir · Ayah 34–42"},{"page":428,"printedPage":428,"surahStart":40,"surahEnd":40,"ayahStart":43,"ayahEnd":52,"label":"Ghafir · Ayah 43–52"},{"page":429,"printedPage":429,"surahStart":40,"surahEnd":40,"ayahStart":53,"ayahEnd":61,"label":"Ghafir · Ayah 53–61"},{"page":430,"printedPage":430,"surahStart":40,"surahEnd":40,"ayahStart":62,"ayahEnd":71,"label":"Ghafir · Ayah 62–71"},{"page":431,"printedPage":431,"surahStart":40,"surahEnd":40,"ayahStart":72,"ayahEnd":80,"label":"Ghafir · Ayah 72–80"},{"page":432,"printedPage":432,"surahStart":40,"surahEnd":41,"ayahStart":81,"ayahEnd":6,"label":"Ghafir–Fussilat"},{"page":433,"printedPage":433,"surahStart":41,"surahEnd":41,"ayahStart":7,"ayahEnd":16,"label":"Fussilat · Ayah 7–16"},{"page":434,"printedPage":434,"surahStart":41,"surahEnd":41,"ayahStart":17,"ayahEnd":27,"label":"Fussilat · Ayah 17–27"},{"page":435,"printedPage":435,"surahStart":41,"surahEnd":41,"ayahStart":28,"ayahEnd":38,"label":"Fussilat · Ayah 28–38"},{"page":436,"printedPage":436,"surahStart":41,"surahEnd":41,"ayahStart":39,"ayahEnd":48,"label":"Fussilat · Ayah 39–48"},{"page":437,"printedPage":437,"surahStart":41,"surahEnd":42,"ayahStart":49,"ayahEnd":5,"label":"Fussilat–Ash-Shuraa"},{"page":438,"printedPage":438,"surahStart":42,"surahEnd":42,"ayahStart":6,"ayahEnd":14,"label":"Ash-Shuraa · Ayah 6–14"},{"page":439,"printedPage":439,"surahStart":42,"surahEnd":42,"ayahStart":15,"ayahEnd":22,"label":"Ash-Shuraa · Ayah 15–22"},{"page":440,"printedPage":440,"surahStart":42,"surahEnd":42,"ayahStart":23,"ayahEnd":31,"label":"Ash-Shuraa · Ayah 23–31"},{"page":441,"printedPage":441,"surahStart":42,"surahEnd":42,"ayahStart":32,"ayahEnd":39,"label":"Ash-Shuraa · Ayah 32–39"},{"page":442,"printedPage":442,"surahStart":42,"surahEnd":42,"ayahStart":40,"ayahEnd":48,"label":"Ash-Shuraa · Ayah 40–48"},{"page":443,"printedPage":443,"surahStart":42,"surahEnd":43,"ayahStart":49,"ayahEnd":8,"label":"Ash-Shuraa–Az-Zukhruf"},{"page":444,"printedPage":444,"surahStart":43,"surahEnd":43,"ayahStart":9,"ayahEnd":23,"label":"Az-Zukhruf · Ayah 9–23"},{"page":445,"printedPage":445,"surahStart":43,"surahEnd":43,"ayahStart":24,"ayahEnd":37,"label":"Az-Zukhruf · Ayah 24–37"},{"page":446,"printedPage":446,"surahStart":43,"surahEnd":43,"ayahStart":38,"ayahEnd":52,"label":"Az-Zukhruf · Ayah 38–52"},{"page":447,"printedPage":447,"surahStart":43,"surahEnd":43,"ayahStart":53,"ayahEnd":66,"label":"Az-Zukhruf · Ayah 53–66"},{"page":448,"printedPage":448,"surahStart":43,"surahEnd":43,"ayahStart":67,"ayahEnd":81,"label":"Az-Zukhruf · Ayah 67–81"},{"page":449,"printedPage":449,"surahStart":43,"surahEnd":44,"ayahStart":82,"ayahEnd":10,"label":"Az-Zukhruf–Ad-Dukhan"},{"page":450,"printedPage":450,"surahStart":44,"surahEnd":44,"ayahStart":11,"ayahEnd":30,"label":"Ad-Dukhan · Ayah 11–30"},{"page":451,"printedPage":451,"surahStart":44,"surahEnd":44,"ayahStart":31,"ayahEnd":49,"label":"Ad-Dukhan · Ayah 31–49"},{"page":452,"printedPage":452,"surahStart":44,"surahEnd":45,"ayahStart":50,"ayahEnd":7,"label":"Ad-Dukhan–Al-Jathiyah"},{"page":453,"printedPage":453,"surahStart":45,"surahEnd":45,"ayahStart":8,"ayahEnd":18,"label":"Al-Jathiyah · Ayah 8–18"},{"page":454,"printedPage":454,"surahStart":45,"surahEnd":45,"ayahStart":19,"ayahEnd":31,"label":"Al-Jathiyah · Ayah 19–31"},{"page":455,"printedPage":455,"surahStart":45,"surahEnd":46,"ayahStart":32,"ayahEnd":5,"label":"Al-Jathiyah–Al-Ahqaf"},{"page":456,"printedPage":456,"surahStart":46,"surahEnd":46,"ayahStart":6,"ayahEnd":13,"label":"Al-Ahqaf · Ayah 6–13"},{"page":457,"printedPage":457,"surahStart":46,"surahEnd":46,"ayahStart":14,"ayahEnd":22,"label":"Al-Ahqaf · Ayah 14–22"},{"page":458,"printedPage":458,"surahStart":46,"surahEnd":46,"ayahStart":23,"ayahEnd":30,"label":"Al-Ahqaf · Ayah 23–30"},{"page":459,"printedPage":459,"surahStart":46,"surahEnd":47,"ayahStart":31,"ayahEnd":5,"label":"Al-Ahqaf–Muhammad"},{"page":460,"printedPage":460,"surahStart":47,"surahEnd":47,"ayahStart":6,"ayahEnd":14,"label":"Muhammad · Ayah 6–14"},{"page":461,"printedPage":461,"surahStart":47,"surahEnd":47,"ayahStart":15,"ayahEnd":24,"label":"Muhammad · Ayah 15–24"},{"page":462,"printedPage":462,"surahStart":47,"surahEnd":47,"ayahStart":25,"ayahEnd":33,"label":"Muhammad · Ayah 25–33"},{"page":463,"printedPage":463,"surahStart":47,"surahEnd":48,"ayahStart":34,"ayahEnd":5,"label":"Muhammad–Al-Fath"},{"page":464,"printedPage":464,"surahStart":48,"surahEnd":48,"ayahStart":6,"ayahEnd":15,"label":"Al-Fath · Ayah 6–15"},{"page":465,"printedPage":465,"surahStart":48,"surahEnd":48,"ayahStart":16,"ayahEnd":24,"label":"Al-Fath · Ayah 16–24"},{"page":466,"printedPage":466,"surahStart":48,"surahEnd":49,"ayahStart":25,"ayahEnd":3,"label":"Al-Fath–Al-Hujurat"},{"page":467,"printedPage":467,"surahStart":49,"surahEnd":49,"ayahStart":4,"ayahEnd":9,"label":"Al-Hujurat · Ayah 4–9"},{"page":468,"printedPage":468,"surahStart":49,"surahEnd":49,"ayahStart":10,"ayahEnd":15,"label":"Al-Hujurat · Ayah 10–15"},{"page":469,"printedPage":469,"surahStart":49,"surahEnd":50,"ayahStart":16,"ayahEnd":11,"label":"Al-Hujurat–Qaf"},{"page":470,"printedPage":470,"surahStart":50,"surahEnd":50,"ayahStart":12,"ayahEnd":34,"label":"Qaf · Ayah 12–34"},{"page":471,"printedPage":471,"surahStart":50,"surahEnd":51,"ayahStart":35,"ayahEnd":10,"label":"Qaf–Adh-Dhariyat"},{"page":472,"printedPage":472,"surahStart":51,"surahEnd":51,"ayahStart":11,"ayahEnd":30,"label":"Adh-Dhariyat · Ayah 11–30"},{"page":473,"printedPage":473,"surahStart":51,"surahEnd":51,"ayahStart":31,"ayahEnd":50,"label":"Adh-Dhariyat · Ayah 31–50"},{"page":474,"printedPage":474,"surahStart":51,"surahEnd":52,"ayahStart":51,"ayahEnd":13,"label":"Adh-Dhariyat–At-Tur"},{"page":475,"printedPage":475,"surahStart":52,"surahEnd":52,"ayahStart":14,"ayahEnd":36,"label":"At-Tur · Ayah 14–36"},{"page":476,"printedPage":476,"surahStart":52,"surahEnd":53,"ayahStart":37,"ayahEnd":16,"label":"At-Tur–An-Najm"},{"page":477,"printedPage":477,"surahStart":53,"surahEnd":53,"ayahStart":17,"ayahEnd":46,"label":"An-Najm · Ayah 17–46"},{"page":478,"printedPage":478,"surahStart":53,"surahEnd":54,"ayahStart":47,"ayahEnd":10,"label":"An-Najm–Al-Qamar"},{"page":479,"printedPage":479,"surahStart":54,"surahEnd":54,"ayahStart":11,"ayahEnd":27,"label":"Al-Qamar · Ayah 11–27"},{"page":480,"printedPage":480,"surahStart":54,"surahEnd":54,"ayahStart":28,"ayahEnd":46,"label":"Al-Qamar · Ayah 28–46"},{"page":481,"printedPage":481,"surahStart":54,"surahEnd":55,"ayahStart":47,"ayahEnd":13,"label":"Al-Qamar–Ar-Rahman"},{"page":482,"printedPage":482,"surahStart":55,"surahEnd":55,"ayahStart":14,"ayahEnd":39,"label":"Ar-Rahman · Ayah 14–39"},{"page":483,"printedPage":483,"surahStart":55,"surahEnd":55,"ayahStart":40,"ayahEnd":65,"label":"Ar-Rahman · Ayah 40–65"},{"page":484,"printedPage":484,"surahStart":55,"surahEnd":56,"ayahStart":66,"ayahEnd":24,"label":"Ar-Rahman–Al-Waqi'ah"},{"page":485,"printedPage":485,"surahStart":56,"surahEnd":56,"ayahStart":25,"ayahEnd":72,"label":"Al-Waqi'ah · Ayah 25–72"},{"page":486,"printedPage":486,"surahStart":56,"surahEnd":57,"ayahStart":73,"ayahEnd":3,"label":"Al-Waqi'ah–Al-Hadid"},{"page":487,"printedPage":487,"surahStart":57,"surahEnd":57,"ayahStart":4,"ayahEnd":9,"label":"Al-Hadid · Ayah 4–9"},{"page":488,"printedPage":488,"surahStart":57,"surahEnd":57,"ayahStart":10,"ayahEnd":15,"label":"Al-Hadid · Ayah 10–15"},{"page":489,"printedPage":489,"surahStart":57,"surahEnd":57,"ayahStart":16,"ayahEnd":20,"label":"Al-Hadid · Ayah 16–20"},{"page":490,"printedPage":490,"surahStart":57,"surahEnd":57,"ayahStart":21,"ayahEnd":26,"label":"Al-Hadid · Ayah 21–26"},{"page":491,"printedPage":491,"surahStart":57,"surahEnd":58,"ayahStart":27,"ayahEnd":6,"label":"Al-Hadid–Al-Mujadila"},{"page":492,"printedPage":492,"surahStart":58,"surahEnd":58,"ayahStart":7,"ayahEnd":16,"label":"Al-Mujadila · Ayah 7–16"},{"page":493,"printedPage":493,"surahStart":58,"surahEnd":59,"ayahStart":17,"ayahEnd":3,"label":"Al-Mujadila–Al-Hashr"},{"page":494,"printedPage":494,"surahStart":59,"surahEnd":59,"ayahStart":4,"ayahEnd":9,"label":"Al-Hashr · Ayah 4–9"},{"page":495,"printedPage":495,"surahStart":59,"surahEnd":59,"ayahStart":10,"ayahEnd":15,"label":"Al-Hashr · Ayah 10–15"},{"page":496,"printedPage":496,"surahStart":59,"surahEnd":59,"ayahStart":16,"ayahEnd":21,"label":"Al-Hashr · Ayah 16–21"},{"page":497,"printedPage":497,"surahStart":59,"surahEnd":60,"ayahStart":22,"ayahEnd":3,"label":"Al-Hashr–Al-Mumtahanah"},{"page":498,"printedPage":498,"surahStart":60,"surahEnd":60,"ayahStart":4,"ayahEnd":10,"label":"Al-Mumtahanah · Ayah 4–10"},{"page":499,"printedPage":499,"surahStart":60,"surahEnd":61,"ayahStart":11,"ayahEnd":4,"label":"Al-Mumtahanah–As-Saf"},{"page":500,"printedPage":500,"surahStart":61,"surahEnd":61,"ayahStart":5,"ayahEnd":10,"label":"As-Saf · Ayah 5–10"},{"page":501,"printedPage":501,"surahStart":61,"surahEnd":62,"ayahStart":11,"ayahEnd":5,"label":"As-Saf–Al-Jumu'ah"},{"page":502,"printedPage":502,"surahStart":62,"surahEnd":63,"ayahStart":6,"ayahEnd":6,"label":"Al-Jumu'ah–Al-Munafiqun"},{"page":503,"printedPage":503,"surahStart":63,"surahEnd":64,"ayahStart":7,"ayahEnd":5,"label":"Al-Munafiqun–At-Taghabun"},{"page":504,"printedPage":504,"surahStart":64,"surahEnd":64,"ayahStart":6,"ayahEnd":13,"label":"At-Taghabun · Ayah 6–13"},{"page":505,"printedPage":505,"surahStart":64,"surahEnd":65,"ayahStart":14,"ayahEnd":3,"label":"At-Taghabun–At-Talaq"},{"page":506,"printedPage":506,"surahStart":65,"surahEnd":65,"ayahStart":4,"ayahEnd":9,"label":"At-Talaq · Ayah 4–9"},{"page":507,"printedPage":507,"surahStart":65,"surahEnd":66,"ayahStart":10,"ayahEnd":3,"label":"At-Talaq–At-Tahrim"},{"page":508,"printedPage":508,"surahStart":66,"surahEnd":66,"ayahStart":4,"ayahEnd":9,"label":"At-Tahrim · Ayah 4–9"},{"page":509,"printedPage":509,"surahStart":66,"surahEnd":67,"ayahStart":10,"ayahEnd":5,"label":"At-Tahrim–Al-Mulk"},{"page":510,"printedPage":510,"surahStart":67,"surahEnd":67,"ayahStart":6,"ayahEnd":15,"label":"Al-Mulk · Ayah 6–15"},{"page":511,"printedPage":511,"surahStart":67,"surahEnd":67,"ayahStart":16,"ayahEnd":25,"label":"Al-Mulk · Ayah 16–25"},{"page":512,"printedPage":512,"surahStart":67,"surahEnd":68,"ayahStart":26,"ayahEnd":13,"label":"Al-Mulk–Al-Qalam"},{"page":513,"printedPage":513,"surahStart":68,"surahEnd":68,"ayahStart":14,"ayahEnd":39,"label":"Al-Qalam · Ayah 14–39"},{"page":514,"printedPage":514,"surahStart":68,"surahEnd":69,"ayahStart":40,"ayahEnd":13,"label":"Al-Qalam–Al-Haqqah"},{"page":515,"printedPage":515,"surahStart":69,"surahEnd":69,"ayahStart":14,"ayahEnd":39,"label":"Al-Haqqah · Ayah 14–39"},{"page":516,"printedPage":516,"surahStart":69,"surahEnd":70,"ayahStart":40,"ayahEnd":22,"label":"Al-Haqqah–Al-Ma'arij"},{"page":517,"printedPage":517,"surahStart":70,"surahEnd":71,"ayahStart":23,"ayahEnd":7,"label":"Al-Ma'arij–Nuh"},{"page":518,"printedPage":518,"surahStart":71,"surahEnd":71,"ayahStart":8,"ayahEnd":21,"label":"Nuh · Ayah 8–21"},{"page":519,"printedPage":519,"surahStart":71,"surahEnd":72,"ayahStart":22,"ayahEnd":7,"label":"Nuh–Al-Jinn"},{"page":520,"printedPage":520,"surahStart":72,"surahEnd":72,"ayahStart":8,"ayahEnd":21,"label":"Al-Jinn · Ayah 8–21"},{"page":521,"printedPage":521,"surahStart":72,"surahEnd":73,"ayahStart":22,"ayahEnd":10,"label":"Al-Jinn–Al-Muzzammil"},{"page":522,"printedPage":522,"surahStart":73,"surahEnd":74,"ayahStart":11,"ayahEnd":14,"label":"Al-Muzzammil–Al-Muddaththir"},{"page":523,"printedPage":523,"surahStart":74,"surahEnd":74,"ayahStart":15,"ayahEnd":42,"label":"Al-Muddaththir · Ayah 15–42"},{"page":524,"printedPage":524,"surahStart":74,"surahEnd":75,"ayahStart":43,"ayahEnd":10,"label":"Al-Muddaththir–Al-Qiyamah"},{"page":525,"printedPage":525,"surahStart":75,"surahEnd":75,"ayahStart":11,"ayahEnd":30,"label":"Al-Qiyamah · Ayah 11–30"},{"page":526,"printedPage":526,"surahStart":75,"surahEnd":76,"ayahStart":31,"ayahEnd":8,"label":"Al-Qiyamah–Al-Insan"},{"page":527,"printedPage":527,"surahStart":76,"surahEnd":76,"ayahStart":9,"ayahEnd":23,"label":"Al-Insan · Ayah 9–23"},{"page":528,"printedPage":528,"surahStart":76,"surahEnd":77,"ayahStart":24,"ayahEnd":25,"label":"Al-Insan–Al-Mursalat"},{"page":529,"printedPage":529,"surahStart":77,"surahEnd":78,"ayahStart":26,"ayahEnd":10,"label":"Al-Mursalat–An-Naba"},{"page":530,"printedPage":530,"surahStart":78,"surahEnd":78,"ayahStart":11,"ayahEnd":30,"label":"An-Naba · Ayah 11–30"},{"page":531,"printedPage":531,"surahStart":78,"surahEnd":79,"ayahStart":31,"ayahEnd":12,"label":"An-Naba–An-Nazi'at"},{"page":532,"printedPage":532,"surahStart":79,"surahEnd":79,"ayahStart":13,"ayahEnd":34,"label":"An-Nazi'at · Ayah 13–34"},{"page":533,"printedPage":533,"surahStart":79,"surahEnd":80,"ayahStart":35,"ayahEnd":21,"label":"An-Nazi'at–'Abasa"},{"page":534,"printedPage":534,"surahStart":80,"surahEnd":81,"ayahStart":22,"ayahEnd":15,"label":"'Abasa–At-Takwir"},{"page":535,"printedPage":535,"surahStart":81,"surahEnd":82,"ayahStart":16,"ayahEnd":9,"label":"At-Takwir–Al-Infitar"},{"page":536,"printedPage":536,"surahStart":82,"surahEnd":83,"ayahStart":10,"ayahEnd":18,"label":"Al-Infitar–Al-Mutaffifin"},{"page":537,"printedPage":537,"surahStart":83,"surahEnd":84,"ayahStart":19,"ayahEnd":12,"label":"Al-Mutaffifin–Al-Inshiqaq"},{"page":538,"printedPage":538,"surahStart":84,"surahEnd":85,"ayahStart":13,"ayahEnd":11,"label":"Al-Inshiqaq–Al-Buruj"},{"page":539,"printedPage":539,"surahStart":85,"surahEnd":86,"ayahStart":12,"ayahEnd":8,"label":"Al-Buruj–At-Tariq"},{"page":540,"printedPage":540,"surahStart":86,"surahEnd":87,"ayahStart":9,"ayahEnd":10,"label":"At-Tariq–Al-A'la"},{"page":541,"printedPage":541,"surahStart":87,"surahEnd":89,"ayahStart":11,"ayahEnd":15,"label":"Al-A'la–Al-Fajr"},{"page":542,"printedPage":542,"surahStart":89,"surahEnd":91,"ayahStart":16,"ayahEnd":8,"label":"Al-Fajr–Ash-Shams"},{"page":543,"printedPage":543,"surahStart":91,"surahEnd":95,"ayahStart":9,"ayahEnd":4,"label":"Ash-Shams–At-Tin"},{"page":544,"printedPage":544,"surahStart":95,"surahEnd":98,"ayahStart":5,"ayahEnd":4,"label":"At-Tin–Al-Bayyinah"},{"page":545,"printedPage":545,"surahStart":98,"surahEnd":101,"ayahStart":5,"ayahEnd":5,"label":"Al-Bayyinah–Al-Qari'ah"},{"page":546,"printedPage":546,"surahStart":101,"surahEnd":104,"ayahStart":6,"ayahEnd":5,"label":"Al-Qari'ah–Al-Humazah"},{"page":547,"printedPage":547,"surahStart":104,"surahEnd":108,"ayahStart":6,"ayahEnd":1,"label":"Al-Humazah–Al-Kawthar"},{"page":548,"printedPage":548,"surahStart":108,"surahEnd":111,"ayahStart":2,"ayahEnd":3,"label":"Al-Kawthar–Al-Masad"},{"page":549,"printedPage":549,"surahStart":111,"surahEnd":114,"ayahStart":4,"ayahEnd":6,"label":"Al-Masad–An-Nas"},{"page":550,"printedPage":550,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":551,"printedPage":551,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":552,"printedPage":552,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":553,"printedPage":553,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":554,"printedPage":554,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":555,"printedPage":555,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":556,"printedPage":556,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":557,"printedPage":557,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"},{"page":558,"printedPage":558,"surahStart":112,"surahEnd":112,"ayahStart":null,"ayahEnd":null,"label":"Al-Ikhlas"}]}
+{
+  "pageCount": 558,
+  "pages": [
+    {
+      "page": 1,
+      "printedPage": null,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "Title"
+    },
+    {
+      "page": 2,
+      "printedPage": 2,
+      "surahStart": 1,
+      "surahEnd": 1,
+      "ayahStart": 1,
+      "ayahEnd": 7,
+      "label": "Al-Fatihah · Ayah 1–7"
+    },
+    {
+      "page": 3,
+      "printedPage": 3,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 1,
+      "ayahEnd": 4,
+      "label": "Al-Baqarah · Ayah 1–4"
+    },
+    {
+      "page": 4,
+      "printedPage": 4,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 5,
+      "ayahEnd": 17,
+      "label": "Al-Baqarah · Ayah 5–17"
+    },
+    {
+      "page": 5,
+      "printedPage": 5,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 18,
+      "ayahEnd": 25,
+      "label": "Al-Baqarah · Ayah 18–25"
+    },
+    {
+      "page": 6,
+      "printedPage": 6,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 25,
+      "ayahEnd": 32,
+      "label": "Al-Baqarah · Ayah 25–32"
+    },
+    {
+      "page": 7,
+      "printedPage": 7,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 32,
+      "ayahEnd": 42,
+      "label": "Al-Baqarah · Ayah 32–42"
+    },
+    {
+      "page": 8,
+      "printedPage": 8,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 42,
+      "ayahEnd": 54,
+      "label": "Al-Baqarah · Ayah 42–54"
+    },
+    {
+      "page": 9,
+      "printedPage": 9,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 54,
+      "ayahEnd": 61,
+      "label": "Al-Baqarah · Ayah 54–61"
+    },
+    {
+      "page": 10,
+      "printedPage": 10,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 61,
+      "ayahEnd": 68,
+      "label": "Al-Baqarah · Ayah 61–68"
+    },
+    {
+      "page": 11,
+      "printedPage": 11,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 68,
+      "ayahEnd": 76,
+      "label": "Al-Baqarah · Ayah 68–76"
+    },
+    {
+      "page": 12,
+      "printedPage": 12,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 76,
+      "ayahEnd": 83,
+      "label": "Al-Baqarah · Ayah 76–83"
+    },
+    {
+      "page": 13,
+      "printedPage": 13,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 83,
+      "ayahEnd": 89,
+      "label": "Al-Baqarah · Ayah 83–89"
+    },
+    {
+      "page": 14,
+      "printedPage": 14,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 89,
+      "ayahEnd": 96,
+      "label": "Al-Baqarah · Ayah 89–96"
+    },
+    {
+      "page": 15,
+      "printedPage": 15,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 96,
+      "ayahEnd": 102,
+      "label": "Al-Baqarah · Ayah 96–102"
+    },
+    {
+      "page": 16,
+      "printedPage": 16,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 103,
+      "ayahEnd": 111,
+      "label": "Al-Baqarah · Ayah 103–111"
+    },
+    {
+      "page": 17,
+      "printedPage": 17,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 111,
+      "ayahEnd": 118,
+      "label": "Al-Baqarah · Ayah 111–118"
+    },
+    {
+      "page": 18,
+      "printedPage": 18,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 118,
+      "ayahEnd": 126,
+      "label": "Al-Baqarah · Ayah 118–126"
+    },
+    {
+      "page": 19,
+      "printedPage": 19,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 126,
+      "ayahEnd": 134,
+      "label": "Al-Baqarah · Ayah 126–134"
+    },
+    {
+      "page": 20,
+      "printedPage": 20,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 134,
+      "ayahEnd": 141,
+      "label": "Al-Baqarah · Ayah 134–141"
+    },
+    {
+      "page": 21,
+      "printedPage": 21,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 142,
+      "ayahEnd": 146,
+      "label": "Al-Baqarah · Ayah 142–146"
+    },
+    {
+      "page": 22,
+      "printedPage": 22,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 147,
+      "ayahEnd": 156,
+      "label": "Al-Baqarah · Ayah 147–156"
+    },
+    {
+      "page": 23,
+      "printedPage": 23,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 156,
+      "ayahEnd": 164,
+      "label": "Al-Baqarah · Ayah 156–164"
+    },
+    {
+      "page": 24,
+      "printedPage": 24,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 164,
+      "ayahEnd": 172,
+      "label": "Al-Baqarah · Ayah 164–172"
+    },
+    {
+      "page": 25,
+      "printedPage": 25,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 173,
+      "ayahEnd": 178,
+      "label": "Al-Baqarah · Ayah 173–178"
+    },
+    {
+      "page": 26,
+      "printedPage": 26,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 178,
+      "ayahEnd": 185,
+      "label": "Al-Baqarah · Ayah 178–185"
+    },
+    {
+      "page": 27,
+      "printedPage": 27,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 185,
+      "ayahEnd": 189,
+      "label": "Al-Baqarah · Ayah 185–189"
+    },
+    {
+      "page": 28,
+      "printedPage": 28,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 189,
+      "ayahEnd": 196,
+      "label": "Al-Baqarah · Ayah 189–196"
+    },
+    {
+      "page": 29,
+      "printedPage": 29,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 196,
+      "ayahEnd": 201,
+      "label": "Al-Baqarah · Ayah 196–201"
+    },
+    {
+      "page": 30,
+      "printedPage": 30,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 201,
+      "ayahEnd": 211,
+      "label": "Al-Baqarah · Ayah 201–211"
+    },
+    {
+      "page": 31,
+      "printedPage": 31,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 211,
+      "ayahEnd": 216,
+      "label": "Al-Baqarah · Ayah 211–216"
+    },
+    {
+      "page": 32,
+      "printedPage": 32,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 216,
+      "ayahEnd": 221,
+      "label": "Al-Baqarah · Ayah 216–221"
+    },
+    {
+      "page": 33,
+      "printedPage": 33,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 221,
+      "ayahEnd": 228,
+      "label": "Al-Baqarah · Ayah 221–228"
+    },
+    {
+      "page": 34,
+      "printedPage": 34,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 228,
+      "ayahEnd": 231,
+      "label": "Al-Baqarah · Ayah 228–231"
+    },
+    {
+      "page": 35,
+      "printedPage": 35,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 231,
+      "ayahEnd": 234,
+      "label": "Al-Baqarah · Ayah 231–234"
+    },
+    {
+      "page": 36,
+      "printedPage": 36,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 235,
+      "ayahEnd": 240,
+      "label": "Al-Baqarah · Ayah 235–240"
+    },
+    {
+      "page": 37,
+      "printedPage": 37,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 240,
+      "ayahEnd": 247,
+      "label": "Al-Baqarah · Ayah 240–247"
+    },
+    {
+      "page": 38,
+      "printedPage": 38,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 247,
+      "ayahEnd": 252,
+      "label": "Al-Baqarah · Ayah 247–252"
+    },
+    {
+      "page": 39,
+      "printedPage": 39,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 253,
+      "ayahEnd": 257,
+      "label": "Al-Baqarah · Ayah 253–257"
+    },
+    {
+      "page": 40,
+      "printedPage": 40,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 257,
+      "ayahEnd": 260,
+      "label": "Al-Baqarah · Ayah 257–260"
+    },
+    {
+      "page": 41,
+      "printedPage": 41,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 260,
+      "ayahEnd": 266,
+      "label": "Al-Baqarah · Ayah 260–266"
+    },
+    {
+      "page": 42,
+      "printedPage": 42,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 266,
+      "ayahEnd": 272,
+      "label": "Al-Baqarah · Ayah 266–272"
+    },
+    {
+      "page": 43,
+      "printedPage": 43,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 272,
+      "ayahEnd": 278,
+      "label": "Al-Baqarah · Ayah 272–278"
+    },
+    {
+      "page": 44,
+      "printedPage": 44,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 278,
+      "ayahEnd": 282,
+      "label": "Al-Baqarah · Ayah 278–282"
+    },
+    {
+      "page": 45,
+      "printedPage": 45,
+      "surahStart": 2,
+      "surahEnd": 2,
+      "ayahStart": 282,
+      "ayahEnd": 286,
+      "label": "Al-Baqarah · Ayah 282–286"
+    },
+    {
+      "page": 46,
+      "printedPage": 46,
+      "surahStart": 2,
+      "surahEnd": 3,
+      "ayahStart": 286,
+      "ayahEnd": 8,
+      "label": "Al-Baqarah–Ali 'Imran"
+    },
+    {
+      "page": 47,
+      "printedPage": 47,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 8,
+      "ayahEnd": 15,
+      "label": "Ali 'Imran · Ayah 8–15"
+    },
+    {
+      "page": 48,
+      "printedPage": 48,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 16,
+      "ayahEnd": 24,
+      "label": "Ali 'Imran · Ayah 16–24"
+    },
+    {
+      "page": 49,
+      "printedPage": 49,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 24,
+      "ayahEnd": 31,
+      "label": "Ali 'Imran · Ayah 24–31"
+    },
+    {
+      "page": 50,
+      "printedPage": 50,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 31,
+      "ayahEnd": 40,
+      "label": "Ali 'Imran · Ayah 31–40"
+    },
+    {
+      "page": 51,
+      "printedPage": 51,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 40,
+      "ayahEnd": 49,
+      "label": "Ali 'Imran · Ayah 40–49"
+    },
+    {
+      "page": 52,
+      "printedPage": 52,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 49,
+      "ayahEnd": 57,
+      "label": "Ali 'Imran · Ayah 49–57"
+    },
+    {
+      "page": 53,
+      "printedPage": 53,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 58,
+      "ayahEnd": 68,
+      "label": "Ali 'Imran · Ayah 58–68"
+    },
+    {
+      "page": 54,
+      "printedPage": 54,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 68,
+      "ayahEnd": 76,
+      "label": "Ali 'Imran · Ayah 68–76"
+    },
+    {
+      "page": 55,
+      "printedPage": 55,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 76,
+      "ayahEnd": 83,
+      "label": "Ali 'Imran · Ayah 76–83"
+    },
+    {
+      "page": 56,
+      "printedPage": 56,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 83,
+      "ayahEnd": 91,
+      "label": "Ali 'Imran · Ayah 83–91"
+    },
+    {
+      "page": 57,
+      "printedPage": 57,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 92,
+      "ayahEnd": 100,
+      "label": "Ali 'Imran · Ayah 92–100"
+    },
+    {
+      "page": 58,
+      "printedPage": 58,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 100,
+      "ayahEnd": 108,
+      "label": "Ali 'Imran · Ayah 100–108"
+    },
+    {
+      "page": 59,
+      "printedPage": 59,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 108,
+      "ayahEnd": 117,
+      "label": "Ali 'Imran · Ayah 108–117"
+    },
+    {
+      "page": 60,
+      "printedPage": 60,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 117,
+      "ayahEnd": 124,
+      "label": "Ali 'Imran · Ayah 117–124"
+    },
+    {
+      "page": 61,
+      "printedPage": 61,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 124,
+      "ayahEnd": 135,
+      "label": "Ali 'Imran · Ayah 124–135"
+    },
+    {
+      "page": 62,
+      "printedPage": 62,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 135,
+      "ayahEnd": 145,
+      "label": "Ali 'Imran · Ayah 135–145"
+    },
+    {
+      "page": 63,
+      "printedPage": 63,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 145,
+      "ayahEnd": 152,
+      "label": "Ali 'Imran · Ayah 145–152"
+    },
+    {
+      "page": 64,
+      "printedPage": 64,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 152,
+      "ayahEnd": 156,
+      "label": "Ali 'Imran · Ayah 152–156"
+    },
+    {
+      "page": 65,
+      "printedPage": 65,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 156,
+      "ayahEnd": 164,
+      "label": "Ali 'Imran · Ayah 156–164"
+    },
+    {
+      "page": 66,
+      "printedPage": 66,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 164,
+      "ayahEnd": 172,
+      "label": "Ali 'Imran · Ayah 164–172"
+    },
+    {
+      "page": 67,
+      "printedPage": 67,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 173,
+      "ayahEnd": 180,
+      "label": "Ali 'Imran · Ayah 173–180"
+    },
+    {
+      "page": 68,
+      "printedPage": 68,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 180,
+      "ayahEnd": 187,
+      "label": "Ali 'Imran · Ayah 180–187"
+    },
+    {
+      "page": 69,
+      "printedPage": 69,
+      "surahStart": 3,
+      "surahEnd": 3,
+      "ayahStart": 187,
+      "ayahEnd": 195,
+      "label": "Ali 'Imran · Ayah 187–195"
+    },
+    {
+      "page": 70,
+      "printedPage": 70,
+      "surahStart": 3,
+      "surahEnd": 4,
+      "ayahStart": 195,
+      "ayahEnd": 1,
+      "label": "Ali 'Imran–An-Nisa"
+    },
+    {
+      "page": 71,
+      "printedPage": 71,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 1,
+      "ayahEnd": 8,
+      "label": "An-Nisa · Ayah 1–8"
+    },
+    {
+      "page": 72,
+      "printedPage": 72,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 8,
+      "ayahEnd": 12,
+      "label": "An-Nisa · Ayah 8–12"
+    },
+    {
+      "page": 73,
+      "printedPage": 73,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 12,
+      "ayahEnd": 18,
+      "label": "An-Nisa · Ayah 12–18"
+    },
+    {
+      "page": 74,
+      "printedPage": 74,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 18,
+      "ayahEnd": 23,
+      "label": "An-Nisa · Ayah 18–23"
+    },
+    {
+      "page": 75,
+      "printedPage": 75,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 24,
+      "ayahEnd": 28,
+      "label": "An-Nisa · Ayah 24–28"
+    },
+    {
+      "page": 76,
+      "printedPage": 76,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 28,
+      "ayahEnd": 35,
+      "label": "An-Nisa · Ayah 28–35"
+    },
+    {
+      "page": 77,
+      "printedPage": 77,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 35,
+      "ayahEnd": 42,
+      "label": "An-Nisa · Ayah 35–42"
+    },
+    {
+      "page": 78,
+      "printedPage": 78,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 42,
+      "ayahEnd": 47,
+      "label": "An-Nisa · Ayah 42–47"
+    },
+    {
+      "page": 79,
+      "printedPage": 79,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 48,
+      "ayahEnd": 57,
+      "label": "An-Nisa · Ayah 48–57"
+    },
+    {
+      "page": 80,
+      "printedPage": 80,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 57,
+      "ayahEnd": 64,
+      "label": "An-Nisa · Ayah 57–64"
+    },
+    {
+      "page": 81,
+      "printedPage": 81,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 64,
+      "ayahEnd": 73,
+      "label": "An-Nisa · Ayah 64–73"
+    },
+    {
+      "page": 82,
+      "printedPage": 82,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 73,
+      "ayahEnd": 78,
+      "label": "An-Nisa · Ayah 73–78"
+    },
+    {
+      "page": 83,
+      "printedPage": 83,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 78,
+      "ayahEnd": 85,
+      "label": "An-Nisa · Ayah 78–85"
+    },
+    {
+      "page": 84,
+      "printedPage": 84,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 85,
+      "ayahEnd": 91,
+      "label": "An-Nisa · Ayah 85–91"
+    },
+    {
+      "page": 85,
+      "printedPage": 85,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 91,
+      "ayahEnd": 95,
+      "label": "An-Nisa · Ayah 91–95"
+    },
+    {
+      "page": 86,
+      "printedPage": 86,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 95,
+      "ayahEnd": 102,
+      "label": "An-Nisa · Ayah 95–102"
+    },
+    {
+      "page": 87,
+      "printedPage": 87,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 102,
+      "ayahEnd": 108,
+      "label": "An-Nisa · Ayah 102–108"
+    },
+    {
+      "page": 88,
+      "printedPage": 88,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 108,
+      "ayahEnd": 116,
+      "label": "An-Nisa · Ayah 108–116"
+    },
+    {
+      "page": 89,
+      "printedPage": 89,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 116,
+      "ayahEnd": 126,
+      "label": "An-Nisa · Ayah 116–126"
+    },
+    {
+      "page": 90,
+      "printedPage": 90,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 126,
+      "ayahEnd": 132,
+      "label": "An-Nisa · Ayah 126–132"
+    },
+    {
+      "page": 91,
+      "printedPage": 91,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 132,
+      "ayahEnd": 140,
+      "label": "An-Nisa · Ayah 132–140"
+    },
+    {
+      "page": 92,
+      "printedPage": 92,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 140,
+      "ayahEnd": 147,
+      "label": "An-Nisa · Ayah 140–147"
+    },
+    {
+      "page": 93,
+      "printedPage": 93,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 148,
+      "ayahEnd": 155,
+      "label": "An-Nisa · Ayah 148–155"
+    },
+    {
+      "page": 94,
+      "printedPage": 94,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 155,
+      "ayahEnd": 163,
+      "label": "An-Nisa · Ayah 155–163"
+    },
+    {
+      "page": 95,
+      "printedPage": 95,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 163,
+      "ayahEnd": 171,
+      "label": "An-Nisa · Ayah 163–171"
+    },
+    {
+      "page": 96,
+      "printedPage": 96,
+      "surahStart": 4,
+      "surahEnd": 4,
+      "ayahStart": 171,
+      "ayahEnd": 176,
+      "label": "An-Nisa · Ayah 171–176"
+    },
+    {
+      "page": 97,
+      "printedPage": 97,
+      "surahStart": 4,
+      "surahEnd": 5,
+      "ayahStart": 176,
+      "ayahEnd": 3,
+      "label": "An-Nisa–Al-Ma'idah"
+    },
+    {
+      "page": 98,
+      "printedPage": 98,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 3,
+      "ayahEnd": 6,
+      "label": "Al-Ma'idah · Ayah 3–6"
+    },
+    {
+      "page": 99,
+      "printedPage": 99,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 6,
+      "ayahEnd": 12,
+      "label": "Al-Ma'idah · Ayah 6–12"
+    },
+    {
+      "page": 100,
+      "printedPage": 100,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 12,
+      "ayahEnd": 17,
+      "label": "Al-Ma'idah · Ayah 12–17"
+    },
+    {
+      "page": 101,
+      "printedPage": 101,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 17,
+      "ayahEnd": 23,
+      "label": "Al-Ma'idah · Ayah 17–23"
+    },
+    {
+      "page": 102,
+      "printedPage": 102,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 23,
+      "ayahEnd": 32,
+      "label": "Al-Ma'idah · Ayah 23–32"
+    },
+    {
+      "page": 103,
+      "printedPage": 103,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 32,
+      "ayahEnd": 39,
+      "label": "Al-Ma'idah · Ayah 32–39"
+    },
+    {
+      "page": 104,
+      "printedPage": 104,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 39,
+      "ayahEnd": 44,
+      "label": "Al-Ma'idah · Ayah 39–44"
+    },
+    {
+      "page": 105,
+      "printedPage": 105,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 44,
+      "ayahEnd": 48,
+      "label": "Al-Ma'idah · Ayah 44–48"
+    },
+    {
+      "page": 106,
+      "printedPage": 106,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 48,
+      "ayahEnd": 54,
+      "label": "Al-Ma'idah · Ayah 48–54"
+    },
+    {
+      "page": 107,
+      "printedPage": 107,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 54,
+      "ayahEnd": 61,
+      "label": "Al-Ma'idah · Ayah 54–61"
+    },
+    {
+      "page": 108,
+      "printedPage": 108,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 61,
+      "ayahEnd": 68,
+      "label": "Al-Ma'idah · Ayah 61–68"
+    },
+    {
+      "page": 109,
+      "printedPage": 109,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 68,
+      "ayahEnd": 74,
+      "label": "Al-Ma'idah · Ayah 68–74"
+    },
+    {
+      "page": 110,
+      "printedPage": 110,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 74,
+      "ayahEnd": 82,
+      "label": "Al-Ma'idah · Ayah 74–82"
+    },
+    {
+      "page": 111,
+      "printedPage": 111,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 83,
+      "ayahEnd": 90,
+      "label": "Al-Ma'idah · Ayah 83–90"
+    },
+    {
+      "page": 112,
+      "printedPage": 112,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 90,
+      "ayahEnd": 96,
+      "label": "Al-Ma'idah · Ayah 90–96"
+    },
+    {
+      "page": 113,
+      "printedPage": 113,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 96,
+      "ayahEnd": 105,
+      "label": "Al-Ma'idah · Ayah 96–105"
+    },
+    {
+      "page": 114,
+      "printedPage": 114,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 105,
+      "ayahEnd": 110,
+      "label": "Al-Ma'idah · Ayah 105–110"
+    },
+    {
+      "page": 115,
+      "printedPage": 115,
+      "surahStart": 5,
+      "surahEnd": 5,
+      "ayahStart": 110,
+      "ayahEnd": 116,
+      "label": "Al-Ma'idah · Ayah 110–116"
+    },
+    {
+      "page": 116,
+      "printedPage": 116,
+      "surahStart": 5,
+      "surahEnd": 6,
+      "ayahStart": 116,
+      "ayahEnd": 6,
+      "label": "Al-Ma'idah–Al-An'am"
+    },
+    {
+      "page": 117,
+      "printedPage": 117,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 6,
+      "ayahEnd": 15,
+      "label": "Al-An'am · Ayah 6–15"
+    },
+    {
+      "page": 118,
+      "printedPage": 118,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 15,
+      "ayahEnd": 25,
+      "label": "Al-An'am · Ayah 15–25"
+    },
+    {
+      "page": 119,
+      "printedPage": 119,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 25,
+      "ayahEnd": 35,
+      "label": "Al-An'am · Ayah 25–35"
+    },
+    {
+      "page": 120,
+      "printedPage": 120,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 35,
+      "ayahEnd": 44,
+      "label": "Al-An'am · Ayah 35–44"
+    },
+    {
+      "page": 121,
+      "printedPage": 121,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 44,
+      "ayahEnd": 53,
+      "label": "Al-An'am · Ayah 44–53"
+    },
+    {
+      "page": 122,
+      "printedPage": 122,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 53,
+      "ayahEnd": 61,
+      "label": "Al-An'am · Ayah 53–61"
+    },
+    {
+      "page": 123,
+      "printedPage": 123,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 61,
+      "ayahEnd": 70,
+      "label": "Al-An'am · Ayah 61–70"
+    },
+    {
+      "page": 124,
+      "printedPage": 124,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 70,
+      "ayahEnd": 78,
+      "label": "Al-An'am · Ayah 70–78"
+    },
+    {
+      "page": 125,
+      "printedPage": 125,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 78,
+      "ayahEnd": 88,
+      "label": "Al-An'am · Ayah 78–88"
+    },
+    {
+      "page": 126,
+      "printedPage": 126,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 88,
+      "ayahEnd": 94,
+      "label": "Al-An'am · Ayah 88–94"
+    },
+    {
+      "page": 127,
+      "printedPage": 127,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 94,
+      "ayahEnd": 101,
+      "label": "Al-An'am · Ayah 94–101"
+    },
+    {
+      "page": 128,
+      "printedPage": 128,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 101,
+      "ayahEnd": 110,
+      "label": "Al-An'am · Ayah 101–110"
+    },
+    {
+      "page": 129,
+      "printedPage": 129,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 111,
+      "ayahEnd": 119,
+      "label": "Al-An'am · Ayah 111–119"
+    },
+    {
+      "page": 130,
+      "printedPage": 130,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 119,
+      "ayahEnd": 125,
+      "label": "Al-An'am · Ayah 119–125"
+    },
+    {
+      "page": 131,
+      "printedPage": 131,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 125,
+      "ayahEnd": 135,
+      "label": "Al-An'am · Ayah 125–135"
+    },
+    {
+      "page": 132,
+      "printedPage": 132,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 135,
+      "ayahEnd": 141,
+      "label": "Al-An'am · Ayah 135–141"
+    },
+    {
+      "page": 133,
+      "printedPage": 133,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 141,
+      "ayahEnd": 146,
+      "label": "Al-An'am · Ayah 141–146"
+    },
+    {
+      "page": 134,
+      "printedPage": 134,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 146,
+      "ayahEnd": 152,
+      "label": "Al-An'am · Ayah 146–152"
+    },
+    {
+      "page": 135,
+      "printedPage": 135,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 152,
+      "ayahEnd": 158,
+      "label": "Al-An'am · Ayah 152–158"
+    },
+    {
+      "page": 136,
+      "printedPage": 136,
+      "surahStart": 6,
+      "surahEnd": 6,
+      "ayahStart": 158,
+      "ayahEnd": 165,
+      "label": "Al-An'am · Ayah 158–165"
+    },
+    {
+      "page": 137,
+      "printedPage": 137,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 1,
+      "ayahEnd": 13,
+      "label": "Al-A'raf · Ayah 1–13"
+    },
+    {
+      "page": 138,
+      "printedPage": 138,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 13,
+      "ayahEnd": 23,
+      "label": "Al-A'raf · Ayah 13–23"
+    },
+    {
+      "page": 139,
+      "printedPage": 139,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 23,
+      "ayahEnd": 32,
+      "label": "Al-A'raf · Ayah 23–32"
+    },
+    {
+      "page": 140,
+      "printedPage": 140,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 32,
+      "ayahEnd": 38,
+      "label": "Al-A'raf · Ayah 32–38"
+    },
+    {
+      "page": 141,
+      "printedPage": 141,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 38,
+      "ayahEnd": 45,
+      "label": "Al-A'raf · Ayah 38–45"
+    },
+    {
+      "page": 142,
+      "printedPage": 142,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 45,
+      "ayahEnd": 53,
+      "label": "Al-A'raf · Ayah 45–53"
+    },
+    {
+      "page": 143,
+      "printedPage": 143,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 53,
+      "ayahEnd": 61,
+      "label": "Al-A'raf · Ayah 53–61"
+    },
+    {
+      "page": 144,
+      "printedPage": 144,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 61,
+      "ayahEnd": 71,
+      "label": "Al-A'raf · Ayah 61–71"
+    },
+    {
+      "page": 145,
+      "printedPage": 145,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 71,
+      "ayahEnd": 79,
+      "label": "Al-A'raf · Ayah 71–79"
+    },
+    {
+      "page": 146,
+      "printedPage": 146,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 79,
+      "ayahEnd": 87,
+      "label": "Al-A'raf · Ayah 79–87"
+    },
+    {
+      "page": 147,
+      "printedPage": 147,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 88,
+      "ayahEnd": 96,
+      "label": "Al-A'raf · Ayah 88–96"
+    },
+    {
+      "page": 148,
+      "printedPage": 148,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 96,
+      "ayahEnd": 107,
+      "label": "Al-A'raf · Ayah 96–107"
+    },
+    {
+      "page": 149,
+      "printedPage": 149,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 108,
+      "ayahEnd": 126,
+      "label": "Al-A'raf · Ayah 108–126"
+    },
+    {
+      "page": 150,
+      "printedPage": 150,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 126,
+      "ayahEnd": 134,
+      "label": "Al-A'raf · Ayah 126–134"
+    },
+    {
+      "page": 151,
+      "printedPage": 151,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 134,
+      "ayahEnd": 142,
+      "label": "Al-A'raf · Ayah 134–142"
+    },
+    {
+      "page": 152,
+      "printedPage": 152,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 142,
+      "ayahEnd": 148,
+      "label": "Al-A'raf · Ayah 142–148"
+    },
+    {
+      "page": 153,
+      "printedPage": 153,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 148,
+      "ayahEnd": 155,
+      "label": "Al-A'raf · Ayah 148–155"
+    },
+    {
+      "page": 154,
+      "printedPage": 154,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 155,
+      "ayahEnd": 159,
+      "label": "Al-A'raf · Ayah 155–159"
+    },
+    {
+      "page": 155,
+      "printedPage": 155,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 159,
+      "ayahEnd": 165,
+      "label": "Al-A'raf · Ayah 159–165"
+    },
+    {
+      "page": 156,
+      "printedPage": 156,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 165,
+      "ayahEnd": 172,
+      "label": "Al-A'raf · Ayah 165–172"
+    },
+    {
+      "page": 157,
+      "printedPage": 157,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 173,
+      "ayahEnd": 182,
+      "label": "Al-A'raf · Ayah 173–182"
+    },
+    {
+      "page": 158,
+      "printedPage": 158,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 182,
+      "ayahEnd": 189,
+      "label": "Al-A'raf · Ayah 182–189"
+    },
+    {
+      "page": 159,
+      "printedPage": 159,
+      "surahStart": 7,
+      "surahEnd": 7,
+      "ayahStart": 189,
+      "ayahEnd": 201,
+      "label": "Al-A'raf · Ayah 189–201"
+    },
+    {
+      "page": 160,
+      "printedPage": 160,
+      "surahStart": 7,
+      "surahEnd": 8,
+      "ayahStart": 201,
+      "ayahEnd": 4,
+      "label": "Al-A'raf–Al-Anfal"
+    },
+    {
+      "page": 161,
+      "printedPage": 161,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 4,
+      "ayahEnd": 13,
+      "label": "Al-Anfal · Ayah 4–13"
+    },
+    {
+      "page": 162,
+      "printedPage": 162,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 13,
+      "ayahEnd": 24,
+      "label": "Al-Anfal · Ayah 13–24"
+    },
+    {
+      "page": 163,
+      "printedPage": 163,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 24,
+      "ayahEnd": 32,
+      "label": "Al-Anfal · Ayah 24–32"
+    },
+    {
+      "page": 164,
+      "printedPage": 164,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 32,
+      "ayahEnd": 40,
+      "label": "Al-Anfal · Ayah 32–40"
+    },
+    {
+      "page": 165,
+      "printedPage": 165,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 41,
+      "ayahEnd": 47,
+      "label": "Al-Anfal · Ayah 41–47"
+    },
+    {
+      "page": 166,
+      "printedPage": 166,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 47,
+      "ayahEnd": 54,
+      "label": "Al-Anfal · Ayah 47–54"
+    },
+    {
+      "page": 167,
+      "printedPage": 167,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 54,
+      "ayahEnd": 64,
+      "label": "Al-Anfal · Ayah 54–64"
+    },
+    {
+      "page": 168,
+      "printedPage": 168,
+      "surahStart": 8,
+      "surahEnd": 8,
+      "ayahStart": 65,
+      "ayahEnd": 72,
+      "label": "Al-Anfal · Ayah 65–72"
+    },
+    {
+      "page": 169,
+      "printedPage": 169,
+      "surahStart": 8,
+      "surahEnd": 9,
+      "ayahStart": 72,
+      "ayahEnd": 3,
+      "label": "Al-Anfal–At-Tawbah"
+    },
+    {
+      "page": 170,
+      "printedPage": 170,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 3,
+      "ayahEnd": 9,
+      "label": "At-Tawbah · Ayah 3–9"
+    },
+    {
+      "page": 171,
+      "printedPage": 171,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 9,
+      "ayahEnd": 18,
+      "label": "At-Tawbah · Ayah 9–18"
+    },
+    {
+      "page": 172,
+      "printedPage": 172,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 18,
+      "ayahEnd": 24,
+      "label": "At-Tawbah · Ayah 18–24"
+    },
+    {
+      "page": 173,
+      "printedPage": 173,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 24,
+      "ayahEnd": 31,
+      "label": "At-Tawbah · Ayah 24–31"
+    },
+    {
+      "page": 174,
+      "printedPage": 174,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 31,
+      "ayahEnd": 37,
+      "label": "At-Tawbah · Ayah 31–37"
+    },
+    {
+      "page": 175,
+      "printedPage": 175,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 37,
+      "ayahEnd": 42,
+      "label": "At-Tawbah · Ayah 37–42"
+    },
+    {
+      "page": 176,
+      "printedPage": 176,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 42,
+      "ayahEnd": 51,
+      "label": "At-Tawbah · Ayah 42–51"
+    },
+    {
+      "page": 177,
+      "printedPage": 177,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 51,
+      "ayahEnd": 60,
+      "label": "At-Tawbah · Ayah 51–60"
+    },
+    {
+      "page": 178,
+      "printedPage": 178,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 60,
+      "ayahEnd": 67,
+      "label": "At-Tawbah · Ayah 60–67"
+    },
+    {
+      "page": 179,
+      "printedPage": 179,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 67,
+      "ayahEnd": 72,
+      "label": "At-Tawbah · Ayah 67–72"
+    },
+    {
+      "page": 180,
+      "printedPage": 180,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 72,
+      "ayahEnd": 79,
+      "label": "At-Tawbah · Ayah 72–79"
+    },
+    {
+      "page": 181,
+      "printedPage": 181,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 79,
+      "ayahEnd": 86,
+      "label": "At-Tawbah · Ayah 79–86"
+    },
+    {
+      "page": 182,
+      "printedPage": 182,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 86,
+      "ayahEnd": 93,
+      "label": "At-Tawbah · Ayah 86–93"
+    },
+    {
+      "page": 183,
+      "printedPage": 183,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 94,
+      "ayahEnd": 100,
+      "label": "At-Tawbah · Ayah 94–100"
+    },
+    {
+      "page": 184,
+      "printedPage": 184,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 100,
+      "ayahEnd": 108,
+      "label": "At-Tawbah · Ayah 100–108"
+    },
+    {
+      "page": 185,
+      "printedPage": 185,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 108,
+      "ayahEnd": 114,
+      "label": "At-Tawbah · Ayah 108–114"
+    },
+    {
+      "page": 186,
+      "printedPage": 186,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 114,
+      "ayahEnd": 120,
+      "label": "At-Tawbah · Ayah 114–120"
+    },
+    {
+      "page": 187,
+      "printedPage": 187,
+      "surahStart": 9,
+      "surahEnd": 9,
+      "ayahStart": 120,
+      "ayahEnd": 129,
+      "label": "At-Tawbah · Ayah 120–129"
+    },
+    {
+      "page": 188,
+      "printedPage": 188,
+      "surahStart": 9,
+      "surahEnd": 10,
+      "ayahStart": 129,
+      "ayahEnd": 6,
+      "label": "At-Tawbah–Yunus"
+    },
+    {
+      "page": 189,
+      "printedPage": 189,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 6,
+      "ayahEnd": 15,
+      "label": "Yunus · Ayah 6–15"
+    },
+    {
+      "page": 190,
+      "printedPage": 190,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 15,
+      "ayahEnd": 22,
+      "label": "Yunus · Ayah 15–22"
+    },
+    {
+      "page": 191,
+      "printedPage": 191,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 22,
+      "ayahEnd": 28,
+      "label": "Yunus · Ayah 22–28"
+    },
+    {
+      "page": 192,
+      "printedPage": 192,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 28,
+      "ayahEnd": 37,
+      "label": "Yunus · Ayah 28–37"
+    },
+    {
+      "page": 193,
+      "printedPage": 193,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 37,
+      "ayahEnd": 47,
+      "label": "Yunus · Ayah 37–47"
+    },
+    {
+      "page": 194,
+      "printedPage": 194,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 47,
+      "ayahEnd": 58,
+      "label": "Yunus · Ayah 47–58"
+    },
+    {
+      "page": 195,
+      "printedPage": 195,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 58,
+      "ayahEnd": 68,
+      "label": "Yunus · Ayah 58–68"
+    },
+    {
+      "page": 196,
+      "printedPage": 196,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 68,
+      "ayahEnd": 76,
+      "label": "Yunus · Ayah 68–76"
+    },
+    {
+      "page": 197,
+      "printedPage": 197,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 76,
+      "ayahEnd": 88,
+      "label": "Yunus · Ayah 76–88"
+    },
+    {
+      "page": 198,
+      "printedPage": 198,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 88,
+      "ayahEnd": 96,
+      "label": "Yunus · Ayah 88–96"
+    },
+    {
+      "page": 199,
+      "printedPage": 199,
+      "surahStart": 10,
+      "surahEnd": 10,
+      "ayahStart": 96,
+      "ayahEnd": 106,
+      "label": "Yunus · Ayah 96–106"
+    },
+    {
+      "page": 200,
+      "printedPage": 200,
+      "surahStart": 10,
+      "surahEnd": 11,
+      "ayahStart": 106,
+      "ayahEnd": 5,
+      "label": "Yunus–Hud"
+    },
+    {
+      "page": 201,
+      "printedPage": 201,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 6,
+      "ayahEnd": 14,
+      "label": "Hud · Ayah 6–14"
+    },
+    {
+      "page": 202,
+      "printedPage": 202,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 14,
+      "ayahEnd": 22,
+      "label": "Hud · Ayah 14–22"
+    },
+    {
+      "page": 203,
+      "printedPage": 203,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 22,
+      "ayahEnd": 31,
+      "label": "Hud · Ayah 22–31"
+    },
+    {
+      "page": 204,
+      "printedPage": 204,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 31,
+      "ayahEnd": 41,
+      "label": "Hud · Ayah 31–41"
+    },
+    {
+      "page": 205,
+      "printedPage": 205,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 41,
+      "ayahEnd": 50,
+      "label": "Hud · Ayah 41–50"
+    },
+    {
+      "page": 206,
+      "printedPage": 206,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 50,
+      "ayahEnd": 60,
+      "label": "Hud · Ayah 50–60"
+    },
+    {
+      "page": 207,
+      "printedPage": 207,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 60,
+      "ayahEnd": 69,
+      "label": "Hud · Ayah 60–69"
+    },
+    {
+      "page": 208,
+      "printedPage": 208,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 69,
+      "ayahEnd": 81,
+      "label": "Hud · Ayah 69–81"
+    },
+    {
+      "page": 209,
+      "printedPage": 209,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 81,
+      "ayahEnd": 89,
+      "label": "Hud · Ayah 81–89"
+    },
+    {
+      "page": 210,
+      "printedPage": 210,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 89,
+      "ayahEnd": 100,
+      "label": "Hud · Ayah 89–100"
+    },
+    {
+      "page": 211,
+      "printedPage": 211,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 100,
+      "ayahEnd": 111,
+      "label": "Hud · Ayah 100–111"
+    },
+    {
+      "page": 212,
+      "printedPage": 212,
+      "surahStart": 11,
+      "surahEnd": 11,
+      "ayahStart": 111,
+      "ayahEnd": 123,
+      "label": "Hud · Ayah 111–123"
+    },
+    {
+      "page": 213,
+      "printedPage": 213,
+      "surahStart": 11,
+      "surahEnd": 12,
+      "ayahStart": 123,
+      "ayahEnd": 10,
+      "label": "Hud–Yusuf"
+    },
+    {
+      "page": 214,
+      "printedPage": 214,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 10,
+      "ayahEnd": 21,
+      "label": "Yusuf · Ayah 10–21"
+    },
+    {
+      "page": 215,
+      "printedPage": 215,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 21,
+      "ayahEnd": 30,
+      "label": "Yusuf · Ayah 21–30"
+    },
+    {
+      "page": 216,
+      "printedPage": 216,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 30,
+      "ayahEnd": 37,
+      "label": "Yusuf · Ayah 30–37"
+    },
+    {
+      "page": 217,
+      "printedPage": 217,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 37,
+      "ayahEnd": 44,
+      "label": "Yusuf · Ayah 37–44"
+    },
+    {
+      "page": 218,
+      "printedPage": 218,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 44,
+      "ayahEnd": 52,
+      "label": "Yusuf · Ayah 44–52"
+    },
+    {
+      "page": 219,
+      "printedPage": 219,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 53,
+      "ayahEnd": 64,
+      "label": "Yusuf · Ayah 53–64"
+    },
+    {
+      "page": 220,
+      "printedPage": 220,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 64,
+      "ayahEnd": 72,
+      "label": "Yusuf · Ayah 64–72"
+    },
+    {
+      "page": 221,
+      "printedPage": 221,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 72,
+      "ayahEnd": 81,
+      "label": "Yusuf · Ayah 72–81"
+    },
+    {
+      "page": 222,
+      "printedPage": 222,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 81,
+      "ayahEnd": 91,
+      "label": "Yusuf · Ayah 81–91"
+    },
+    {
+      "page": 223,
+      "printedPage": 223,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 91,
+      "ayahEnd": 101,
+      "label": "Yusuf · Ayah 91–101"
+    },
+    {
+      "page": 224,
+      "printedPage": 224,
+      "surahStart": 12,
+      "surahEnd": 12,
+      "ayahStart": 101,
+      "ayahEnd": 111,
+      "label": "Yusuf · Ayah 101–111"
+    },
+    {
+      "page": 225,
+      "printedPage": 225,
+      "surahStart": 12,
+      "surahEnd": 13,
+      "ayahStart": 111,
+      "ayahEnd": 5,
+      "label": "Yusuf–Ar-Ra'd"
+    },
+    {
+      "page": 226,
+      "printedPage": 226,
+      "surahStart": 13,
+      "surahEnd": 13,
+      "ayahStart": 5,
+      "ayahEnd": 14,
+      "label": "Ar-Ra'd · Ayah 5–14"
+    },
+    {
+      "page": 227,
+      "printedPage": 227,
+      "surahStart": 13,
+      "surahEnd": 13,
+      "ayahStart": 14,
+      "ayahEnd": 19,
+      "label": "Ar-Ra'd · Ayah 14–19"
+    },
+    {
+      "page": 228,
+      "printedPage": 228,
+      "surahStart": 13,
+      "surahEnd": 13,
+      "ayahStart": 19,
+      "ayahEnd": 29,
+      "label": "Ar-Ra'd · Ayah 19–29"
+    },
+    {
+      "page": 229,
+      "printedPage": 229,
+      "surahStart": 13,
+      "surahEnd": 13,
+      "ayahStart": 29,
+      "ayahEnd": 35,
+      "label": "Ar-Ra'd · Ayah 29–35"
+    },
+    {
+      "page": 230,
+      "printedPage": 230,
+      "surahStart": 13,
+      "surahEnd": 13,
+      "ayahStart": 35,
+      "ayahEnd": 43,
+      "label": "Ar-Ra'd · Ayah 35–43"
+    },
+    {
+      "page": 231,
+      "printedPage": 231,
+      "surahStart": 13,
+      "surahEnd": 14,
+      "ayahStart": 43,
+      "ayahEnd": 7,
+      "label": "Ar-Ra'd–Ibrahim"
+    },
+    {
+      "page": 232,
+      "printedPage": 232,
+      "surahStart": 14,
+      "surahEnd": 14,
+      "ayahStart": 7,
+      "ayahEnd": 13,
+      "label": "Ibrahim · Ayah 7–13"
+    },
+    {
+      "page": 233,
+      "printedPage": 233,
+      "surahStart": 14,
+      "surahEnd": 14,
+      "ayahStart": 13,
+      "ayahEnd": 22,
+      "label": "Ibrahim · Ayah 13–22"
+    },
+    {
+      "page": 234,
+      "printedPage": 234,
+      "surahStart": 14,
+      "surahEnd": 14,
+      "ayahStart": 22,
+      "ayahEnd": 32,
+      "label": "Ibrahim · Ayah 22–32"
+    },
+    {
+      "page": 235,
+      "printedPage": 235,
+      "surahStart": 14,
+      "surahEnd": 14,
+      "ayahStart": 32,
+      "ayahEnd": 42,
+      "label": "Ibrahim · Ayah 32–42"
+    },
+    {
+      "page": 236,
+      "printedPage": 236,
+      "surahStart": 14,
+      "surahEnd": 15,
+      "ayahStart": 42,
+      "ayahEnd": 1,
+      "label": "Ibrahim–Al-Hijr"
+    },
+    {
+      "page": 237,
+      "printedPage": 237,
+      "surahStart": 15,
+      "surahEnd": 15,
+      "ayahStart": 2,
+      "ayahEnd": 20,
+      "label": "Al-Hijr · Ayah 2–20"
+    },
+    {
+      "page": 238,
+      "printedPage": 238,
+      "surahStart": 15,
+      "surahEnd": 15,
+      "ayahStart": 20,
+      "ayahEnd": 39,
+      "label": "Al-Hijr · Ayah 20–39"
+    },
+    {
+      "page": 239,
+      "printedPage": 239,
+      "surahStart": 15,
+      "surahEnd": 15,
+      "ayahStart": 39,
+      "ayahEnd": 60,
+      "label": "Al-Hijr · Ayah 39–60"
+    },
+    {
+      "page": 240,
+      "printedPage": 240,
+      "surahStart": 15,
+      "surahEnd": 15,
+      "ayahStart": 60,
+      "ayahEnd": 83,
+      "label": "Al-Hijr · Ayah 60–83"
+    },
+    {
+      "page": 241,
+      "printedPage": 241,
+      "surahStart": 15,
+      "surahEnd": 16,
+      "ayahStart": 84,
+      "ayahEnd": 2,
+      "label": "Al-Hijr–An-Nahl"
+    },
+    {
+      "page": 242,
+      "printedPage": 242,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 2,
+      "ayahEnd": 14,
+      "label": "An-Nahl · Ayah 2–14"
+    },
+    {
+      "page": 243,
+      "printedPage": 243,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 14,
+      "ayahEnd": 27,
+      "label": "An-Nahl · Ayah 14–27"
+    },
+    {
+      "page": 244,
+      "printedPage": 244,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 27,
+      "ayahEnd": 35,
+      "label": "An-Nahl · Ayah 27–35"
+    },
+    {
+      "page": 245,
+      "printedPage": 245,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 35,
+      "ayahEnd": 44,
+      "label": "An-Nahl · Ayah 35–44"
+    },
+    {
+      "page": 246,
+      "printedPage": 246,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 45,
+      "ayahEnd": 58,
+      "label": "An-Nahl · Ayah 45–58"
+    },
+    {
+      "page": 247,
+      "printedPage": 247,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 58,
+      "ayahEnd": 67,
+      "label": "An-Nahl · Ayah 58–67"
+    },
+    {
+      "page": 248,
+      "printedPage": 248,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 67,
+      "ayahEnd": 74,
+      "label": "An-Nahl · Ayah 67–74"
+    },
+    {
+      "page": 249,
+      "printedPage": 249,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 74,
+      "ayahEnd": 81,
+      "label": "An-Nahl · Ayah 74–81"
+    },
+    {
+      "page": 250,
+      "printedPage": 250,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 81,
+      "ayahEnd": 90,
+      "label": "An-Nahl–An-Nahl"
+    },
+    {
+      "page": 251,
+      "printedPage": 251,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 90,
+      "ayahEnd": 97,
+      "label": "An-Nahl · Ayah 90–97"
+    },
+    {
+      "page": 252,
+      "printedPage": 252,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 97,
+      "ayahEnd": 108,
+      "label": "An-Nahl · Ayah 97–108"
+    },
+    {
+      "page": 253,
+      "printedPage": 253,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 108,
+      "ayahEnd": 118,
+      "label": "An-Nahl · Ayah 108–118"
+    },
+    {
+      "page": 254,
+      "printedPage": 254,
+      "surahStart": 16,
+      "surahEnd": 16,
+      "ayahStart": 118,
+      "ayahEnd": 128,
+      "label": "An-Nahl · Ayah 118–128"
+    },
+    {
+      "page": 255,
+      "printedPage": 255,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 1,
+      "ayahEnd": 9,
+      "label": "Al-Isra · Ayah 1–9"
+    },
+    {
+      "page": 256,
+      "printedPage": 256,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 9,
+      "ayahEnd": 19,
+      "label": "Al-Isra · Ayah 9–19"
+    },
+    {
+      "page": 257,
+      "printedPage": 257,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 19,
+      "ayahEnd": 30,
+      "label": "Al-Isra · Ayah 19–30"
+    },
+    {
+      "page": 258,
+      "printedPage": 258,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 30,
+      "ayahEnd": 41,
+      "label": "Al-Isra · Ayah 30–41"
+    },
+    {
+      "page": 259,
+      "printedPage": 259,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 41,
+      "ayahEnd": 52,
+      "label": "Al-Isra · Ayah 41–52"
+    },
+    {
+      "page": 260,
+      "printedPage": 260,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 52,
+      "ayahEnd": 61,
+      "label": "Al-Isra · Ayah 52–61"
+    },
+    {
+      "page": 261,
+      "printedPage": 261,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 61,
+      "ayahEnd": 70,
+      "label": "Al-Isra · Ayah 61–70"
+    },
+    {
+      "page": 262,
+      "printedPage": 262,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 70,
+      "ayahEnd": 82,
+      "label": "Al-Isra · Ayah 70–82"
+    },
+    {
+      "page": 263,
+      "printedPage": 263,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 82,
+      "ayahEnd": 94,
+      "label": "Al-Isra · Ayah 82–94"
+    },
+    {
+      "page": 264,
+      "printedPage": 264,
+      "surahStart": 17,
+      "surahEnd": 17,
+      "ayahStart": 94,
+      "ayahEnd": 103,
+      "label": "Al-Isra · Ayah 94–103"
+    },
+    {
+      "page": 265,
+      "printedPage": 265,
+      "surahStart": 17,
+      "surahEnd": 18,
+      "ayahStart": 103,
+      "ayahEnd": 3,
+      "label": "Al-Isra–Al-Kahf"
+    },
+    {
+      "page": 266,
+      "printedPage": 266,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 3,
+      "ayahEnd": 16,
+      "label": "Al-Kahf · Ayah 3–16"
+    },
+    {
+      "page": 267,
+      "printedPage": 267,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 16,
+      "ayahEnd": 21,
+      "label": "Al-Kahf · Ayah 16–21"
+    },
+    {
+      "page": 268,
+      "printedPage": 268,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 21,
+      "ayahEnd": 29,
+      "label": "Al-Kahf · Ayah 21–29"
+    },
+    {
+      "page": 269,
+      "printedPage": 269,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 29,
+      "ayahEnd": 41,
+      "label": "Al-Kahf · Ayah 29–41"
+    },
+    {
+      "page": 270,
+      "printedPage": 270,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 41,
+      "ayahEnd": 50,
+      "label": "Al-Kahf · Ayah 41–50"
+    },
+    {
+      "page": 271,
+      "printedPage": 271,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 50,
+      "ayahEnd": 60,
+      "label": "Al-Kahf · Ayah 50–60"
+    },
+    {
+      "page": 272,
+      "printedPage": 272,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 60,
+      "ayahEnd": 74,
+      "label": "Al-Kahf · Ayah 60–74"
+    },
+    {
+      "page": 273,
+      "printedPage": 273,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 75,
+      "ayahEnd": 85,
+      "label": "Al-Kahf · Ayah 75–85"
+    },
+    {
+      "page": 274,
+      "printedPage": 274,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 85,
+      "ayahEnd": 98,
+      "label": "Al-Kahf · Ayah 85–98"
+    },
+    {
+      "page": 275,
+      "printedPage": 275,
+      "surahStart": 18,
+      "surahEnd": 18,
+      "ayahStart": 98,
+      "ayahEnd": 110,
+      "label": "Al-Kahf · Ayah 98–110"
+    },
+    {
+      "page": 276,
+      "printedPage": 276,
+      "surahStart": 19,
+      "surahEnd": 19,
+      "ayahStart": 1,
+      "ayahEnd": 17,
+      "label": "Maryam · Ayah 1–17"
+    },
+    {
+      "page": 277,
+      "printedPage": 277,
+      "surahStart": 19,
+      "surahEnd": 19,
+      "ayahStart": 17,
+      "ayahEnd": 31,
+      "label": "Maryam · Ayah 17–31"
+    },
+    {
+      "page": 278,
+      "printedPage": 278,
+      "surahStart": 19,
+      "surahEnd": 19,
+      "ayahStart": 31,
+      "ayahEnd": 46,
+      "label": "Maryam · Ayah 31–46"
+    },
+    {
+      "page": 279,
+      "printedPage": 279,
+      "surahStart": 19,
+      "surahEnd": 19,
+      "ayahStart": 46,
+      "ayahEnd": 59,
+      "label": "Maryam · Ayah 46–59"
+    },
+    {
+      "page": 280,
+      "printedPage": 280,
+      "surahStart": 19,
+      "surahEnd": 19,
+      "ayahStart": 60,
+      "ayahEnd": 74,
+      "label": "Maryam · Ayah 60–74"
+    },
+    {
+      "page": 281,
+      "printedPage": 281,
+      "surahStart": 19,
+      "surahEnd": 19,
+      "ayahStart": 75,
+      "ayahEnd": 93,
+      "label": "Maryam · Ayah 75–93"
+    },
+    {
+      "page": 282,
+      "printedPage": 282,
+      "surahStart": 19,
+      "surahEnd": 20,
+      "ayahStart": 94,
+      "ayahEnd": 14,
+      "label": "Maryam–Taha"
+    },
+    {
+      "page": 283,
+      "printedPage": 283,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 15,
+      "ayahEnd": 40,
+      "label": "Taha · Ayah 15–40"
+    },
+    {
+      "page": 284,
+      "printedPage": 284,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 40,
+      "ayahEnd": 55,
+      "label": "Taha · Ayah 40–55"
+    },
+    {
+      "page": 285,
+      "printedPage": 285,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 56,
+      "ayahEnd": 71,
+      "label": "Taha · Ayah 56–71"
+    },
+    {
+      "page": 286,
+      "printedPage": 286,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 71,
+      "ayahEnd": 82,
+      "label": "Taha · Ayah 71–82"
+    },
+    {
+      "page": 287,
+      "printedPage": 287,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 82,
+      "ayahEnd": 96,
+      "label": "Taha · Ayah 82–96"
+    },
+    {
+      "page": 288,
+      "printedPage": 288,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 96,
+      "ayahEnd": 111,
+      "label": "Taha · Ayah 96–111"
+    },
+    {
+      "page": 289,
+      "printedPage": 289,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 111,
+      "ayahEnd": 124,
+      "label": "Taha · Ayah 111–124"
+    },
+    {
+      "page": 290,
+      "printedPage": 290,
+      "surahStart": 20,
+      "surahEnd": 20,
+      "ayahStart": 124,
+      "ayahEnd": 135,
+      "label": "Taha · Ayah 124–135"
+    },
+    {
+      "page": 291,
+      "printedPage": 291,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 1,
+      "ayahEnd": 11,
+      "label": "Al-Anbya · Ayah 1–11"
+    },
+    {
+      "page": 292,
+      "printedPage": 292,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 11,
+      "ayahEnd": 25,
+      "label": "Al-Anbya · Ayah 11–25"
+    },
+    {
+      "page": 293,
+      "printedPage": 293,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 25,
+      "ayahEnd": 36,
+      "label": "Al-Anbya · Ayah 25–36"
+    },
+    {
+      "page": 294,
+      "printedPage": 294,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 36,
+      "ayahEnd": 47,
+      "label": "Al-Anbya · Ayah 36–47"
+    },
+    {
+      "page": 295,
+      "printedPage": 295,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 47,
+      "ayahEnd": 61,
+      "label": "Al-Anbya · Ayah 47–61"
+    },
+    {
+      "page": 296,
+      "printedPage": 296,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 61,
+      "ayahEnd": 76,
+      "label": "Al-Anbya · Ayah 61–76"
+    },
+    {
+      "page": 297,
+      "printedPage": 297,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 76,
+      "ayahEnd": 87,
+      "label": "Al-Anbya · Ayah 76–87"
+    },
+    {
+      "page": 298,
+      "printedPage": 298,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 87,
+      "ayahEnd": 99,
+      "label": "Al-Anbya · Ayah 87–99"
+    },
+    {
+      "page": 299,
+      "printedPage": 299,
+      "surahStart": 21,
+      "surahEnd": 21,
+      "ayahStart": 99,
+      "ayahEnd": 112,
+      "label": "Al-Anbya · Ayah 99–112"
+    },
+    {
+      "page": 300,
+      "printedPage": 300,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 1,
+      "ayahEnd": 6,
+      "label": "Al-Hajj · Ayah 1–6"
+    },
+    {
+      "page": 301,
+      "printedPage": 301,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 6,
+      "ayahEnd": 16,
+      "label": "Al-Hajj · Ayah 6–16"
+    },
+    {
+      "page": 302,
+      "printedPage": 302,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 17,
+      "ayahEnd": 25,
+      "label": "Al-Hajj · Ayah 17–25"
+    },
+    {
+      "page": 303,
+      "printedPage": 303,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 25,
+      "ayahEnd": 34,
+      "label": "Al-Hajj · Ayah 25–34"
+    },
+    {
+      "page": 304,
+      "printedPage": 304,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 34,
+      "ayahEnd": 41,
+      "label": "Al-Hajj · Ayah 34–41"
+    },
+    {
+      "page": 305,
+      "printedPage": 305,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 41,
+      "ayahEnd": 52,
+      "label": "Al-Hajj · Ayah 41–52"
+    },
+    {
+      "page": 306,
+      "printedPage": 306,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 52,
+      "ayahEnd": 62,
+      "label": "Al-Hajj · Ayah 52–62"
+    },
+    {
+      "page": 307,
+      "printedPage": 307,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 62,
+      "ayahEnd": 72,
+      "label": "Al-Hajj · Ayah 62–72"
+    },
+    {
+      "page": 308,
+      "printedPage": 308,
+      "surahStart": 22,
+      "surahEnd": 22,
+      "ayahStart": 72,
+      "ayahEnd": 78,
+      "label": "Al-Hajj · Ayah 72–78"
+    },
+    {
+      "page": 309,
+      "printedPage": 309,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 1,
+      "ayahEnd": 19,
+      "label": "Al-Mu'minun · Ayah 1–19"
+    },
+    {
+      "page": 310,
+      "printedPage": 310,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 19,
+      "ayahEnd": 30,
+      "label": "Al-Mu'minun · Ayah 19–30"
+    },
+    {
+      "page": 311,
+      "printedPage": 311,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 30,
+      "ayahEnd": 45,
+      "label": "Al-Mu'minun · Ayah 30–45"
+    },
+    {
+      "page": 312,
+      "printedPage": 312,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 46,
+      "ayahEnd": 63,
+      "label": "Al-Mu'minun · Ayah 46–63"
+    },
+    {
+      "page": 313,
+      "printedPage": 313,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 63,
+      "ayahEnd": 79,
+      "label": "Al-Mu'minun · Ayah 63–79"
+    },
+    {
+      "page": 314,
+      "printedPage": 314,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 80,
+      "ayahEnd": 97,
+      "label": "Al-Mu'minun · Ayah 80–97"
+    },
+    {
+      "page": 315,
+      "printedPage": 315,
+      "surahStart": 23,
+      "surahEnd": 23,
+      "ayahStart": 97,
+      "ayahEnd": 114,
+      "label": "Al-Mu'minun · Ayah 97–114"
+    },
+    {
+      "page": 316,
+      "printedPage": 316,
+      "surahStart": 23,
+      "surahEnd": 24,
+      "ayahStart": 115,
+      "ayahEnd": 6,
+      "label": "Al-Mu'minun–An-Nur"
+    },
+    {
+      "page": 317,
+      "printedPage": 317,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 6,
+      "ayahEnd": 16,
+      "label": "An-Nur · Ayah 6–16"
+    },
+    {
+      "page": 318,
+      "printedPage": 318,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 16,
+      "ayahEnd": 25,
+      "label": "An-Nur · Ayah 16–25"
+    },
+    {
+      "page": 319,
+      "printedPage": 319,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 26,
+      "ayahEnd": 31,
+      "label": "An-Nur · Ayah 26–31"
+    },
+    {
+      "page": 320,
+      "printedPage": 320,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 31,
+      "ayahEnd": 36,
+      "label": "An-Nur · Ayah 31–36"
+    },
+    {
+      "page": 321,
+      "printedPage": 321,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 36,
+      "ayahEnd": 44,
+      "label": "An-Nur · Ayah 36–44"
+    },
+    {
+      "page": 322,
+      "printedPage": 322,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 44,
+      "ayahEnd": 54,
+      "label": "An-Nur · Ayah 44–54"
+    },
+    {
+      "page": 323,
+      "printedPage": 323,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 54,
+      "ayahEnd": 60,
+      "label": "An-Nur · Ayah 54–60"
+    },
+    {
+      "page": 324,
+      "printedPage": 324,
+      "surahStart": 24,
+      "surahEnd": 24,
+      "ayahStart": 60,
+      "ayahEnd": 64,
+      "label": "An-Nur · Ayah 60–64"
+    },
+    {
+      "page": 325,
+      "printedPage": 325,
+      "surahStart": 24,
+      "surahEnd": 25,
+      "ayahStart": 64,
+      "ayahEnd": 9,
+      "label": "An-Nur–Al-Furqan"
+    },
+    {
+      "page": 326,
+      "printedPage": 326,
+      "surahStart": 25,
+      "surahEnd": 25,
+      "ayahStart": 9,
+      "ayahEnd": 20,
+      "label": "Al-Furqan · Ayah 9–20"
+    },
+    {
+      "page": 327,
+      "printedPage": 327,
+      "surahStart": 25,
+      "surahEnd": 25,
+      "ayahStart": 21,
+      "ayahEnd": 34,
+      "label": "Al-Furqan · Ayah 21–34"
+    },
+    {
+      "page": 328,
+      "printedPage": 328,
+      "surahStart": 25,
+      "surahEnd": 25,
+      "ayahStart": 34,
+      "ayahEnd": 47,
+      "label": "Al-Furqan · Ayah 34–47"
+    },
+    {
+      "page": 329,
+      "printedPage": 329,
+      "surahStart": 25,
+      "surahEnd": 25,
+      "ayahStart": 47,
+      "ayahEnd": 61,
+      "label": "Al-Furqan · Ayah 47–61"
+    },
+    {
+      "page": 330,
+      "printedPage": 330,
+      "surahStart": 25,
+      "surahEnd": 25,
+      "ayahStart": 61,
+      "ayahEnd": 75,
+      "label": "Al-Furqan · Ayah 61–75"
+    },
+    {
+      "page": 331,
+      "printedPage": 331,
+      "surahStart": 25,
+      "surahEnd": 26,
+      "ayahStart": 75,
+      "ayahEnd": 17,
+      "label": "Al-Furqan–Ash-Shu'ara"
+    },
+    {
+      "page": 332,
+      "printedPage": 332,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 17,
+      "ayahEnd": 36,
+      "label": "Ash-Shu'ara · Ayah 17–36"
+    },
+    {
+      "page": 333,
+      "printedPage": 333,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 37,
+      "ayahEnd": 57,
+      "label": "Ash-Shu'ara · Ayah 37–57"
+    },
+    {
+      "page": 334,
+      "printedPage": 334,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 57,
+      "ayahEnd": 83,
+      "label": "Ash-Shu'ara · Ayah 57–83"
+    },
+    {
+      "page": 335,
+      "printedPage": 335,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 83,
+      "ayahEnd": 112,
+      "label": "Ash-Shu'ara · Ayah 83–112"
+    },
+    {
+      "page": 336,
+      "printedPage": 336,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 112,
+      "ayahEnd": 139,
+      "label": "Ash-Shu'ara · Ayah 112–139"
+    },
+    {
+      "page": 337,
+      "printedPage": 337,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 139,
+      "ayahEnd": 165,
+      "label": "Ash-Shu'ara · Ayah 139–165"
+    },
+    {
+      "page": 338,
+      "printedPage": 338,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 165,
+      "ayahEnd": 189,
+      "label": "Ash-Shu'ara · Ayah 165–189"
+    },
+    {
+      "page": 339,
+      "printedPage": 339,
+      "surahStart": 26,
+      "surahEnd": 26,
+      "ayahStart": 190,
+      "ayahEnd": 218,
+      "label": "Ash-Shu'ara · Ayah 190–218"
+    },
+    {
+      "page": 340,
+      "printedPage": 340,
+      "surahStart": 26,
+      "surahEnd": 27,
+      "ayahStart": 218,
+      "ayahEnd": 9,
+      "label": "Ash-Shu'ara–An-Naml"
+    },
+    {
+      "page": 341,
+      "printedPage": 341,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 10,
+      "ayahEnd": 19,
+      "label": "An-Naml · Ayah 10–19"
+    },
+    {
+      "page": 342,
+      "printedPage": 342,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 19,
+      "ayahEnd": 34,
+      "label": "An-Naml · Ayah 19–34"
+    },
+    {
+      "page": 343,
+      "printedPage": 343,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 34,
+      "ayahEnd": 44,
+      "label": "An-Naml · Ayah 34–44"
+    },
+    {
+      "page": 344,
+      "printedPage": 344,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 45,
+      "ayahEnd": 59,
+      "label": "An-Naml · Ayah 45–59"
+    },
+    {
+      "page": 345,
+      "printedPage": 345,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 60,
+      "ayahEnd": 68,
+      "label": "An-Naml · Ayah 60–68"
+    },
+    {
+      "page": 346,
+      "printedPage": 346,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 68,
+      "ayahEnd": 83,
+      "label": "An-Naml · Ayah 68–83"
+    },
+    {
+      "page": 347,
+      "printedPage": 347,
+      "surahStart": 27,
+      "surahEnd": 27,
+      "ayahStart": 83,
+      "ayahEnd": 93,
+      "label": "An-Naml · Ayah 83–93"
+    },
+    {
+      "page": 348,
+      "printedPage": 348,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 1,
+      "ayahEnd": 10,
+      "label": "Al-Qasas · Ayah 1–10"
+    },
+    {
+      "page": 349,
+      "printedPage": 349,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 10,
+      "ayahEnd": 18,
+      "label": "Al-Qasas · Ayah 10–18"
+    },
+    {
+      "page": 350,
+      "printedPage": 350,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 18,
+      "ayahEnd": 25,
+      "label": "Al-Qasas · Ayah 18–25"
+    },
+    {
+      "page": 351,
+      "printedPage": 351,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 26,
+      "ayahEnd": 33,
+      "label": "Al-Qasas · Ayah 26–33"
+    },
+    {
+      "page": 352,
+      "printedPage": 352,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 33,
+      "ayahEnd": 42,
+      "label": "Al-Qasas · Ayah 33–42"
+    },
+    {
+      "page": 353,
+      "printedPage": 353,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 43,
+      "ayahEnd": 50,
+      "label": "Al-Qasas · Ayah 43–50"
+    },
+    {
+      "page": 354,
+      "printedPage": 354,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 50,
+      "ayahEnd": 60,
+      "label": "Al-Qasas · Ayah 50–60"
+    },
+    {
+      "page": 355,
+      "printedPage": 355,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 60,
+      "ayahEnd": 71,
+      "label": "Al-Qasas · Ayah 60–71"
+    },
+    {
+      "page": 356,
+      "printedPage": 356,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 71,
+      "ayahEnd": 78,
+      "label": "Al-Qasas · Ayah 71–78"
+    },
+    {
+      "page": 357,
+      "printedPage": 357,
+      "surahStart": 28,
+      "surahEnd": 28,
+      "ayahStart": 78,
+      "ayahEnd": 86,
+      "label": "Al-Qasas · Ayah 78–86"
+    },
+    {
+      "page": 358,
+      "printedPage": 358,
+      "surahStart": 28,
+      "surahEnd": 29,
+      "ayahStart": 86,
+      "ayahEnd": 8,
+      "label": "Al-Qasas–Al-'Ankabut"
+    },
+    {
+      "page": 359,
+      "printedPage": 359,
+      "surahStart": 29,
+      "surahEnd": 29,
+      "ayahStart": 8,
+      "ayahEnd": 17,
+      "label": "Al-'Ankabut · Ayah 8–17"
+    },
+    {
+      "page": 360,
+      "printedPage": 360,
+      "surahStart": 29,
+      "surahEnd": 29,
+      "ayahStart": 17,
+      "ayahEnd": 27,
+      "label": "Al-'Ankabut · Ayah 17–27"
+    },
+    {
+      "page": 361,
+      "printedPage": 361,
+      "surahStart": 29,
+      "surahEnd": 29,
+      "ayahStart": 27,
+      "ayahEnd": 35,
+      "label": "Al-'Ankabut · Ayah 27–35"
+    },
+    {
+      "page": 362,
+      "printedPage": 362,
+      "surahStart": 29,
+      "surahEnd": 29,
+      "ayahStart": 35,
+      "ayahEnd": 44,
+      "label": "Al-'Ankabut · Ayah 35–44"
+    },
+    {
+      "page": 363,
+      "printedPage": 363,
+      "surahStart": 29,
+      "surahEnd": 29,
+      "ayahStart": 45,
+      "ayahEnd": 52,
+      "label": "Al-'Ankabut · Ayah 45–52"
+    },
+    {
+      "page": 364,
+      "printedPage": 364,
+      "surahStart": 29,
+      "surahEnd": 29,
+      "ayahStart": 53,
+      "ayahEnd": 63,
+      "label": "Al-'Ankabut · Ayah 53–63"
+    },
+    {
+      "page": 365,
+      "printedPage": 365,
+      "surahStart": 29,
+      "surahEnd": 30,
+      "ayahStart": 63,
+      "ayahEnd": 6,
+      "label": "Al-'Ankabut–Ar-Rum"
+    },
+    {
+      "page": 366,
+      "printedPage": 366,
+      "surahStart": 30,
+      "surahEnd": 30,
+      "ayahStart": 6,
+      "ayahEnd": 17,
+      "label": "Ar-Rum · Ayah 6–17"
+    },
+    {
+      "page": 367,
+      "printedPage": 367,
+      "surahStart": 30,
+      "surahEnd": 30,
+      "ayahStart": 18,
+      "ayahEnd": 28,
+      "label": "Ar-Rum · Ayah 18–28"
+    },
+    {
+      "page": 368,
+      "printedPage": 368,
+      "surahStart": 30,
+      "surahEnd": 30,
+      "ayahStart": 28,
+      "ayahEnd": 38,
+      "label": "Ar-Rum · Ayah 28–38"
+    },
+    {
+      "page": 369,
+      "printedPage": 369,
+      "surahStart": 30,
+      "surahEnd": 30,
+      "ayahStart": 38,
+      "ayahEnd": 47,
+      "label": "Ar-Rum · Ayah 38–47"
+    },
+    {
+      "page": 370,
+      "printedPage": 370,
+      "surahStart": 30,
+      "surahEnd": 30,
+      "ayahStart": 47,
+      "ayahEnd": 56,
+      "label": "Ar-Rum · Ayah 47–56"
+    },
+    {
+      "page": 371,
+      "printedPage": 371,
+      "surahStart": 30,
+      "surahEnd": 31,
+      "ayahStart": 56,
+      "ayahEnd": 9,
+      "label": "Ar-Rum–Luqman"
+    },
+    {
+      "page": 372,
+      "printedPage": 372,
+      "surahStart": 31,
+      "surahEnd": 31,
+      "ayahStart": 9,
+      "ayahEnd": 17,
+      "label": "Luqman · Ayah 9–17"
+    },
+    {
+      "page": 373,
+      "printedPage": 373,
+      "surahStart": 31,
+      "surahEnd": 31,
+      "ayahStart": 17,
+      "ayahEnd": 27,
+      "label": "Luqman · Ayah 17–27"
+    },
+    {
+      "page": 374,
+      "printedPage": 374,
+      "surahStart": 31,
+      "surahEnd": 32,
+      "ayahStart": 27,
+      "ayahEnd": 3,
+      "label": "Luqman–As-Sajdah"
+    },
+    {
+      "page": 375,
+      "printedPage": 375,
+      "surahStart": 32,
+      "surahEnd": 32,
+      "ayahStart": 3,
+      "ayahEnd": 14,
+      "label": "As-Sajdah · Ayah 3–14"
+    },
+    {
+      "page": 376,
+      "printedPage": 376,
+      "surahStart": 32,
+      "surahEnd": 32,
+      "ayahStart": 14,
+      "ayahEnd": 26,
+      "label": "As-Sajdah · Ayah 14–26"
+    },
+    {
+      "page": 377,
+      "printedPage": 377,
+      "surahStart": 32,
+      "surahEnd": 33,
+      "ayahStart": 26,
+      "ayahEnd": 5,
+      "label": "As-Sajdah–Al-Ahzab"
+    },
+    {
+      "page": 378,
+      "printedPage": 378,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 6,
+      "ayahEnd": 14,
+      "label": "Al-Ahzab · Ayah 6–14"
+    },
+    {
+      "page": 379,
+      "printedPage": 379,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 14,
+      "ayahEnd": 22,
+      "label": "Al-Ahzab · Ayah 14–22"
+    },
+    {
+      "page": 380,
+      "printedPage": 380,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 22,
+      "ayahEnd": 30,
+      "label": "Al-Ahzab · Ayah 22–30"
+    },
+    {
+      "page": 381,
+      "printedPage": 381,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 31,
+      "ayahEnd": 36,
+      "label": "Al-Ahzab · Ayah 31–36"
+    },
+    {
+      "page": 382,
+      "printedPage": 382,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 36,
+      "ayahEnd": 47,
+      "label": "Al-Ahzab · Ayah 36–47"
+    },
+    {
+      "page": 383,
+      "printedPage": 383,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 47,
+      "ayahEnd": 52,
+      "label": "Al-Ahzab · Ayah 47–52"
+    },
+    {
+      "page": 384,
+      "printedPage": 384,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 52,
+      "ayahEnd": 58,
+      "label": "Al-Ahzab · Ayah 52–58"
+    },
+    {
+      "page": 385,
+      "printedPage": 385,
+      "surahStart": 33,
+      "surahEnd": 33,
+      "ayahStart": 58,
+      "ayahEnd": 69,
+      "label": "Al-Ahzab · Ayah 58–69"
+    },
+    {
+      "page": 386,
+      "printedPage": 386,
+      "surahStart": 33,
+      "surahEnd": 34,
+      "ayahStart": 69,
+      "ayahEnd": 3,
+      "label": "Al-Ahzab–Saba"
+    },
+    {
+      "page": 387,
+      "printedPage": 387,
+      "surahStart": 34,
+      "surahEnd": 34,
+      "ayahStart": 3,
+      "ayahEnd": 12,
+      "label": "Saba · Ayah 3–12"
+    },
+    {
+      "page": 388,
+      "printedPage": 388,
+      "surahStart": 34,
+      "surahEnd": 34,
+      "ayahStart": 12,
+      "ayahEnd": 20,
+      "label": "Saba · Ayah 12–20"
+    },
+    {
+      "page": 389,
+      "printedPage": 389,
+      "surahStart": 34,
+      "surahEnd": 34,
+      "ayahStart": 20,
+      "ayahEnd": 31,
+      "label": "Saba · Ayah 20–31"
+    },
+    {
+      "page": 390,
+      "printedPage": 390,
+      "surahStart": 34,
+      "surahEnd": 34,
+      "ayahStart": 31,
+      "ayahEnd": 39,
+      "label": "Saba · Ayah 31–39"
+    },
+    {
+      "page": 391,
+      "printedPage": 391,
+      "surahStart": 34,
+      "surahEnd": 34,
+      "ayahStart": 39,
+      "ayahEnd": 48,
+      "label": "Saba · Ayah 39–48"
+    },
+    {
+      "page": 392,
+      "printedPage": 392,
+      "surahStart": 34,
+      "surahEnd": 35,
+      "ayahStart": 48,
+      "ayahEnd": 4,
+      "label": "Saba–Fatir"
+    },
+    {
+      "page": 393,
+      "printedPage": 393,
+      "surahStart": 35,
+      "surahEnd": 35,
+      "ayahStart": 4,
+      "ayahEnd": 12,
+      "label": "Fatir · Ayah 4–12"
+    },
+    {
+      "page": 394,
+      "printedPage": 394,
+      "surahStart": 35,
+      "surahEnd": 35,
+      "ayahStart": 12,
+      "ayahEnd": 23,
+      "label": "Fatir · Ayah 12–23"
+    },
+    {
+      "page": 395,
+      "printedPage": 395,
+      "surahStart": 35,
+      "surahEnd": 35,
+      "ayahStart": 23,
+      "ayahEnd": 33,
+      "label": "Fatir · Ayah 23–33"
+    },
+    {
+      "page": 396,
+      "printedPage": 396,
+      "surahStart": 35,
+      "surahEnd": 35,
+      "ayahStart": 33,
+      "ayahEnd": 41,
+      "label": "Fatir · Ayah 33–41"
+    },
+    {
+      "page": 397,
+      "printedPage": 397,
+      "surahStart": 35,
+      "surahEnd": 36,
+      "ayahStart": 41,
+      "ayahEnd": 8,
+      "label": "Fatir–Ya-Sin"
+    },
+    {
+      "page": 398,
+      "printedPage": 398,
+      "surahStart": 36,
+      "surahEnd": 36,
+      "ayahStart": 8,
+      "ayahEnd": 21,
+      "label": "Ya-Sin · Ayah 8–21"
+    },
+    {
+      "page": 399,
+      "printedPage": 399,
+      "surahStart": 36,
+      "surahEnd": 36,
+      "ayahStart": 22,
+      "ayahEnd": 38,
+      "label": "Ya-Sin · Ayah 22–38"
+    },
+    {
+      "page": 400,
+      "printedPage": 400,
+      "surahStart": 36,
+      "surahEnd": 36,
+      "ayahStart": 38,
+      "ayahEnd": 54,
+      "label": "Ya-Sin · Ayah 38–54"
+    },
+    {
+      "page": 401,
+      "printedPage": 401,
+      "surahStart": 36,
+      "surahEnd": 36,
+      "ayahStart": 54,
+      "ayahEnd": 72,
+      "label": "Ya-Sin · Ayah 54–72"
+    },
+    {
+      "page": 402,
+      "printedPage": 402,
+      "surahStart": 36,
+      "surahEnd": 37,
+      "ayahStart": 72,
+      "ayahEnd": 7,
+      "label": "Ya-Sin–As-Saffat"
+    },
+    {
+      "page": 403,
+      "printedPage": 403,
+      "surahStart": 37,
+      "surahEnd": 37,
+      "ayahStart": 7,
+      "ayahEnd": 33,
+      "label": "As-Saffat · Ayah 7–33"
+    },
+    {
+      "page": 404,
+      "printedPage": 404,
+      "surahStart": 37,
+      "surahEnd": 37,
+      "ayahStart": 33,
+      "ayahEnd": 62,
+      "label": "As-Saffat · Ayah 33–62"
+    },
+    {
+      "page": 405,
+      "printedPage": 405,
+      "surahStart": 37,
+      "surahEnd": 37,
+      "ayahStart": 62,
+      "ayahEnd": 93,
+      "label": "As-Saffat · Ayah 62–93"
+    },
+    {
+      "page": 406,
+      "printedPage": 406,
+      "surahStart": 37,
+      "surahEnd": 37,
+      "ayahStart": 93,
+      "ayahEnd": 118,
+      "label": "As-Saffat · Ayah 93–118"
+    },
+    {
+      "page": 407,
+      "printedPage": 407,
+      "surahStart": 37,
+      "surahEnd": 37,
+      "ayahStart": 118,
+      "ayahEnd": 149,
+      "label": "As-Saffat · Ayah 118–149"
+    },
+    {
+      "page": 408,
+      "printedPage": 408,
+      "surahStart": 37,
+      "surahEnd": 37,
+      "ayahStart": 149,
+      "ayahEnd": 180,
+      "label": "As-Saffat · Ayah 149–180"
+    },
+    {
+      "page": 409,
+      "printedPage": 409,
+      "surahStart": 37,
+      "surahEnd": 38,
+      "ayahStart": 181,
+      "ayahEnd": 17,
+      "label": "As-Saffat–Sad"
+    },
+    {
+      "page": 410,
+      "printedPage": 410,
+      "surahStart": 38,
+      "surahEnd": 38,
+      "ayahStart": 17,
+      "ayahEnd": 28,
+      "label": "Sad · Ayah 17–28"
+    },
+    {
+      "page": 411,
+      "printedPage": 411,
+      "surahStart": 38,
+      "surahEnd": 38,
+      "ayahStart": 28,
+      "ayahEnd": 45,
+      "label": "Sad · Ayah 28–45"
+    },
+    {
+      "page": 412,
+      "printedPage": 412,
+      "surahStart": 38,
+      "surahEnd": 38,
+      "ayahStart": 45,
+      "ayahEnd": 70,
+      "label": "Sad · Ayah 45–70"
+    },
+    {
+      "page": 413,
+      "printedPage": 413,
+      "surahStart": 38,
+      "surahEnd": 39,
+      "ayahStart": 70,
+      "ayahEnd": 3,
+      "label": "Sad–Az-Zumar"
+    },
+    {
+      "page": 414,
+      "printedPage": 414,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 3,
+      "ayahEnd": 9,
+      "label": "Az-Zumar · Ayah 3–9"
+    },
+    {
+      "page": 415,
+      "printedPage": 415,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 9,
+      "ayahEnd": 21,
+      "label": "Az-Zumar · Ayah 9–21"
+    },
+    {
+      "page": 416,
+      "printedPage": 416,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 21,
+      "ayahEnd": 31,
+      "label": "Az-Zumar · Ayah 21–31"
+    },
+    {
+      "page": 417,
+      "printedPage": 417,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 32,
+      "ayahEnd": 41,
+      "label": "Az-Zumar · Ayah 32–41"
+    },
+    {
+      "page": 418,
+      "printedPage": 418,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 41,
+      "ayahEnd": 49,
+      "label": "Az-Zumar · Ayah 41–49"
+    },
+    {
+      "page": 419,
+      "printedPage": 419,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 49,
+      "ayahEnd": 59,
+      "label": "Az-Zumar · Ayah 49–59"
+    },
+    {
+      "page": 420,
+      "printedPage": 420,
+      "surahStart": 39,
+      "surahEnd": 39,
+      "ayahStart": 59,
+      "ayahEnd": 70,
+      "label": "Az-Zumar · Ayah 59–70"
+    },
+    {
+      "page": 421,
+      "printedPage": 421,
+      "surahStart": 39,
+      "surahEnd": 40,
+      "ayahStart": 70,
+      "ayahEnd": 4,
+      "label": "Az-Zumar–Ghafir"
+    },
+    {
+      "page": 422,
+      "printedPage": 422,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 4,
+      "ayahEnd": 13,
+      "label": "Ghafir · Ayah 4–13"
+    },
+    {
+      "page": 423,
+      "printedPage": 423,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 13,
+      "ayahEnd": 23,
+      "label": "Ghafir · Ayah 13–23"
+    },
+    {
+      "page": 424,
+      "printedPage": 424,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 24,
+      "ayahEnd": 32,
+      "label": "Ghafir · Ayah 24–32"
+    },
+    {
+      "page": 425,
+      "printedPage": 425,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 32,
+      "ayahEnd": 41,
+      "label": "Ghafir · Ayah 32–41"
+    },
+    {
+      "page": 426,
+      "printedPage": 426,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 42,
+      "ayahEnd": 52,
+      "label": "Ghafir · Ayah 42–52"
+    },
+    {
+      "page": 427,
+      "printedPage": 427,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 52,
+      "ayahEnd": 63,
+      "label": "Ghafir · Ayah 52–63"
+    },
+    {
+      "page": 428,
+      "printedPage": 428,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 63,
+      "ayahEnd": 74,
+      "label": "Ghafir · Ayah 63–74"
+    },
+    {
+      "page": 429,
+      "printedPage": 429,
+      "surahStart": 40,
+      "surahEnd": 40,
+      "ayahStart": 74,
+      "ayahEnd": 83,
+      "label": "Ghafir · Ayah 74–83"
+    },
+    {
+      "page": 430,
+      "printedPage": 430,
+      "surahStart": 40,
+      "surahEnd": 41,
+      "ayahStart": 83,
+      "ayahEnd": 10,
+      "label": "Ghafir–Fussilat"
+    },
+    {
+      "page": 431,
+      "printedPage": 431,
+      "surahStart": 41,
+      "surahEnd": 41,
+      "ayahStart": 10,
+      "ayahEnd": 20,
+      "label": "Fussilat · Ayah 10–20"
+    },
+    {
+      "page": 432,
+      "printedPage": 432,
+      "surahStart": 41,
+      "surahEnd": 41,
+      "ayahStart": 20,
+      "ayahEnd": 29,
+      "label": "Fussilat · Ayah 20–29"
+    },
+    {
+      "page": 433,
+      "printedPage": 433,
+      "surahStart": 41,
+      "surahEnd": 41,
+      "ayahStart": 29,
+      "ayahEnd": 38,
+      "label": "Fussilat · Ayah 29–38"
+    },
+    {
+      "page": 434,
+      "printedPage": 434,
+      "surahStart": 41,
+      "surahEnd": 41,
+      "ayahStart": 39,
+      "ayahEnd": 46,
+      "label": "Fussilat · Ayah 39–46"
+    },
+    {
+      "page": 435,
+      "printedPage": 435,
+      "surahStart": 41,
+      "surahEnd": 42,
+      "ayahStart": 47,
+      "ayahEnd": 3,
+      "label": "Fussilat–Ash-Shuraa"
+    },
+    {
+      "page": 436,
+      "printedPage": 436,
+      "surahStart": 42,
+      "surahEnd": 42,
+      "ayahStart": 3,
+      "ayahEnd": 13,
+      "label": "Ash-Shuraa · Ayah 3–13"
+    },
+    {
+      "page": 437,
+      "printedPage": 437,
+      "surahStart": 42,
+      "surahEnd": 42,
+      "ayahStart": 13,
+      "ayahEnd": 18,
+      "label": "Ash-Shuraa · Ayah 13–18"
+    },
+    {
+      "page": 438,
+      "printedPage": 438,
+      "surahStart": 42,
+      "surahEnd": 42,
+      "ayahStart": 19,
+      "ayahEnd": 26,
+      "label": "Ash-Shuraa · Ayah 19–26"
+    },
+    {
+      "page": 439,
+      "printedPage": 439,
+      "surahStart": 42,
+      "surahEnd": 42,
+      "ayahStart": 26,
+      "ayahEnd": 38,
+      "label": "Ash-Shuraa · Ayah 26–38"
+    },
+    {
+      "page": 440,
+      "printedPage": 440,
+      "surahStart": 42,
+      "surahEnd": 42,
+      "ayahStart": 38,
+      "ayahEnd": 48,
+      "label": "Ash-Shuraa · Ayah 38–48"
+    },
+    {
+      "page": 441,
+      "printedPage": 441,
+      "surahStart": 42,
+      "surahEnd": 43,
+      "ayahStart": 48,
+      "ayahEnd": 6,
+      "label": "Ash-Shuraa–Az-Zukhruf"
+    },
+    {
+      "page": 442,
+      "printedPage": 442,
+      "surahStart": 43,
+      "surahEnd": 43,
+      "ayahStart": 6,
+      "ayahEnd": 20,
+      "label": "Az-Zukhruf · Ayah 6–20"
+    },
+    {
+      "page": 443,
+      "printedPage": 443,
+      "surahStart": 43,
+      "surahEnd": 43,
+      "ayahStart": 20,
+      "ayahEnd": 33,
+      "label": "Az-Zukhruf · Ayah 20–33"
+    },
+    {
+      "page": 444,
+      "printedPage": 444,
+      "surahStart": 43,
+      "surahEnd": 43,
+      "ayahStart": 33,
+      "ayahEnd": 48,
+      "label": "Az-Zukhruf · Ayah 33–48"
+    },
+    {
+      "page": 445,
+      "printedPage": 445,
+      "surahStart": 43,
+      "surahEnd": 43,
+      "ayahStart": 48,
+      "ayahEnd": 64,
+      "label": "Az-Zukhruf · Ayah 48–64"
+    },
+    {
+      "page": 446,
+      "printedPage": 446,
+      "surahStart": 43,
+      "surahEnd": 43,
+      "ayahStart": 64,
+      "ayahEnd": 82,
+      "label": "Az-Zukhruf · Ayah 64–82"
+    },
+    {
+      "page": 447,
+      "printedPage": 447,
+      "surahStart": 43,
+      "surahEnd": 44,
+      "ayahStart": 82,
+      "ayahEnd": 13,
+      "label": "Az-Zukhruf–Ad-Dukhan"
+    },
+    {
+      "page": 448,
+      "printedPage": 448,
+      "surahStart": 44,
+      "surahEnd": 44,
+      "ayahStart": 13,
+      "ayahEnd": 37,
+      "label": "Ad-Dukhan · Ayah 13–37"
+    },
+    {
+      "page": 449,
+      "printedPage": 449,
+      "surahStart": 44,
+      "surahEnd": 45,
+      "ayahStart": 37,
+      "ayahEnd": 3,
+      "label": "Ad-Dukhan–Al-Jathiyah"
+    },
+    {
+      "page": 450,
+      "printedPage": 450,
+      "surahStart": 45,
+      "surahEnd": 45,
+      "ayahStart": 3,
+      "ayahEnd": 16,
+      "label": "Al-Jathiyah · Ayah 3–16"
+    },
+    {
+      "page": 451,
+      "printedPage": 451,
+      "surahStart": 45,
+      "surahEnd": 45,
+      "ayahStart": 16,
+      "ayahEnd": 26,
+      "label": "Al-Jathiyah · Ayah 16–26"
+    },
+    {
+      "page": 452,
+      "printedPage": 452,
+      "surahStart": 45,
+      "surahEnd": 45,
+      "ayahStart": 26,
+      "ayahEnd": 37,
+      "label": "Al-Jathiyah · Ayah 26–37"
+    },
+    {
+      "page": 453,
+      "printedPage": 453,
+      "surahStart": 46,
+      "surahEnd": 46,
+      "ayahStart": 1,
+      "ayahEnd": 9,
+      "label": "Al-Ahqaf · Ayah 1–9"
+    },
+    {
+      "page": 454,
+      "printedPage": 454,
+      "surahStart": 46,
+      "surahEnd": 46,
+      "ayahStart": 10,
+      "ayahEnd": 17,
+      "label": "Al-Ahqaf · Ayah 10–17"
+    },
+    {
+      "page": 455,
+      "printedPage": 455,
+      "surahStart": 46,
+      "surahEnd": 46,
+      "ayahStart": 17,
+      "ayahEnd": 25,
+      "label": "Al-Ahqaf · Ayah 17–25"
+    },
+    {
+      "page": 456,
+      "printedPage": 456,
+      "surahStart": 46,
+      "surahEnd": 46,
+      "ayahStart": 25,
+      "ayahEnd": 33,
+      "label": "Al-Ahqaf · Ayah 25–33"
+    },
+    {
+      "page": 457,
+      "printedPage": 457,
+      "surahStart": 46,
+      "surahEnd": 47,
+      "ayahStart": 33,
+      "ayahEnd": 4,
+      "label": "Al-Ahqaf–Muhammad"
+    },
+    {
+      "page": 458,
+      "printedPage": 458,
+      "surahStart": 47,
+      "surahEnd": 47,
+      "ayahStart": 5,
+      "ayahEnd": 16,
+      "label": "Muhammad · Ayah 5–16"
+    },
+    {
+      "page": 459,
+      "printedPage": 459,
+      "surahStart": 47,
+      "surahEnd": 47,
+      "ayahStart": 16,
+      "ayahEnd": 27,
+      "label": "Muhammad · Ayah 16–27"
+    },
+    {
+      "page": 460,
+      "printedPage": 460,
+      "surahStart": 47,
+      "surahEnd": 47,
+      "ayahStart": 27,
+      "ayahEnd": 38,
+      "label": "Muhammad · Ayah 27–38"
+    },
+    {
+      "page": 461,
+      "printedPage": 461,
+      "surahStart": 48,
+      "surahEnd": 48,
+      "ayahStart": 1,
+      "ayahEnd": 11,
+      "label": "Al-Fath · Ayah 1–11"
+    },
+    {
+      "page": 462,
+      "printedPage": 462,
+      "surahStart": 48,
+      "surahEnd": 48,
+      "ayahStart": 11,
+      "ayahEnd": 17,
+      "label": "Al-Fath · Ayah 11–17"
+    },
+    {
+      "page": 463,
+      "printedPage": 463,
+      "surahStart": 48,
+      "surahEnd": 48,
+      "ayahStart": 17,
+      "ayahEnd": 26,
+      "label": "Al-Fath · Ayah 17–26"
+    },
+    {
+      "page": 464,
+      "printedPage": 464,
+      "surahStart": 48,
+      "surahEnd": 49,
+      "ayahStart": 26,
+      "ayahEnd": 1,
+      "label": "Al-Fath–Al-Hujurat"
+    },
+    {
+      "page": 465,
+      "printedPage": 465,
+      "surahStart": 49,
+      "surahEnd": 49,
+      "ayahStart": 1,
+      "ayahEnd": 10,
+      "label": "Al-Hujurat · Ayah 1–10"
+    },
+    {
+      "page": 466,
+      "printedPage": 466,
+      "surahStart": 49,
+      "surahEnd": 49,
+      "ayahStart": 10,
+      "ayahEnd": 16,
+      "label": "Al-Hujurat · Ayah 10–16"
+    },
+    {
+      "page": 467,
+      "printedPage": 467,
+      "surahStart": 49,
+      "surahEnd": 50,
+      "ayahStart": 16,
+      "ayahEnd": 12,
+      "label": "Al-Hujurat–Qaf"
+    },
+    {
+      "page": 468,
+      "printedPage": 468,
+      "surahStart": 50,
+      "surahEnd": 50,
+      "ayahStart": 12,
+      "ayahEnd": 31,
+      "label": "Qaf · Ayah 12–31"
+    },
+    {
+      "page": 469,
+      "printedPage": 469,
+      "surahStart": 50,
+      "surahEnd": 51,
+      "ayahStart": 31,
+      "ayahEnd": 4,
+      "label": "Qaf–Adh-Dhariyat"
+    },
+    {
+      "page": 470,
+      "printedPage": 470,
+      "surahStart": 51,
+      "surahEnd": 51,
+      "ayahStart": 4,
+      "ayahEnd": 30,
+      "label": "Adh-Dhariyat · Ayah 4–30"
+    },
+    {
+      "page": 471,
+      "printedPage": 471,
+      "surahStart": 51,
+      "surahEnd": 51,
+      "ayahStart": 31,
+      "ayahEnd": 52,
+      "label": "Adh-Dhariyat · Ayah 31–52"
+    },
+    {
+      "page": 472,
+      "printedPage": 472,
+      "surahStart": 51,
+      "surahEnd": 52,
+      "ayahStart": 52,
+      "ayahEnd": 19,
+      "label": "Adh-Dhariyat–At-Tur"
+    },
+    {
+      "page": 473,
+      "printedPage": 473,
+      "surahStart": 52,
+      "surahEnd": 52,
+      "ayahStart": 19,
+      "ayahEnd": 40,
+      "label": "At-Tur · Ayah 19–40"
+    },
+    {
+      "page": 474,
+      "printedPage": 474,
+      "surahStart": 52,
+      "surahEnd": 53,
+      "ayahStart": 40,
+      "ayahEnd": 18,
+      "label": "At-Tur–An-Najm"
+    },
+    {
+      "page": 475,
+      "printedPage": 475,
+      "surahStart": 53,
+      "surahEnd": 53,
+      "ayahStart": 18,
+      "ayahEnd": 32,
+      "label": "An-Najm · Ayah 18–32"
+    },
+    {
+      "page": 476,
+      "printedPage": 476,
+      "surahStart": 53,
+      "surahEnd": 54,
+      "ayahStart": 32,
+      "ayahEnd": 2,
+      "label": "An-Najm–Al-Qamar"
+    },
+    {
+      "page": 477,
+      "printedPage": 477,
+      "surahStart": 54,
+      "surahEnd": 54,
+      "ayahStart": 2,
+      "ayahEnd": 25,
+      "label": "Al-Qamar · Ayah 2–25"
+    },
+    {
+      "page": 478,
+      "printedPage": 478,
+      "surahStart": 54,
+      "surahEnd": 54,
+      "ayahStart": 25,
+      "ayahEnd": 48,
+      "label": "Al-Qamar · Ayah 25–48"
+    },
+    {
+      "page": 479,
+      "printedPage": 479,
+      "surahStart": 54,
+      "surahEnd": 55,
+      "ayahStart": 48,
+      "ayahEnd": 22,
+      "label": "Al-Qamar–Ar-Rahman"
+    },
+    {
+      "page": 480,
+      "printedPage": 480,
+      "surahStart": 55,
+      "surahEnd": 55,
+      "ayahStart": 22,
+      "ayahEnd": 48,
+      "label": "Ar-Rahman · Ayah 22–48"
+    },
+    {
+      "page": 481,
+      "printedPage": 481,
+      "surahStart": 55,
+      "surahEnd": 55,
+      "ayahStart": 49,
+      "ayahEnd": 78,
+      "label": "Ar-Rahman · Ayah 49–78"
+    },
+    {
+      "page": 482,
+      "printedPage": 482,
+      "surahStart": 56,
+      "surahEnd": 56,
+      "ayahStart": 1,
+      "ayahEnd": 34,
+      "label": "Al-Waqi'ah · Ayah 1–34"
+    },
+    {
+      "page": 483,
+      "printedPage": 483,
+      "surahStart": 56,
+      "surahEnd": 56,
+      "ayahStart": 35,
+      "ayahEnd": 64,
+      "label": "Al-Waqi'ah · Ayah 35–64"
+    },
+    {
+      "page": 484,
+      "printedPage": 484,
+      "surahStart": 56,
+      "surahEnd": 56,
+      "ayahStart": 65,
+      "ayahEnd": 95,
+      "label": "Al-Waqi'ah · Ayah 65–95"
+    },
+    {
+      "page": 485,
+      "printedPage": 485,
+      "surahStart": 56,
+      "surahEnd": 57,
+      "ayahStart": 95,
+      "ayahEnd": 10,
+      "label": "Al-Waqi'ah–Al-Hadid"
+    },
+    {
+      "page": 486,
+      "printedPage": 486,
+      "surahStart": 57,
+      "surahEnd": 57,
+      "ayahStart": 10,
+      "ayahEnd": 16,
+      "label": "Al-Hadid · Ayah 10–16"
+    },
+    {
+      "page": 487,
+      "printedPage": 487,
+      "surahStart": 57,
+      "surahEnd": 57,
+      "ayahStart": 16,
+      "ayahEnd": 23,
+      "label": "Al-Hadid · Ayah 16–23"
+    },
+    {
+      "page": 488,
+      "printedPage": 488,
+      "surahStart": 57,
+      "surahEnd": 57,
+      "ayahStart": 23,
+      "ayahEnd": 29,
+      "label": "Al-Hadid · Ayah 23–29"
+    },
+    {
+      "page": 489,
+      "printedPage": 489,
+      "surahStart": 58,
+      "surahEnd": 58,
+      "ayahStart": 1,
+      "ayahEnd": 6,
+      "label": "Al-Mujadila · Ayah 1–6"
+    },
+    {
+      "page": 490,
+      "printedPage": 490,
+      "surahStart": 58,
+      "surahEnd": 58,
+      "ayahStart": 6,
+      "ayahEnd": 11,
+      "label": "Al-Mujadila · Ayah 6–11"
+    },
+    {
+      "page": 491,
+      "printedPage": 491,
+      "surahStart": 58,
+      "surahEnd": 58,
+      "ayahStart": 11,
+      "ayahEnd": 19,
+      "label": "Al-Mujadila · Ayah 11–19"
+    },
+    {
+      "page": 492,
+      "printedPage": 492,
+      "surahStart": 58,
+      "surahEnd": 59,
+      "ayahStart": 19,
+      "ayahEnd": 2,
+      "label": "Al-Mujadila–Al-Hashr"
+    },
+    {
+      "page": 493,
+      "printedPage": 493,
+      "surahStart": 59,
+      "surahEnd": 59,
+      "ayahStart": 2,
+      "ayahEnd": 8,
+      "label": "Al-Hashr · Ayah 2–8"
+    },
+    {
+      "page": 494,
+      "printedPage": 494,
+      "surahStart": 59,
+      "surahEnd": 59,
+      "ayahStart": 8,
+      "ayahEnd": 14,
+      "label": "Al-Hashr · Ayah 8–14"
+    },
+    {
+      "page": 495,
+      "printedPage": 495,
+      "surahStart": 59,
+      "surahEnd": 59,
+      "ayahStart": 15,
+      "ayahEnd": 24,
+      "label": "Al-Hashr · Ayah 15–24"
+    },
+    {
+      "page": 496,
+      "printedPage": 496,
+      "surahStart": 60,
+      "surahEnd": 60,
+      "ayahStart": 1,
+      "ayahEnd": 4,
+      "label": "Al-Mumtahanah · Ayah 1–4"
+    },
+    {
+      "page": 497,
+      "printedPage": 497,
+      "surahStart": 60,
+      "surahEnd": 60,
+      "ayahStart": 4,
+      "ayahEnd": 10,
+      "label": "Al-Mumtahanah · Ayah 4–10"
+    },
+    {
+      "page": 498,
+      "printedPage": 498,
+      "surahStart": 60,
+      "surahEnd": 61,
+      "ayahStart": 10,
+      "ayahEnd": 4,
+      "label": "Al-Mumtahanah–As-Saf"
+    },
+    {
+      "page": 499,
+      "printedPage": 499,
+      "surahStart": 61,
+      "surahEnd": 61,
+      "ayahStart": 4,
+      "ayahEnd": 12,
+      "label": "As-Saf · Ayah 4–12"
+    },
+    {
+      "page": 500,
+      "printedPage": 500,
+      "surahStart": 61,
+      "surahEnd": 62,
+      "ayahStart": 12,
+      "ayahEnd": 5,
+      "label": "As-Saf–Al-Jumu'ah"
+    },
+    {
+      "page": 501,
+      "printedPage": 501,
+      "surahStart": 62,
+      "surahEnd": 63,
+      "ayahStart": 5,
+      "ayahEnd": 1,
+      "label": "Al-Jumu'ah–Al-Munafiqun"
+    },
+    {
+      "page": 502,
+      "printedPage": 502,
+      "surahStart": 63,
+      "surahEnd": 63,
+      "ayahStart": 1,
+      "ayahEnd": 9,
+      "label": "Al-Munafiqun · Ayah 1–9"
+    },
+    {
+      "page": 503,
+      "printedPage": 503,
+      "surahStart": 63,
+      "surahEnd": 64,
+      "ayahStart": 9,
+      "ayahEnd": 7,
+      "label": "Al-Munafiqun–At-Taghabun"
+    },
+    {
+      "page": 504,
+      "printedPage": 504,
+      "surahStart": 64,
+      "surahEnd": 64,
+      "ayahStart": 7,
+      "ayahEnd": 16,
+      "label": "At-Taghabun · Ayah 7–16"
+    },
+    {
+      "page": 505,
+      "printedPage": 505,
+      "surahStart": 64,
+      "surahEnd": 65,
+      "ayahStart": 17,
+      "ayahEnd": 4,
+      "label": "At-Taghabun–At-Talaq"
+    },
+    {
+      "page": 506,
+      "printedPage": 506,
+      "surahStart": 65,
+      "surahEnd": 65,
+      "ayahStart": 4,
+      "ayahEnd": 11,
+      "label": "At-Talaq · Ayah 4–11"
+    },
+    {
+      "page": 507,
+      "printedPage": 507,
+      "surahStart": 65,
+      "surahEnd": 66,
+      "ayahStart": 11,
+      "ayahEnd": 6,
+      "label": "At-Talaq–At-Tahrim"
+    },
+    {
+      "page": 508,
+      "printedPage": 508,
+      "surahStart": 66,
+      "surahEnd": 66,
+      "ayahStart": 6,
+      "ayahEnd": 12,
+      "label": "At-Tahrim · Ayah 6–12"
+    },
+    {
+      "page": 509,
+      "printedPage": 509,
+      "surahStart": 67,
+      "surahEnd": 67,
+      "ayahStart": 1,
+      "ayahEnd": 12,
+      "label": "Al-Mulk · Ayah 1–12"
+    },
+    {
+      "page": 510,
+      "printedPage": 510,
+      "surahStart": 67,
+      "surahEnd": 67,
+      "ayahStart": 12,
+      "ayahEnd": 27,
+      "label": "Al-Mulk · Ayah 12–27"
+    },
+    {
+      "page": 511,
+      "printedPage": 511,
+      "surahStart": 67,
+      "surahEnd": 68,
+      "ayahStart": 27,
+      "ayahEnd": 17,
+      "label": "Al-Mulk–Al-Qalam"
+    },
+    {
+      "page": 512,
+      "printedPage": 512,
+      "surahStart": 68,
+      "surahEnd": 68,
+      "ayahStart": 17,
+      "ayahEnd": 42,
+      "label": "Al-Qalam · Ayah 17–42"
+    },
+    {
+      "page": 513,
+      "printedPage": 513,
+      "surahStart": 68,
+      "surahEnd": 69,
+      "ayahStart": 42,
+      "ayahEnd": 7,
+      "label": "Al-Qalam–Al-Haqqah"
+    },
+    {
+      "page": 514,
+      "printedPage": 514,
+      "surahStart": 69,
+      "surahEnd": 69,
+      "ayahStart": 7,
+      "ayahEnd": 32,
+      "label": "Al-Haqqah · Ayah 7–32"
+    },
+    {
+      "page": 515,
+      "printedPage": 515,
+      "surahStart": 69,
+      "surahEnd": 70,
+      "ayahStart": 32,
+      "ayahEnd": 5,
+      "label": "Al-Haqqah–Al-Ma'arij"
+    },
+    {
+      "page": 516,
+      "printedPage": 516,
+      "surahStart": 70,
+      "surahEnd": 70,
+      "ayahStart": 5,
+      "ayahEnd": 34,
+      "label": "Al-Ma'arij · Ayah 5–34"
+    },
+    {
+      "page": 517,
+      "printedPage": 517,
+      "surahStart": 70,
+      "surahEnd": 71,
+      "ayahStart": 34,
+      "ayahEnd": 7,
+      "label": "Al-Ma'arij–Nuh"
+    },
+    {
+      "page": 518,
+      "printedPage": 518,
+      "surahStart": 71,
+      "surahEnd": 71,
+      "ayahStart": 7,
+      "ayahEnd": 26,
+      "label": "Nuh · Ayah 7–26"
+    },
+    {
+      "page": 519,
+      "printedPage": 519,
+      "surahStart": 71,
+      "surahEnd": 72,
+      "ayahStart": 26,
+      "ayahEnd": 11,
+      "label": "Nuh–Al-Jinn"
+    },
+    {
+      "page": 520,
+      "printedPage": 520,
+      "surahStart": 72,
+      "surahEnd": 72,
+      "ayahStart": 11,
+      "ayahEnd": 27,
+      "label": "Al-Jinn · Ayah 11–27"
+    },
+    {
+      "page": 521,
+      "printedPage": 521,
+      "surahStart": 72,
+      "surahEnd": 73,
+      "ayahStart": 27,
+      "ayahEnd": 19,
+      "label": "Al-Jinn–Al-Muzzammil"
+    },
+    {
+      "page": 522,
+      "printedPage": 522,
+      "surahStart": 73,
+      "surahEnd": 74,
+      "ayahStart": 19,
+      "ayahEnd": 14,
+      "label": "Al-Muzzammil–Al-Muddaththir"
+    },
+    {
+      "page": 523,
+      "printedPage": 523,
+      "surahStart": 74,
+      "surahEnd": 74,
+      "ayahStart": 15,
+      "ayahEnd": 44,
+      "label": "Al-Muddaththir · Ayah 15–44"
+    },
+    {
+      "page": 524,
+      "printedPage": 524,
+      "surahStart": 74,
+      "surahEnd": 75,
+      "ayahStart": 44,
+      "ayahEnd": 17,
+      "label": "Al-Muddaththir–Al-Qiyamah"
+    },
+    {
+      "page": 525,
+      "printedPage": 525,
+      "surahStart": 75,
+      "surahEnd": 76,
+      "ayahStart": 17,
+      "ayahEnd": 5,
+      "label": "Al-Qiyamah–Al-Insan"
+    },
+    {
+      "page": 526,
+      "printedPage": 526,
+      "surahStart": 76,
+      "surahEnd": 76,
+      "ayahStart": 5,
+      "ayahEnd": 24,
+      "label": "Al-Insan · Ayah 5–24"
+    },
+    {
+      "page": 527,
+      "printedPage": 527,
+      "surahStart": 76,
+      "surahEnd": 77,
+      "ayahStart": 24,
+      "ayahEnd": 21,
+      "label": "Al-Insan–Al-Mursalat"
+    },
+    {
+      "page": 528,
+      "printedPage": 528,
+      "surahStart": 77,
+      "surahEnd": 77,
+      "ayahStart": 21,
+      "ayahEnd": 50,
+      "label": "Al-Mursalat · Ayah 21–50"
+    },
+    {
+      "page": 529,
+      "printedPage": 529,
+      "surahStart": 78,
+      "surahEnd": 78,
+      "ayahStart": 1,
+      "ayahEnd": 34,
+      "label": "An-Naba · Ayah 1–34"
+    },
+    {
+      "page": 530,
+      "printedPage": 530,
+      "surahStart": 78,
+      "surahEnd": 79,
+      "ayahStart": 35,
+      "ayahEnd": 19,
+      "label": "An-Naba–An-Nazi'at"
+    },
+    {
+      "page": 531,
+      "printedPage": 531,
+      "surahStart": 79,
+      "surahEnd": 80,
+      "ayahStart": 20,
+      "ayahEnd": 3,
+      "label": "An-Nazi'at–'Abasa"
+    },
+    {
+      "page": 532,
+      "printedPage": 532,
+      "surahStart": 80,
+      "surahEnd": 80,
+      "ayahStart": 4,
+      "ayahEnd": 42,
+      "label": "'Abasa · Ayah 4–42"
+    },
+    {
+      "page": 533,
+      "printedPage": 533,
+      "surahStart": 81,
+      "surahEnd": 82,
+      "ayahStart": 1,
+      "ayahEnd": 3,
+      "label": "At-Takwir–Al-Infitar"
+    },
+    {
+      "page": 534,
+      "printedPage": 534,
+      "surahStart": 82,
+      "surahEnd": 83,
+      "ayahStart": 3,
+      "ayahEnd": 14,
+      "label": "Al-Infitar–Al-Mutaffifin"
+    },
+    {
+      "page": 535,
+      "printedPage": 535,
+      "surahStart": 83,
+      "surahEnd": 84,
+      "ayahStart": 14,
+      "ayahEnd": 5,
+      "label": "Al-Mutaffifin–Al-Inshiqaq"
+    },
+    {
+      "page": 536,
+      "printedPage": 536,
+      "surahStart": 84,
+      "surahEnd": 85,
+      "ayahStart": 6,
+      "ayahEnd": 9,
+      "label": "Al-Inshiqaq–Al-Buruj"
+    },
+    {
+      "page": 537,
+      "printedPage": 537,
+      "surahStart": 85,
+      "surahEnd": 86,
+      "ayahStart": 10,
+      "ayahEnd": 17,
+      "label": "Al-Buruj–At-Tariq"
+    },
+    {
+      "page": 538,
+      "printedPage": 538,
+      "surahStart": 87,
+      "surahEnd": 88,
+      "ayahStart": 1,
+      "ayahEnd": 13,
+      "label": "Al-A'la–Al-Ghashiyah"
+    },
+    {
+      "page": 539,
+      "printedPage": 539,
+      "surahStart": 88,
+      "surahEnd": 89,
+      "ayahStart": 13,
+      "ayahEnd": 18,
+      "label": "Al-Ghashiyah–Al-Fajr"
+    },
+    {
+      "page": 540,
+      "printedPage": 540,
+      "surahStart": 89,
+      "surahEnd": 90,
+      "ayahStart": 19,
+      "ayahEnd": 17,
+      "label": "Al-Fajr–Al-Balad"
+    },
+    {
+      "page": 541,
+      "printedPage": 541,
+      "surahStart": 90,
+      "surahEnd": 92,
+      "ayahStart": 17,
+      "ayahEnd": 12,
+      "label": "Al-Balad–Al-Layl"
+    },
+    {
+      "page": 542,
+      "printedPage": 542,
+      "surahStart": 92,
+      "surahEnd": 94,
+      "ayahStart": 13,
+      "ayahEnd": 8,
+      "label": "Al-Layl–Ash-Sharh"
+    },
+    {
+      "page": 543,
+      "printedPage": 543,
+      "surahStart": 95,
+      "surahEnd": 96,
+      "ayahStart": 1,
+      "ayahEnd": 19,
+      "label": "At-Tin–Al-'Alaq"
+    },
+    {
+      "page": 544,
+      "printedPage": 544,
+      "surahStart": 97,
+      "surahEnd": 98,
+      "ayahStart": 1,
+      "ayahEnd": 8,
+      "label": "Al-Qadr–Al-Bayyinah"
+    },
+    {
+      "page": 545,
+      "printedPage": 545,
+      "surahStart": 99,
+      "surahEnd": 101,
+      "ayahStart": 1,
+      "ayahEnd": 7,
+      "label": "Az-Zalzalah–Al-Qari'ah"
+    },
+    {
+      "page": 546,
+      "printedPage": 546,
+      "surahStart": 101,
+      "surahEnd": 104,
+      "ayahStart": 7,
+      "ayahEnd": 9,
+      "label": "Al-Qari'ah–Al-Humazah"
+    },
+    {
+      "page": 547,
+      "printedPage": 547,
+      "surahStart": 105,
+      "surahEnd": 108,
+      "ayahStart": 1,
+      "ayahEnd": 3,
+      "label": "Al-Fil–Al-Kawthar"
+    },
+    {
+      "page": 548,
+      "printedPage": 548,
+      "surahStart": 109,
+      "surahEnd": 112,
+      "ayahStart": 1,
+      "ayahEnd": 4,
+      "label": "Al-Kafirun–Al-Ikhlas"
+    },
+    {
+      "page": 549,
+      "printedPage": 549,
+      "surahStart": 113,
+      "surahEnd": 114,
+      "ayahStart": 1,
+      "ayahEnd": 6,
+      "label": "Al-Falaq–An-Nas"
+    },
+    {
+      "page": 550,
+      "printedPage": 550,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 551,
+      "printedPage": 551,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 552,
+      "printedPage": 552,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 553,
+      "printedPage": 553,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 554,
+      "printedPage": 554,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 555,
+      "printedPage": 555,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 556,
+      "printedPage": 556,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 557,
+      "printedPage": 557,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    },
+    {
+      "page": 558,
+      "printedPage": 558,
+      "surahStart": null,
+      "surahEnd": null,
+      "ayahStart": null,
+      "ayahEnd": null,
+      "label": "End matter"
+    }
+  ]
+}

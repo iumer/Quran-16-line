@@ -58,6 +58,34 @@ class SearchNavigationTest {
     }
 
     @Test
+    fun tajLayoutSpotChecksMatchPhysicalMushaf() {
+        // Client screenshot: page 479 ends Al-Qamar and starts Ar-Rahman
+        assertEquals(476, surahs.first { it.id == 54 }.page)
+        assertEquals(479, surahs.first { it.id == 55 }.page)
+        assertEquals(479, ayahIndex["55:1"])
+        assertEquals(478, ayahIndex["54:48"])
+        assertEquals(479, ayahIndex["54:55"])
+        assertEquals(521, surahs.first { it.id == 73 }.page)
+        assertEquals(522, surahs.first { it.id == 74 }.page)
+        assertEquals(7, surahs.first { it.id == 55 }.startLine)
+    }
+
+    @Test
+    fun pageLabelsDescribePhysicalContent() {
+        val pageIndex = gson.fromJson(
+            File(assets, "page_index.json").readText(),
+            com.google.gson.JsonObject::class.java
+        )
+        val pages = pageIndex.getAsJsonArray("pages")
+        fun label(page: Int): String =
+            pages.first { it.asJsonObject.get("page").asInt == page }
+                .asJsonObject.get("label").asString
+        assertEquals("Al-Qamar–Ar-Rahman", label(479))
+        assertTrue(label(2).startsWith("Al-Fatihah"))
+        assertTrue(label(549).contains("Nas"))
+    }
+
+    @Test
     fun everyAyahIsIndexed() {
         val expected = surahs.sumOf { it.totalVerses }
         assertEquals(6236, expected)
