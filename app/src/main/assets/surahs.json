@@ -1,0 +1,1485 @@
+[
+  {
+    "id": 1,
+    "name": "الفاتحة",
+    "transliteration": "Al-Fatihah",
+    "totalVerses": 7,
+    "page": 2,
+    "aliases": [
+      "Al Fatihah",
+      "Al-Fatihah",
+      "الفاتحة"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 2,
+    "name": "البقرة",
+    "transliteration": "Al-Baqarah",
+    "totalVerses": 286,
+    "page": 3,
+    "aliases": [
+      "Al Baqarah",
+      "البقرة",
+      "Al-Baqarah"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 3,
+    "name": "آل عمران",
+    "transliteration": "Ali 'Imran",
+    "totalVerses": 200,
+    "page": 46,
+    "aliases": [
+      "Ali Imran",
+      "Ali 'Imran",
+      "آل عمران"
+    ],
+    "startLine": 5
+  },
+  {
+    "id": 4,
+    "name": "النساء",
+    "transliteration": "An-Nisa",
+    "totalVerses": 176,
+    "page": 70,
+    "aliases": [
+      "An-Nisa",
+      "An Nisa",
+      "النساء"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 5,
+    "name": "المائدة",
+    "transliteration": "Al-Ma'idah",
+    "totalVerses": 120,
+    "page": 97,
+    "aliases": [
+      "المائدة",
+      "Al-Ma'idah",
+      "Al-Maidah",
+      "Al Ma'idah"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 6,
+    "name": "الأنعام",
+    "transliteration": "Al-An'am",
+    "totalVerses": 165,
+    "page": 116,
+    "aliases": [
+      "Al-An'am",
+      "الأنعام",
+      "Al An'am",
+      "Al-Anam"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 7,
+    "name": "الأعراف",
+    "transliteration": "Al-A'raf",
+    "totalVerses": 206,
+    "page": 137,
+    "aliases": [
+      "Al-Araf",
+      "Al-A'raf",
+      "Al A'raf",
+      "الأعراف"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 8,
+    "name": "الأنفال",
+    "transliteration": "Al-Anfal",
+    "totalVerses": 75,
+    "page": 160,
+    "aliases": [
+      "Al Anfal",
+      "Al-Anfal",
+      "الأنفال"
+    ],
+    "startLine": 11
+  },
+  {
+    "id": 9,
+    "name": "التوبة",
+    "transliteration": "At-Tawbah",
+    "totalVerses": 129,
+    "page": 169,
+    "aliases": [
+      "التوبة",
+      "At Tawbah",
+      "At-Tawbah"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 10,
+    "name": "يونس",
+    "transliteration": "Yunus",
+    "totalVerses": 109,
+    "page": 188,
+    "aliases": [
+      "يونس",
+      "Yunus"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 11,
+    "name": "هود",
+    "transliteration": "Hud",
+    "totalVerses": 123,
+    "page": 200,
+    "aliases": [
+      "هود",
+      "Hud"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 12,
+    "name": "يوسف",
+    "transliteration": "Yusuf",
+    "totalVerses": 111,
+    "page": 213,
+    "aliases": [
+      "يوسف",
+      "Yusuf"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 13,
+    "name": "الرعد",
+    "transliteration": "Ar-Ra'd",
+    "totalVerses": 43,
+    "page": 225,
+    "aliases": [
+      "Ar-Rad",
+      "الرعد",
+      "Ar-Ra'd",
+      "Ar Ra'd"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 14,
+    "name": "ابراهيم",
+    "transliteration": "Ibrahim",
+    "totalVerses": 52,
+    "page": 231,
+    "aliases": [
+      "ابراهيم",
+      "Ibrahim"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 15,
+    "name": "الحجر",
+    "transliteration": "Al-Hijr",
+    "totalVerses": 99,
+    "page": 236,
+    "aliases": [
+      "Al-Hijr",
+      "الحجر",
+      "Al Hijr"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 16,
+    "name": "النحل",
+    "transliteration": "An-Nahl",
+    "totalVerses": 128,
+    "page": 241,
+    "aliases": [
+      "An-Nahl",
+      "An Nahl",
+      "النحل"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 17,
+    "name": "الإسراء",
+    "transliteration": "Al-Isra",
+    "totalVerses": 111,
+    "page": 255,
+    "aliases": [
+      "الإسراء",
+      "Al Isra",
+      "Al-Isra"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 18,
+    "name": "الكهف",
+    "transliteration": "Al-Kahf",
+    "totalVerses": 110,
+    "page": 265,
+    "aliases": [
+      "Al-Kahf",
+      "Al Kahf",
+      "الكهف"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 19,
+    "name": "مريم",
+    "transliteration": "Maryam",
+    "totalVerses": 98,
+    "page": 276,
+    "aliases": [
+      "Maryam",
+      "مريم"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 20,
+    "name": "طه",
+    "transliteration": "Taha",
+    "totalVerses": 135,
+    "page": 282,
+    "aliases": [
+      "Taha",
+      "طه"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 21,
+    "name": "الأنبياء",
+    "transliteration": "Al-Anbya",
+    "totalVerses": 112,
+    "page": 291,
+    "aliases": [
+      "Al Anbya",
+      "الأنبياء",
+      "Al-Anbya"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 22,
+    "name": "الحج",
+    "transliteration": "Al-Hajj",
+    "totalVerses": 78,
+    "page": 300,
+    "aliases": [
+      "Al Hajj",
+      "الحج",
+      "Al-Hajj"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 23,
+    "name": "المؤمنون",
+    "transliteration": "Al-Mu'minun",
+    "totalVerses": 118,
+    "page": 309,
+    "aliases": [
+      "المؤمنون",
+      "Al-Muminun",
+      "Al Mu'minun",
+      "Al-Mu'minun"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 24,
+    "name": "النور",
+    "transliteration": "An-Nur",
+    "totalVerses": 64,
+    "page": 316,
+    "aliases": [
+      "An-Nur",
+      "النور",
+      "An Nur"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 25,
+    "name": "الفرقان",
+    "transliteration": "Al-Furqan",
+    "totalVerses": 77,
+    "page": 325,
+    "aliases": [
+      "Al-Furqan",
+      "الفرقان",
+      "Al Furqan"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 26,
+    "name": "الشعراء",
+    "transliteration": "Ash-Shu'ara",
+    "totalVerses": 227,
+    "page": 331,
+    "aliases": [
+      "الشعراء",
+      "Ash-Shu'ara",
+      "Ash-Shuara",
+      "Ash Shu'ara"
+    ],
+    "startLine": 5
+  },
+  {
+    "id": 27,
+    "name": "النمل",
+    "transliteration": "An-Naml",
+    "totalVerses": 93,
+    "page": 340,
+    "aliases": [
+      "An-Naml",
+      "An Naml",
+      "النمل"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 28,
+    "name": "القصص",
+    "transliteration": "Al-Qasas",
+    "totalVerses": 88,
+    "page": 348,
+    "aliases": [
+      "القصص",
+      "Al-Qasas",
+      "Al Qasas"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 29,
+    "name": "العنكبوت",
+    "transliteration": "Al-'Ankabut",
+    "totalVerses": 69,
+    "page": 358,
+    "aliases": [
+      "Al-'Ankabut",
+      "Al 'Ankabut",
+      "Al-Ankabut",
+      "العنكبوت"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 30,
+    "name": "الروم",
+    "transliteration": "Ar-Rum",
+    "totalVerses": 60,
+    "page": 365,
+    "aliases": [
+      "Ar Rum",
+      "الروم",
+      "Ar-Rum"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 31,
+    "name": "لقمان",
+    "transliteration": "Luqman",
+    "totalVerses": 34,
+    "page": 371,
+    "aliases": [
+      "لقمان",
+      "Luqman"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 32,
+    "name": "السجدة",
+    "transliteration": "As-Sajdah",
+    "totalVerses": 30,
+    "page": 374,
+    "aliases": [
+      "As Sajdah",
+      "As-Sajdah",
+      "السجدة"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 33,
+    "name": "الأحزاب",
+    "transliteration": "Al-Ahzab",
+    "totalVerses": 73,
+    "page": 377,
+    "aliases": [
+      "الأحزاب",
+      "Al-Ahzab",
+      "Al Ahzab"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 34,
+    "name": "سبإ",
+    "transliteration": "Saba",
+    "totalVerses": 54,
+    "page": 386,
+    "aliases": [
+      "Saba",
+      "سبإ"
+    ],
+    "startLine": 11
+  },
+  {
+    "id": 35,
+    "name": "فاطر",
+    "transliteration": "Fatir",
+    "totalVerses": 45,
+    "page": 392,
+    "aliases": [
+      "Fatir",
+      "فاطر"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 36,
+    "name": "يس",
+    "transliteration": "Ya-Sin",
+    "totalVerses": 83,
+    "page": 397,
+    "aliases": [
+      "يس",
+      "Ya-Sin",
+      "Ya Sin"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 37,
+    "name": "الصافات",
+    "transliteration": "As-Saffat",
+    "totalVerses": 182,
+    "page": 402,
+    "aliases": [
+      "الصافات",
+      "As Saffat",
+      "As-Saffat"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 38,
+    "name": "ص",
+    "transliteration": "Sad",
+    "totalVerses": 88,
+    "page": 409,
+    "aliases": [
+      "Sad",
+      "ص"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 39,
+    "name": "الزمر",
+    "transliteration": "Az-Zumar",
+    "totalVerses": 75,
+    "page": 413,
+    "aliases": [
+      "Az Zumar",
+      "Az-Zumar",
+      "الزمر"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 40,
+    "name": "غافر",
+    "transliteration": "Ghafir",
+    "totalVerses": 85,
+    "page": 421,
+    "aliases": [
+      "غافر",
+      "Ghafir"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 41,
+    "name": "فصلت",
+    "transliteration": "Fussilat",
+    "totalVerses": 54,
+    "page": 430,
+    "aliases": [
+      "فصلت",
+      "Fussilat"
+    ],
+    "startLine": 6
+  },
+  {
+    "id": 42,
+    "name": "الشورى",
+    "transliteration": "Ash-Shuraa",
+    "totalVerses": 53,
+    "page": 435,
+    "aliases": [
+      "Ash-Shuraa",
+      "الشورى",
+      "Ash Shuraa"
+    ],
+    "startLine": 16
+  },
+  {
+    "id": 43,
+    "name": "الزخرف",
+    "transliteration": "Az-Zukhruf",
+    "totalVerses": 89,
+    "page": 441,
+    "aliases": [
+      "Az-Zukhruf",
+      "Az Zukhruf",
+      "الزخرف"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 44,
+    "name": "الدخان",
+    "transliteration": "Ad-Dukhan",
+    "totalVerses": 59,
+    "page": 447,
+    "aliases": [
+      "الدخان",
+      "Ad Dukhan",
+      "Ad-Dukhan"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 45,
+    "name": "الجاثية",
+    "transliteration": "Al-Jathiyah",
+    "totalVerses": 37,
+    "page": 449,
+    "aliases": [
+      "Al-Jathiyah",
+      "الجاثية",
+      "Al Jathiyah"
+    ],
+    "startLine": 16
+  },
+  {
+    "id": 46,
+    "name": "الأحقاف",
+    "transliteration": "Al-Ahqaf",
+    "totalVerses": 35,
+    "page": 453,
+    "aliases": [
+      "الأحقاف",
+      "Al-Ahqaf",
+      "Al Ahqaf"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 47,
+    "name": "محمد",
+    "transliteration": "Muhammad",
+    "totalVerses": 38,
+    "page": 457,
+    "aliases": [
+      "محمد",
+      "Muhammad"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 48,
+    "name": "الفتح",
+    "transliteration": "Al-Fath",
+    "totalVerses": 29,
+    "page": 461,
+    "aliases": [
+      "الفتح",
+      "Al Fath",
+      "Al-Fath"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 49,
+    "name": "الحجرات",
+    "transliteration": "Al-Hujurat",
+    "totalVerses": 18,
+    "page": 464,
+    "aliases": [
+      "Al-Hujurat",
+      "Al Hujurat",
+      "الحجرات"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 50,
+    "name": "ق",
+    "transliteration": "Qaf",
+    "totalVerses": 45,
+    "page": 467,
+    "aliases": [
+      "ق",
+      "Qaf"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 51,
+    "name": "الذاريات",
+    "transliteration": "Adh-Dhariyat",
+    "totalVerses": 60,
+    "page": 469,
+    "aliases": [
+      "الذاريات",
+      "Adh-Dhariyat",
+      "Adh Dhariyat"
+    ],
+    "startLine": 16
+  },
+  {
+    "id": 52,
+    "name": "الطور",
+    "transliteration": "At-Tur",
+    "totalVerses": 49,
+    "page": 472,
+    "aliases": [
+      "الطور",
+      "At Tur",
+      "At-Tur"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 53,
+    "name": "النجم",
+    "transliteration": "An-Najm",
+    "totalVerses": 62,
+    "page": 474,
+    "aliases": [
+      "النجم",
+      "An-Najm",
+      "An Najm"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 54,
+    "name": "القمر",
+    "transliteration": "Al-Qamar",
+    "totalVerses": 55,
+    "page": 476,
+    "aliases": [
+      "Al-Qamar",
+      "Al Qamar",
+      "القمر"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 55,
+    "name": "الرحمن",
+    "transliteration": "Ar-Rahman",
+    "totalVerses": 78,
+    "page": 479,
+    "aliases": [
+      "الرحمن",
+      "Ar Rahman",
+      "Ar-Rahman"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 56,
+    "name": "الواقعة",
+    "transliteration": "Al-Waqi'ah",
+    "totalVerses": 96,
+    "page": 482,
+    "aliases": [
+      "Al-Waqi'ah",
+      "Al Waqi'ah",
+      "Al-Waqiah",
+      "الواقعة"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 57,
+    "name": "الحديد",
+    "transliteration": "Al-Hadid",
+    "totalVerses": 29,
+    "page": 485,
+    "aliases": [
+      "Al-Hadid",
+      "الحديد",
+      "Al Hadid"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 58,
+    "name": "المجادلة",
+    "transliteration": "Al-Mujadila",
+    "totalVerses": 22,
+    "page": 489,
+    "aliases": [
+      "Al-Mujadila",
+      "Al Mujadila",
+      "المجادلة"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 59,
+    "name": "الحشر",
+    "transliteration": "Al-Hashr",
+    "totalVerses": 24,
+    "page": 492,
+    "aliases": [
+      "Al-Hashr",
+      "Al Hashr",
+      "الحشر"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 60,
+    "name": "الممتحنة",
+    "transliteration": "Al-Mumtahanah",
+    "totalVerses": 13,
+    "page": 496,
+    "aliases": [
+      "Al Mumtahanah",
+      "Al-Mumtahanah",
+      "الممتحنة"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 61,
+    "name": "الصف",
+    "transliteration": "As-Saf",
+    "totalVerses": 14,
+    "page": 498,
+    "aliases": [
+      "As-Saf",
+      "As Saf",
+      "الصف"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 62,
+    "name": "الجمعة",
+    "transliteration": "Al-Jumu'ah",
+    "totalVerses": 11,
+    "page": 500,
+    "aliases": [
+      "Al-Jumu'ah",
+      "Al Jumu'ah",
+      "Al-Jumuah",
+      "الجمعة"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 63,
+    "name": "المنافقون",
+    "transliteration": "Al-Munafiqun",
+    "totalVerses": 11,
+    "page": 501,
+    "aliases": [
+      "Al-Munafiqun",
+      "المنافقون",
+      "Al Munafiqun"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 64,
+    "name": "التغابن",
+    "transliteration": "At-Taghabun",
+    "totalVerses": 18,
+    "page": 503,
+    "aliases": [
+      "التغابن",
+      "At Taghabun",
+      "At-Taghabun"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 65,
+    "name": "الطلاق",
+    "transliteration": "At-Talaq",
+    "totalVerses": 12,
+    "page": 505,
+    "aliases": [
+      "الطلاق",
+      "At-Talaq",
+      "At Talaq"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 66,
+    "name": "التحريم",
+    "transliteration": "At-Tahrim",
+    "totalVerses": 12,
+    "page": 507,
+    "aliases": [
+      "التحريم",
+      "At-Tahrim",
+      "At Tahrim"
+    ],
+    "startLine": 5
+  },
+  {
+    "id": 67,
+    "name": "الملك",
+    "transliteration": "Al-Mulk",
+    "totalVerses": 30,
+    "page": 509,
+    "aliases": [
+      "Al Mulk",
+      "الملك",
+      "Al-Mulk"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 68,
+    "name": "القلم",
+    "transliteration": "Al-Qalam",
+    "totalVerses": 52,
+    "page": 511,
+    "aliases": [
+      "Al-Qalam",
+      "Al Qalam",
+      "القلم"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 69,
+    "name": "الحاقة",
+    "transliteration": "Al-Haqqah",
+    "totalVerses": 52,
+    "page": 513,
+    "aliases": [
+      "Al-Haqqah",
+      "الحاقة",
+      "Al Haqqah"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 70,
+    "name": "المعارج",
+    "transliteration": "Al-Ma'arij",
+    "totalVerses": 44,
+    "page": 515,
+    "aliases": [
+      "المعارج",
+      "Al Ma'arij",
+      "Al-Ma'arij",
+      "Al-Maarij"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 71,
+    "name": "نوح",
+    "transliteration": "Nuh",
+    "totalVerses": 28,
+    "page": 517,
+    "aliases": [
+      "نوح",
+      "Nuh"
+    ],
+    "startLine": 11
+  },
+  {
+    "id": 72,
+    "name": "الجن",
+    "transliteration": "Al-Jinn",
+    "totalVerses": 28,
+    "page": 519,
+    "aliases": [
+      "Al Jinn",
+      "الجن",
+      "Al-Jinn"
+    ],
+    "startLine": 6
+  },
+  {
+    "id": 73,
+    "name": "المزمل",
+    "transliteration": "Al-Muzzammil",
+    "totalVerses": 20,
+    "page": 521,
+    "aliases": [
+      "Al Muzzammil",
+      "Al-Muzzammil",
+      "المزمل"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 74,
+    "name": "المدثر",
+    "transliteration": "Al-Muddaththir",
+    "totalVerses": 56,
+    "page": 522,
+    "aliases": [
+      "Al-Muddaththir",
+      "Al Muddaththir",
+      "المدثر"
+    ],
+    "startLine": 12
+  },
+  {
+    "id": 75,
+    "name": "القيامة",
+    "transliteration": "Al-Qiyamah",
+    "totalVerses": 40,
+    "page": 524,
+    "aliases": [
+      "القيامة",
+      "Al-Qiyamah",
+      "Al Qiyamah"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 76,
+    "name": "الانسان",
+    "transliteration": "Al-Insan",
+    "totalVerses": 31,
+    "page": 525,
+    "aliases": [
+      "الانسان",
+      "Al Insan",
+      "Al-Insan"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 77,
+    "name": "المرسلات",
+    "transliteration": "Al-Mursalat",
+    "totalVerses": 50,
+    "page": 527,
+    "aliases": [
+      "Al-Mursalat",
+      "المرسلات",
+      "Al Mursalat"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 78,
+    "name": "النبإ",
+    "transliteration": "An-Naba",
+    "totalVerses": 40,
+    "page": 529,
+    "aliases": [
+      "An Naba",
+      "النبإ",
+      "An-Naba"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 79,
+    "name": "النازعات",
+    "transliteration": "An-Nazi'at",
+    "totalVerses": 46,
+    "page": 530,
+    "aliases": [
+      "An-Nazi'at",
+      "النازعات",
+      "An Nazi'at",
+      "An-Naziat"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 80,
+    "name": "عبس",
+    "transliteration": "'Abasa",
+    "totalVerses": 42,
+    "page": 531,
+    "aliases": [
+      "'Abasa",
+      "عبس",
+      "Abasa"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 81,
+    "name": "التكوير",
+    "transliteration": "At-Takwir",
+    "totalVerses": 29,
+    "page": 533,
+    "aliases": [
+      "التكوير",
+      "At-Takwir",
+      "At Takwir"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 82,
+    "name": "الإنفطار",
+    "transliteration": "Al-Infitar",
+    "totalVerses": 19,
+    "page": 533,
+    "aliases": [
+      "الإنفطار",
+      "Al Infitar",
+      "Al-Infitar"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 83,
+    "name": "المطففين",
+    "transliteration": "Al-Mutaffifin",
+    "totalVerses": 36,
+    "page": 534,
+    "aliases": [
+      "Al-Mutaffifin",
+      "Al Mutaffifin",
+      "المطففين"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 84,
+    "name": "الإنشقاق",
+    "transliteration": "Al-Inshiqaq",
+    "totalVerses": 25,
+    "page": 535,
+    "aliases": [
+      "Al-Inshiqaq",
+      "Al Inshiqaq",
+      "الإنشقاق"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 85,
+    "name": "البروج",
+    "transliteration": "Al-Buruj",
+    "totalVerses": 22,
+    "page": 536,
+    "aliases": [
+      "البروج",
+      "Al Buruj",
+      "Al-Buruj"
+    ],
+    "startLine": 12
+  },
+  {
+    "id": 86,
+    "name": "الطارق",
+    "transliteration": "At-Tariq",
+    "totalVerses": 17,
+    "page": 537,
+    "aliases": [
+      "الطارق",
+      "At Tariq",
+      "At-Tariq"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 87,
+    "name": "الأعلى",
+    "transliteration": "Al-A'la",
+    "totalVerses": 19,
+    "page": 538,
+    "aliases": [
+      "Al-Ala",
+      "Al-A'la",
+      "الأعلى",
+      "Al A'la"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 88,
+    "name": "الغاشية",
+    "transliteration": "Al-Ghashiyah",
+    "totalVerses": 26,
+    "page": 538,
+    "aliases": [
+      "الغاشية",
+      "Al-Ghashiyah",
+      "Al Ghashiyah"
+    ],
+    "startLine": 12
+  },
+  {
+    "id": 89,
+    "name": "الفجر",
+    "transliteration": "Al-Fajr",
+    "totalVerses": 30,
+    "page": 539,
+    "aliases": [
+      "Al Fajr",
+      "Al-Fajr",
+      "الفجر"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 90,
+    "name": "البلد",
+    "transliteration": "Al-Balad",
+    "totalVerses": 20,
+    "page": 540,
+    "aliases": [
+      "البلد",
+      "Al-Balad",
+      "Al Balad"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 91,
+    "name": "الشمس",
+    "transliteration": "Ash-Shams",
+    "totalVerses": 15,
+    "page": 541,
+    "aliases": [
+      "Ash-Shams",
+      "Ash Shams",
+      "الشمس"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 92,
+    "name": "الليل",
+    "transliteration": "Al-Layl",
+    "totalVerses": 21,
+    "page": 541,
+    "aliases": [
+      "Al Layl",
+      "الليل",
+      "Al-Layl"
+    ],
+    "startLine": 12
+  },
+  {
+    "id": 93,
+    "name": "الضحى",
+    "transliteration": "Ad-Duhaa",
+    "totalVerses": 11,
+    "page": 542,
+    "aliases": [
+      "الضحى",
+      "Ad-Duhaa",
+      "Ad Duhaa"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 94,
+    "name": "الشرح",
+    "transliteration": "Ash-Sharh",
+    "totalVerses": 8,
+    "page": 542,
+    "aliases": [
+      "Ash Sharh",
+      "Ash-Sharh",
+      "الشرح"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 95,
+    "name": "التين",
+    "transliteration": "At-Tin",
+    "totalVerses": 8,
+    "page": 543,
+    "aliases": [
+      "At-Tin",
+      "At Tin",
+      "التين"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 96,
+    "name": "العلق",
+    "transliteration": "Al-'Alaq",
+    "totalVerses": 19,
+    "page": 543,
+    "aliases": [
+      "العلق",
+      "Al-'Alaq",
+      "Al 'Alaq",
+      "Al-Alaq"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 97,
+    "name": "القدر",
+    "transliteration": "Al-Qadr",
+    "totalVerses": 5,
+    "page": 544,
+    "aliases": [
+      "Al-Qadr",
+      "Al Qadr",
+      "القدر"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 98,
+    "name": "البينة",
+    "transliteration": "Al-Bayyinah",
+    "totalVerses": 8,
+    "page": 544,
+    "aliases": [
+      "Al Bayyinah",
+      "البينة",
+      "Al-Bayyinah"
+    ],
+    "startLine": 6
+  },
+  {
+    "id": 99,
+    "name": "الزلزلة",
+    "transliteration": "Az-Zalzalah",
+    "totalVerses": 8,
+    "page": 545,
+    "aliases": [
+      "Az Zalzalah",
+      "Az-Zalzalah",
+      "الزلزلة"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 100,
+    "name": "العاديات",
+    "transliteration": "Al-'Adiyat",
+    "totalVerses": 11,
+    "page": 545,
+    "aliases": [
+      "Al-Adiyat",
+      "Al-'Adiyat",
+      "العاديات",
+      "Al 'Adiyat"
+    ],
+    "startLine": 8
+  },
+  {
+    "id": 101,
+    "name": "القارعة",
+    "transliteration": "Al-Qari'ah",
+    "totalVerses": 11,
+    "page": 545,
+    "aliases": [
+      "Al-Qariah",
+      "Al Qari'ah",
+      "القارعة",
+      "Al-Qari'ah"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 102,
+    "name": "التكاثر",
+    "transliteration": "At-Takathur",
+    "totalVerses": 8,
+    "page": 546,
+    "aliases": [
+      "At Takathur",
+      "At-Takathur",
+      "التكاثر"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 103,
+    "name": "العصر",
+    "transliteration": "Al-'Asr",
+    "totalVerses": 3,
+    "page": 546,
+    "aliases": [
+      "Al 'Asr",
+      "Al-Asr",
+      "العصر",
+      "Al-'Asr"
+    ],
+    "startLine": 9
+  },
+  {
+    "id": 104,
+    "name": "الهمزة",
+    "transliteration": "Al-Humazah",
+    "totalVerses": 9,
+    "page": 546,
+    "aliases": [
+      "الهمزة",
+      "Al-Humazah",
+      "Al Humazah"
+    ],
+    "startLine": 13
+  },
+  {
+    "id": 105,
+    "name": "الفيل",
+    "transliteration": "Al-Fil",
+    "totalVerses": 5,
+    "page": 547,
+    "aliases": [
+      "الفيل",
+      "Al-Fil",
+      "Al Fil"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 106,
+    "name": "قريش",
+    "transliteration": "Quraysh",
+    "totalVerses": 4,
+    "page": 547,
+    "aliases": [
+      "قريش",
+      "Quraysh"
+    ],
+    "startLine": 6
+  },
+  {
+    "id": 107,
+    "name": "الماعون",
+    "transliteration": "Al-Ma'un",
+    "totalVerses": 7,
+    "page": 547,
+    "aliases": [
+      "Al Ma'un",
+      "الماعون",
+      "Al-Ma'un",
+      "Al-Maun"
+    ],
+    "startLine": 10
+  },
+  {
+    "id": 108,
+    "name": "الكوثر",
+    "transliteration": "Al-Kawthar",
+    "totalVerses": 3,
+    "page": 547,
+    "aliases": [
+      "الكوثر",
+      "Al Kawthar",
+      "Al-Kawthar"
+    ],
+    "startLine": 15
+  },
+  {
+    "id": 109,
+    "name": "الكافرون",
+    "transliteration": "Al-Kafirun",
+    "totalVerses": 6,
+    "page": 548,
+    "aliases": [
+      "Al-Kafirun",
+      "الكافرون",
+      "Al Kafirun"
+    ],
+    "startLine": 3
+  },
+  {
+    "id": 110,
+    "name": "النصر",
+    "transliteration": "An-Nasr",
+    "totalVerses": 3,
+    "page": 548,
+    "aliases": [
+      "An-Nasr",
+      "النصر",
+      "An Nasr"
+    ],
+    "startLine": 7
+  },
+  {
+    "id": 111,
+    "name": "المسد",
+    "transliteration": "Al-Masad",
+    "totalVerses": 5,
+    "page": 548,
+    "aliases": [
+      "المسد",
+      "Al Masad",
+      "Al-Masad"
+    ],
+    "startLine": 11
+  },
+  {
+    "id": 112,
+    "name": "الإخلاص",
+    "transliteration": "Al-Ikhlas",
+    "totalVerses": 4,
+    "page": 548,
+    "aliases": [
+      "Al-Ikhlas",
+      "الإخلاص",
+      "Al Ikhlas"
+    ],
+    "startLine": 14
+  },
+  {
+    "id": 113,
+    "name": "الفلق",
+    "transliteration": "Al-Falaq",
+    "totalVerses": 5,
+    "page": 549,
+    "aliases": [
+      "Al Falaq",
+      "Al-Falaq",
+      "الفلق"
+    ],
+    "startLine": 4
+  },
+  {
+    "id": 114,
+    "name": "الناس",
+    "transliteration": "An-Nas",
+    "totalVerses": 6,
+    "page": 549,
+    "aliases": [
+      "An-Nas",
+      "An Nas",
+      "الناس"
+    ],
+    "startLine": 8
+  }
+]

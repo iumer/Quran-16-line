@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quran 16-Line — UI Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Literata:opsz,wght@7..72,500;7..72,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --parchment: #F4EBD0;
+      --paper: #FFFDF8;
+      --ink: #1F1A14;
+      --muted: #6E675C;
+      --rule: #C9B896;
+      --highlight: #FFE08A;
+      --chrome: #EFE7D6;
+      --grey: #8A8378;
+      --white: #FFFFFF;
+      --shadow: 0 18px 40px rgba(40, 30, 10, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Sans 3", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at top, #fffaf0 0%, transparent 55%),
+        linear-gradient(160deg, #d9d2c4 0%, #bdb5a6 45%, #cfc7b8 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .phone {
+      width: min(390px, 100%);
+      height: 780px;
+      background: var(--parchment);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #c8bda3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .status {
+      height: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 18px;
+      font-size: 12px;
+      color: var(--muted);
+      background: linear-gradient(to bottom, #fff8e8, transparent);
+    }
+    .chrome {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px 8px;
+      background: linear-gradient(to bottom, var(--chrome), transparent);
+    }
+    .brand {
+      font-family: Literata, Georgia, serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+    }
+    .meta { color: var(--muted); font-size: 13px; }
+    .icons { display: flex; gap: 10px; }
+    .icon-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      color: var(--ink);
+      display: grid; place-items: center;
+      cursor: pointer;
+    }
+    .page {
+      flex: 1;
+      margin: 4px 14px 10px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.35), transparent 30%),
+        var(--parchment);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .ornament {
+      text-align: center;
+      color: var(--grey);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .surah-title {
+      text-align: center;
+      font-family: "Amiri Quran", serif;
+      font-size: 22px;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+    .lines {
+      flex: 1;
+      display: grid;
+      grid-template-rows: repeat(16, 1fr);
+      gap: 2px;
+      direction: rtl;
+    }
+    .line {
+      font-family: "Amiri Quran", serif;
+      font-size: 17px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 160ms ease;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .line:hover { background: rgba(255, 224, 138, 0.35); }
+    .line.active { background: var(--highlight); }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .slider {
+      flex: 1;
+      margin: 0 12px;
+      accent-color: #8b7355;
+    }
+    .sheet {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      background: var(--paper);
+      border-top: 1px solid var(--rule);
+      border-radius: 18px 18px 0 0;
+      padding: 16px 18px 22px;
+      transform: translateY(105%);
+      transition: transform 240ms ease;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.08);
+    }
+    .sheet.open { transform: translateY(0); }
+    .sheet h2 {
+      margin: 0 0 8px;
+      font-family: Literata, Georgia, serif;
+      font-size: 20px;
+    }
+    .sheet p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+    .tab {
+      border: 1px solid var(--rule);
+      background: var(--chrome);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .tab.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: var(--white);
+      font: inherit;
+      margin-bottom: 10px;
+    }
+    .primary {
+      width: 100%;
+      border: 0;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 12px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .legend {
+      max-width: 390px;
+      margin-top: 18px;
+      color: #3d372e;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .legend h1 {
+      font-family: Literata, Georgia, serif;
+      font-size: 28px;
+      margin: 0 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="phone" id="phone">
+      <div class="status"><span>9:41</span><span>LTE</span></div>
+      <div class="chrome">
+        <div>
+          <div class="brand">Quran 16-Line</div>
+          <div class="meta">Al-Baqarah · Ayah 25–31</div>
+        </div>
+        <div class="icons">
+          <button class="icon-btn" id="bookmarkBtn" title="Bookmark">★</button>
+          <button class="icon-btn" id="searchBtn" title="Search">⌕</button>
+        </div>
+      </div>
+      <div class="page">
+        <div class="ornament">— page 3 · 16 lines —</div>
+        <h1 class="surah-title">سُورَةُ البَقَرَةِ</h1>
+        <div class="lines" id="lines"></div>
+      </div>
+      <div class="footer">
+        <span>◀</span>
+        <input class="slider" type="range" min="1" max="559" value="3" />
+        <span>3 / 559</span>
+      </div>
+      <div class="sheet" id="sheet">
+        <h2>Search</h2>
+        <p>Jump by page, surah, or ayat.</p>
+        <div class="tabs">
+          <button class="tab active" data-tab="page">Page</button>
+          <button class="tab" data-tab="surah">Surah</button>
+          <button class="tab" data-tab="ayat">Ayat</button>
+        </div>
+        <div id="fields">
+          <input type="number" placeholder="Page number (1–559)" min="1" max="559" />
+        </div>
+        <button class="primary" id="goBtn">Go to reading</button>
+      </div>
+    </div>
+    <div class="legend">
+      <h1>Reader prototype</h1>
+      <p>Parchment page, fixed 16-line grid, tap-to-highlight, bookmark + search chrome. Swipe left/right maps to previous/next mushaf page in the Android build.</p>
+    </div>
+  </div>
+  <script>
+    const sample = [
+      "ٱلَّذِينَ يُؤْمِنُونَ بِٱلْغَيْبِ وَيُقِيمُونَ ٱلصَّلَوٰةَ",
+      "وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ ﴿٣﴾ وَٱلَّذِينَ يُؤْمِنُونَ",
+      "بِمَآ أُنزِلَ إِلَيْكَ وَمَآ أُنزِلَ مِن قَبْلِكَ",
+      "وَبِٱلْـَٔاخِرَةِ هُمْ يُوقِنُونَ ﴿٤﴾ أُو۟لَـٰٓئِكَ عَلَىٰ",
+      "هُدًى مِّن رَّبِّهِمْ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ ﴿٥﴾",
+      "إِنَّ ٱلَّذِينَ كَفَرُوا۟ سَوَآءٌ عَلَيْهِمْ ءَأَنذَرْتَهُمْ",
+      "أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ ﴿٦﴾ خَتَمَ ٱللَّهُ",
+      "عَلَىٰ قُلُوبِهِمْ وَعَلَىٰ سَمْعِهِمْ ۖ وَعَلَىٰٓ أَبْصَـٰرِهِمْ",
+      "غِشَـٰوَةٌ ۖ وَلَهُمْ عَذَابٌ عَظِيمٌ ﴿٧﴾ وَمِنَ ٱلنَّاسِ",
+      "مَن يَقُولُ ءَامَنَّا بِٱللَّهِ وَبِٱلْيَوْمِ ٱلْـَٔاخِرِ",
+      "وَمَا هُم بِمُؤْمِنِينَ ﴿٨﴾ يُخَـٰدِعُونَ ٱللَّهَ وَٱلَّذِينَ",
+      "ءَامَنُوا۟ وَمَا يَخْدَعُونَ إِلَّآ أَنفُسَهُمْ وَمَا يَشْعُرُونَ ﴿٩﴾",
+      "فِى قُلُوبِهِم مَّرَضٌ فَزَادَهُمُ ٱللَّهُ مَرَضًا ۖ",
+      "وَلَهُمْ عَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْذِبُونَ ﴿١٠﴾",
+      "وَإِذَا قِيلَ لَهُمْ لَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ",
+      "قَالُوٓا۟ إِنَّمَا نَحْنُ مُصْلِحُونَ ﴿١١﴾"
+    ];
+    const lines = document.getElementById('lines');
+    sample.forEach((text, i) => {
+      const el = document.createElement('div');
+      el.className = 'line' + (i === 4 ? ' active' : '');
+      el.textContent = text;
+      el.onclick = () => {
+        document.querySelectorAll('.line').forEach(n => n.classList.remove('active'));
+        el.classList.add('active');
+      };
+      lines.appendChild(el);
+    });
+    const sheet = document.getElementById('sheet');
+    document.getElementById('searchBtn').onclick = () => sheet.classList.add('open');
+    document.getElementById('goBtn').onclick = () => sheet.classList.remove('open');
+    document.getElementById('bookmarkBtn').onclick = (e) => {
+      e.currentTarget.textContent = e.currentTarget.textContent === '★' ? '☆' : '★';
+    };
+    const fields = document.getElementById('fields');
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.onclick = () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const mode = tab.dataset.tab;
+        if (mode === 'page') fields.innerHTML = '<input type="number" placeholder="Page number (1–559)" min="1" max="559" />';
+        if (mode === 'surah') fields.innerHTML = '<select><option>2 — Al-Baqarah</option><option>1 — Al-Fatihah</option><option>36 — Ya-Sin</option></select>';
+        if (mode === 'ayat') fields.innerHTML = '<select><option>2 — Al-Baqarah</option></select><input type="number" placeholder="Ayat number" min="1" />';
+      };
+    });
+  </script>
+</body>
+</html>
