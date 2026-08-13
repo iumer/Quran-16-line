@@ -33,16 +33,44 @@ class PdfMushafSource(private val context: Context) {
         mutex.withLock {
             if (renderer != null) return@withLock readerPageCountLocked()
             val target = File(context.filesDir, "quran_16_lines.pdf")
-            if (!target.exists() || target.length() == 0L) {
+            fun copyFromAssets() {
                 context.assets.open(ASSET_NAME).use { input ->
                     FileOutputStream(target).use { output -> input.copyTo(output) }
                 }
             }
-            val pfd = ParcelFileDescriptor.open(target, ParcelFileDescriptor.MODE_READ_ONLY)
-            descriptor = pfd
-            renderer = PdfRenderer(pfd)
+            if (!target.exists() || target.length() == 0L) {
+                copyFromAssets()
+            }
+            try {
+                openRendererLocked(target)
+            } catch (_: Exception) {
+                // Stale/corrupt cached copy from an older install — replace and retry once.
+                closeLocked()
+                if (target.exists()) target.delete()
+                copyFromAssets()
+                openRendererLocked(target)
+            }
             readerPageCountLocked()
         }
+    }
+
+    private fun openRendererLocked(target: File) {
+        val pfd = ParcelFileDescriptor.open(target, ParcelFileDescriptor.MODE_READ_ONLY)
+        descriptor = pfd
+        renderer = PdfRenderer(pfd)
+    }
+
+    private fun closeLocked() {
+        try {
+            renderer?.close()
+        } catch (_: Exception) {
+        }
+        try {
+            descriptor?.close()
+        } catch (_: Exception) {
+        }
+        renderer = null
+        descriptor = null
     }
 
     fun pageCount(): Int = renderer?.let { (it.pageCount - SKIP_LEADING_PDF_PAGES).coerceAtLeast(0) } ?: 0
@@ -78,10 +106,7 @@ class PdfMushafSource(private val context: Context) {
         }
 
     fun close() {
-        renderer?.close()
-        descriptor?.close()
-        renderer = null
-        descriptor = null
+        closeLocked()
         bitmapCache.evictAll()
     }
 

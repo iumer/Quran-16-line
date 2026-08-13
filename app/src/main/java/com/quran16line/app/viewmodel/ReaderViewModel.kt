@@ -35,6 +35,7 @@ data class ReaderUiState(
     val resumePage: Int = PdfMushafSource.DEFAULT_START_PAGE,
     val resumeLabel: String = "",
     val message: String? = null,
+    val loadError: String? = null,
     val linesPerPage: Int = PdfMushafSource.LINES_PER_PAGE
 )
 
@@ -47,40 +48,52 @@ class ReaderViewModel(app: Application) : AndroidViewModel(app) {
 
     init {
         viewModelScope.launch {
-            repository.ensureLoaded()
-            prefs.migratePageIndexIfNeeded()
-            val pageCount = repository.pageCount()
-            // Prefer the highlight mark (left-off page/line); fall back to last scrolled page.
-            val savedHighlight = prefs.highlight.first()
-            val savedLastPage = prefs.lastPage.first()
-            val resumePage = resumeReaderPage(savedLastPage, savedHighlight, pageCount)
-            val savedBookmarks = prefs.bookmarks.first()
-            _state.update {
-                it.copy(
-                    ready = true,
-                    pageCount = pageCount,
-                    currentPage = resumePage,
-                    pageEntry = repository.pageEntry(resumePage),
-                    pageLabel = repository.labelForPage(resumePage),
-                    surahs = repository.surahList(),
-                    highlight = savedHighlight,
-                    bookmarks = savedBookmarks,
-                    isBookmarked = savedBookmarks.any { b -> b.page == resumePage },
-                    showHome = true,
-                    resumePage = resumePage,
-                    resumeLabel = "Page $resumePage · ${repository.labelForPage(resumePage)}"
-                )
-            }
+            try {
+                repository.ensureLoaded()
+                prefs.migratePageIndexIfNeeded()
+                val pageCount = repository.pageCount()
+                // Prefer the highlight mark (left-off page/line); fall back to last scrolled page.
+                val savedHighlight = prefs.highlight.first()
+                val savedLastPage = prefs.lastPage.first()
+                val resumePage = resumeReaderPage(savedLastPage, savedHighlight, pageCount)
+                val savedBookmarks = prefs.bookmarks.first()
+                _state.update {
+                    it.copy(
+                        ready = true,
+                        loadError = null,
+                        pageCount = pageCount,
+                        currentPage = resumePage,
+                        pageEntry = repository.pageEntry(resumePage),
+                        pageLabel = repository.labelForPage(resumePage),
+                        surahs = repository.surahList(),
+                        highlight = savedHighlight,
+                        bookmarks = savedBookmarks,
+                        isBookmarked = savedBookmarks.any { b -> b.page == resumePage },
+                        showHome = true,
+                        resumePage = resumePage,
+                        resumeLabel = "Page $resumePage · ${repository.labelForPage(resumePage)}"
+                    )
+                }
 
-            // After startup, never overwrite currentPage from DataStore (that races with swipes).
-            combine(prefs.highlight, prefs.bookmarks) { highlight, bookmarks ->
-                highlight to bookmarks
-            }.collect { (highlight, bookmarks) ->
-                _state.update { current ->
-                    current.copy(
-                        highlight = highlight,
-                        bookmarks = bookmarks,
-                        isBookmarked = bookmarks.any { it.page == current.currentPage }
+                // After startup, never overwrite currentPage from DataStore (that races with swipes).
+                combine(prefs.highlight, prefs.bookmarks) { highlight, bookmarks ->
+                    highlight to bookmarks
+                }.collect { (highlight, bookmarks) ->
+                    _state.update { current ->
+                        current.copy(
+                            highlight = highlight,
+                            bookmarks = bookmarks,
+                            isBookmarked = bookmarks.any { it.page == current.currentPage }
+                        )
+                    }
+                }
+            } catch (t: Throwable) {
+                _state.update {
+                    it.copy(
+                        ready = true,
+                        pageCount = 0,
+                        loadError = t.message?.takeIf { msg -> msg.isNotBlank() }
+                            ?: "Could not open the mushaf. Try clearing app storage and reinstalling."
                     )
                 }
             }

@@ -63,8 +63,9 @@ fun HomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
+            // Must be a raster/vector drawable — AdaptiveIcon mipmaps crash painterResource.
             Image(
-                painter = painterResource(R.mipmap.ic_launcher),
+                painter = painterResource(R.drawable.ic_home_logo),
                 contentDescription = "Quran Pak 16 Lines",
                 modifier = Modifier.size(96.dp)
             )

@@ -118,6 +118,24 @@ fun ReaderScreen(vm: ReaderViewModel = viewModel()) {
         snackbarHost = { SnackbarHost(snackbar) },
         containerColor = Parchment
     ) { padding ->
+        if (state.loadError != null) {
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .padding(padding)
+                    .padding(28.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = state.loadError ?: "",
+                    color = Ink,
+                    style = MaterialTheme.typography.bodyLarge,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
+            }
+            return@Scaffold
+        }
+
         if (!state.ready || state.pageCount == 0) {
             Box(
                 Modifier
